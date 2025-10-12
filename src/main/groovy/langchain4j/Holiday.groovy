@@ -24,9 +24,9 @@ def chatModel = OllamaChatModel.builder()
     .build()
 
 String prompt = '"What are some interesting things to do while I am on vacation in Caloundra?"'
-println "Ollama Response: " + chatModel.chat(prompt)
+println "Response: " + chatModel.chat(prompt)
 /*
-Ollama Response:  Caloundra, located on the Sunshine Coast of Australia, offers a variety of activities that cater to different interests. Here are some suggestions for an enjoyable vacation:
+Response:  Caloundra, located on the Sunshine Coast of Australia, offers a variety of activities that cater to different interests. Here are some suggestions for an enjoyable vacation:
 
 1. Visit the beaches: Caloundra has several beautiful beaches such as Kings Beach, Moffat Beach, and Bulcock Beach. These beaches offer swimming, surfing, and sunbathing opportunities.
 2. Explore the Glass House Mountains: The Glass House Mountains are a group of 12 granite peaks that rise above the low-lying plains of the Sunshine Coast. You can hike or take a guided tour to explore these unique landmarks.

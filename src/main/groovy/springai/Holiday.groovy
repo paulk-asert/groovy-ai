@@ -18,27 +18,18 @@ package springai
 import org.springframework.ai.chat.client.ChatClient
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.context.annotation.Bean
-
-@Bean
-static ChatClient chatClient(ChatClient.Builder builder) {
-    builder.build()
-}
 
 @SpringBootApplication
 void main() {
-    try(def context = SpringApplication.run(Holiday)) {
-        def chatClient = context.getBean(ChatClient)
-        println "Asking Ollama..."
-        def response = chatClient
+    try(var context = SpringApplication.run(Holiday)) {
+        var chatClient = context.getBean(ChatClient.Builder).build()
+        var response = chatClient
                 .prompt("What are some interesting things to do while I am on vacation in Caloundra?")
                 .call()
-        println "\nResponse:\n" + response.content()
+        println "Response:\n" + response.content()
     }
 }
 /*
-Asking Ollama...
-
 Response:
  Caloundra, located on the Sunshine Coast of Australia, offers a variety of activities that cater to different interests. Here are some suggestions for an enjoyable vacation:
 
