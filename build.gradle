@@ -28,7 +28,7 @@ repositories {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(25)
     }
 }
 
@@ -54,7 +54,7 @@ sourceSets.main.allSource.files.each { file ->
     String name = file.absolutePath - projectDir.absolutePath - $/\src\main\groovy\/$
     if (!name.endsWith('.groovy')) return
     name = (name - '.groovy').replaceAll('\\\\', '.')
-    if (name in ['springai.Activity', 'springai.Itinerary']) return
+    if (name.startsWith('domain.')) return
     tasks.register("run.$name", JavaExec) {
         dependsOn compileGroovy
         group = 'Application'
