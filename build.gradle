@@ -1,0 +1,46 @@
+plugins {
+    id 'com.github.ben-manes.versions' version '0.52.0'
+    id 'groovy'
+    id 'org.springframework.boot' version '3.5.5'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+def springAiVersion = '1.0.3'
+
+dependencies {
+    implementation 'org.apache.groovy:groovy:5.0.1'
+    implementation 'io.github.ollama4j:ollama4j:1.1.1'
+    implementation 'dev.langchain4j:langchain4j-ollama:1.7.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.ai:spring-ai-starter-model-ollama'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.ai:spring-ai-bom:$springAiVersion"
+    }
+}
+
+sourceSets.main.allSource.files.each { file ->
+    String name = file.absolutePath - projectDir.absolutePath - $/\src\main\groovy\/$
+    if (!name.endsWith('.groovy')) return
+    name = (name - '.groovy').replaceAll('\\\\', '.')
+    if (name in ['springai.Activity', 'springai.Itinerary']) return
+    tasks.register("run.$name", JavaExec) {
+        dependsOn compileGroovy
+        group = 'Application'
+        description = "Run $file.name as a JVM application/Groovy script"
+        classpath = sourceSets.main.runtimeClasspath
+        mainClass = name
+    }
+}
