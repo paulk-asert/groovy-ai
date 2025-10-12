@@ -13,7 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package springai
+package domain
 
+// inspired by the class of the same name in:
+// https://github.com/danvega/groovyai/blob/master/src/main/groovy/dev/danvega/workshop/output/Itinerary.groovy
 record Itinerary(List<Activity> itinerary) {
 }

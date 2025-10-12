@@ -13,10 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package springai
+package domain
 
 import groovy.transform.ToString
 
+// inspired by the class of the same name in:
+// https://github.com/danvega/groovyai/blob/master/src/main/groovy/dev/danvega/workshop/output/Activity.groovy
 @ToString(includePackage = false)
 record Activity(String activity, String location, String day, String time) {
 }

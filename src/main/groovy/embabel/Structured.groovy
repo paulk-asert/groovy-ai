@@ -18,9 +18,9 @@ package embabel
 import com.embabel.agent.api.common.OperationContext
 import com.embabel.agent.config.annotation.EnableAgents
 import com.embabel.agent.config.annotation.LoggingThemes
+import domain.Itinerary
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import springai.Itinerary
 
 @SpringBootApplication
 @EnableAgents(loggingTheme = LoggingThemes.STAR_WARS)
