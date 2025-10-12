@@ -13,20 +13,6 @@ println "Ollama Response: " + chatModel.chat(prompt)
 /*
 Ollama Response:  Caloundra, located on the Sunshine Coast of Australia, offers a variety of activities that cater to different interests. Here are some suggestions for an enjoyable vacation:
 
-1. **Beaches**: Caloundry's main beach and Kings Beach are popular choices for swimming, sunbathing, and surfing. Moffat Beach and Dicky Beach are also worth visiting.
-
-2. **Bulcock Beach Esplanade Market**: This market, held every Sunday, offers a wide range of local produce, arts, crafts, and food stalls. It's a great place to experience the local culture and find unique souvenirs.
-
-3. **The Eumundi Markets**: A bit further from Caloundra (about 40 minutes drive), these markets are renowned for their vibrant atmosphere and wide variety of artisanal goods, food, and live music. They are held every Wednesday and Saturday.
-
-4. **Glass House Mountains National Park**: This park features a series of volcanic plugs that offer stunning views. You can hike, picnic, or simply enjoy the scenic vistas.
-
-5. **UnderWater World Sea Life Mooloolaba**: A popular aquarium located in nearby Mooloolaba. It features a variety of marine life, including sharks, stingrays, and turtles.
-
-6. **Australia Zoo**: Made famous by the Crocodile Hunter, Steve Irwin, Australia Zoo is home to a wide range of Australian wildlife. It's about a 40-minute drive from Caloundra.
-
-7. **Noosa Everglades and Great Sandy National Park**: For a longer day trip (about 1.5 hours drive), you can explore the Noosa Everglades, Australia's only everglade system, or hike through the beautiful landscapes of Great Sandy National Park.
-
 1. Visit the beaches: Caloundra has several beautiful beaches such as Kings Beach, Moffat Beach, and Bulcock Beach. These beaches offer swimming, surfing, and sunbathing opportunities.
 2. Explore the Glass House Mountains: The Glass House Mountains are a group of 12 granite peaks that rise above the low-lying plains of the Sunshine Coast. You can hike or take a guided tour to explore these unique landmarks.
 3. Visit the UnderWater World Sea Life Mooloolaba: This aquarium is home to a variety of marine life, including sharks, turtles, and seahorses. It's a great destination for families with children.
