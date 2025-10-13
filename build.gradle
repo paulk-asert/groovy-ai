@@ -15,9 +15,9 @@
  */
 
 plugins {
-    id 'com.github.ben-manes.versions' version '0.52.0'
+    id 'com.github.ben-manes.versions' version '0.53.0'
     id 'groovy'
-    id 'org.springframework.boot' version '3.5.5'
+    id 'org.springframework.boot' version '3.5.6'
     id 'io.spring.dependency-management' version '1.1.7'
 }
 
@@ -61,6 +61,6 @@ sourceSets.main.allSource.files.each { source ->
         description = "Run $source.name as a JVM application/Groovy script"
         classpath = sourceSets.main.runtimeClasspath
         mainClass = name
-        jvmArgs = ['--enable-native-access=ALL-UNNAMED'] // avoid warning in JDK25
+        jvmArgs = ['--enable-native-access=ALL-UNNAMED'] // avoid warning on JDK25
     }
 }
