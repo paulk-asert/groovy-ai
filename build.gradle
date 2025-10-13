@@ -50,15 +50,15 @@ dependencyManagement {
     }
 }
 
-sourceSets.main.allSource.files.each { file ->
-    String name = file.absolutePath - projectDir.absolutePath - $/\src\main\groovy\/$
-    if (!name.endsWith('.groovy')) return
-    name = (name - '.groovy').replaceAll('\\\\', '.')
-    if (name.startsWith('domain.')) return
+sourceSets.main.allSource.files.each { source ->
+    def baseDir = projectDir.toURI().toString() + 'src/main/groovy/'
+    def name = source.toURI().toString() - baseDir
+    if (name.startsWith('domain') || !name.endsWith('.groovy')) return
+    name = (name - '.groovy').replaceAll('/', '.')
     tasks.register("run.$name", JavaExec) {
         dependsOn compileGroovy
         group = 'Application'
-        description = "Run $file.name as a JVM application/Groovy script"
+        description = "Run $source.name as a JVM application/Groovy script"
         classpath = sourceSets.main.runtimeClasspath
         mainClass = name
         jvmArgs = ['--enable-native-access=ALL-UNNAMED'] // avoid warning in JDK25
