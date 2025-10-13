@@ -61,5 +61,6 @@ sourceSets.main.allSource.files.each { file ->
         description = "Run $file.name as a JVM application/Groovy script"
         classpath = sourceSets.main.runtimeClasspath
         mainClass = name
+        jvmArgs = ['--enable-native-access=ALL-UNNAMED'] // avoid warning in JDK25
     }
 }

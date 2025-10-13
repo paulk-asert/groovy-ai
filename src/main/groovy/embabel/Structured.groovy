@@ -34,3 +34,12 @@ void main() {
             .join('\n')
     }
 }
+/*
+Activity(Visit the Kings Beach, Kings Beach, Caloundra, Day 1, Morning)
+Activity(Explore Bulcock Beach, Bulcock Beach, Caloundra, Day 1, Afternoon)
+Activity(Dine at Mooloolaba Seafood Market, Mooloolaba Seafood Market, Mooloolaba, Day 1, Evening)
+Activity(Visit the Aussie World Theme Park, Aussie World, Palmview, Day 2, Whole day)
+Activity(Relax at Shelly Beach, Shelly Beach, Caloundra, Day 3, Morning)
+Activity(Try Surfing at Currimundi Beach, Currimundi Beach, Currimundi, Day 3, Afternoon)
+Activity(Explore the Eumundi Markets, Eumundi Markets, Eumundi, Day 4, Morning to Afternoon)
+*/
