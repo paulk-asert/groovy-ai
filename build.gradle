@@ -32,7 +32,7 @@ java {
     }
 }
 
-def springAiVersion = '1.0.3'
+var springAiVersion = '1.0.3'
 
 dependencies {
     implementation 'org.apache.groovy:groovy:5.0.1'
@@ -50,11 +50,10 @@ dependencyManagement {
     }
 }
 
-sourceSets.main.allSource.files.each { source ->
-    def baseDir = projectDir.toURI().toString() + 'src/main/groovy/'
-    def name = source.toURI().toString() - baseDir
-    if (name.startsWith('domain') || !name.endsWith('.groovy')) return
-    name = (name - '.groovy').replaceAll('/', '.')
+sourceSets.main.allSource.filter{ it.name.endsWith('.groovy') }.each { source ->
+    var name = source.toURI().toString().replaceAll('.*/src/main/groovy/(.*)\\.groovy', '$1')
+    name = name.replaceAll('/', '.')
+    if (name.startsWith('domain')) return
     tasks.register("run.$name", JavaExec) {
         dependsOn compileGroovy
         group = 'Application'
