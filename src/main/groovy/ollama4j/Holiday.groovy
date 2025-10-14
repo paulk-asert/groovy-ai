@@ -19,81 +19,42 @@ import io.github.ollama4j.Ollama
 import io.github.ollama4j.models.chat.OllamaChatMessageRole
 import io.github.ollama4j.models.chat.OllamaChatRequestBuilder
 
-def ollama = new Ollama(requestTimeoutSeconds: 300)
+var ollama = new Ollama(requestTimeoutSeconds: 300)
 println "Found ollama: ${ollama.ping()}"
 
-def prompt = '"What are 4 interesting things to do while I am on vacation in Caloundra?"'
-def builder = OllamaChatRequestBuilder.builder()
+var prompt = 'What are 4 interesting things to do while I am on vacation in Caloundra?'
+var builder = OllamaChatRequestBuilder.builder()
     .withModel('mistral:7b')
 
-def request = builder
+var request = builder
     .withMessage(OllamaChatMessageRole.USER, prompt)
     .build()
 
-def result = ollama.chat(request, null)
-println "First answer: " + result.responseModel.message.response
+var result = ollama.chat(request, null)
+println "Four things:\n$result.responseModel.message.response"
 
-def prompt2 = "If I had half a day and can only go to one, which would you recommend?"
+var prompt2 = 'If I had half a day and can only go to one, which would you recommend?'
 request = builder
     .withMessages(result.chatHistory)
     .withMessage(OllamaChatMessageRole.USER, prompt2)
     .build()
 
 result = ollama.chat(request, null)
-println "Second answer: " + result.responseModel.message.response
+println "Best thing:\n$result.responseModel.message.response"
 
 /*
 Found ollama: true
-Asking model: {
-  "model" : "mistral:7b",
-  "stream" : false,
-  "messages" : [ {
-    "role" : "user",
-    "thinking" : null,
-    "images" : null,
-    "content" : "\"What are 4 interesting things to do while I am on vacation in Caloundra?\"",
-    "tool_calls" : [ ]
-  } ],
-  "tools" : [ ],
-  "think" : false,
-  "useTools" : true
-}
-First answer:  1. Visit the beautiful beaches: Caloundra is known for its stunning coastline, with some of the most popular beaches including Kings Beach, Moffat Beach, and Bulcock Beach. These beaches offer swimming, surfing, and sunbathing opportunities, as well as picturesque views of the ocean.
 
-2. Visit the Underwater World SEA LIFE Sunshine Coast: This aquarium is home to a variety of marine life, including sharks, rays, turtles, and fish. Visitors can walk through the Shark Shipwreck Tunnel, see penguins up close, and even touch starfish in the Rockpool Experience.
+Four things:
+ 1. Visit the beautiful beaches: Caloundra is famous for its stunning beaches, including Kings Beach, Moffat Beach, and Bulcock Beach. Spend your days soaking up the sun, swimming, or surfing.
 
-3. Explore the Glass House Mountains: Just a short drive from Caloundra, the Glass House Mountains offer breathtaking views and a unique geological formation. You can hike up to the summit of one of the mountains for panoramic vistas of the surrounding area.
+2. Explore the UnderWater World SeaLife Aquarium: This marine attraction offers a unique opportunity to interact with various sea creatures. You can even have a close encounter with sharks and turtles!
 
-4. Visit the Eumundi Markets: Located approximately 30 minutes drive from Caloundra, the Eumundi Markets are one of the largest and longest-running art and craft markets in Australia. The market features over 600 stalls selling a wide variety of goods, including locally made arts and crafts, food, clothing, and souvenirs.
-Asking model: {
-  "model" : "mistral:7b",
-  "stream" : false,
-  "messages" : [ {
-    "role" : "user",
-    "thinking" : null,
-    "images" : null,
-    "content" : "\"What are 4 interesting things to do while I am on vacation in Caloundra?\"",
-    "tool_calls" : [ ]
-  }, {
-    "role" : "assistant",
-    "thinking" : null,
-    "images" : null,
-    "content" : " 1. Visit the beautiful beaches: Caloundra is known for its stunning coastline, with some of the most popular beaches including Kings Beach, Moffat Beach, and Bulcock Beach. These beaches offer swimming, surfing, and sunbathing opportunities, as well as picturesque views of the ocean.\n\n2. Visit the Underwater World SEA LIFE Sunshine Coast: This aquarium is home to a variety of marine life, including sharks, rays, turtles, and fish. Visitors can walk through the Shark Shipwreck Tunnel, see penguins up close, and even touch starfish in the Rockpool Experience.\n\n3. Explore the Glass House Mountains: Just a short drive from Caloundra, the Glass House Mountains offer breathtaking views and a unique geological formation. You can hike up to the summit of one of the mountains for panoramic vistas of the surrounding area.\n\n4. Visit the Eumundi Markets: Located approximately 30 minutes drive from Caloundra, the Eumundi Markets are one of the largest and longest-running art and craft markets in Australia. The market features over 600 stalls selling a wide variety of goods, including locally made arts and crafts, food, clothing, and souvenirs.",
-    "tool_calls" : null
-  }, {
-    "role" : "user",
-    "thinking" : null,
-    "images" : null,
-    "content" : "If I had half a day and can only go to one, which would you recommend?",
-    "tool_calls" : [ ]
-  } ],
-  "tools" : [ ],
-  "think" : false,
-  "useTools" : true
-}
-Second answer:  If you have half a day and can only choose one activity in Caloundra, I would recommend visiting the beautiful Kings Beach. This beach offers a variety of activities for all ages, including swimming, surfing, and sunbathing. The beach also has a children's playground, picnic areas, and BBQ facilities, making it a great spot for families. Additionally, Kings Beach has several cafes and restaurants nearby where you can grab a bite to eat or relax with a drink after spending some time at the beach.
+3. Visit the Glastonbury Estate: For those who love history, this beautiful estate is worth a visit. It was built in the 1920s and features a variety of artifacts and memorabilia from World War I and II.
 
-Another option if you prefer indoor activities would be visiting the Underwater World SEA LIFE Sunshine Coast. This aquarium is home to a variety of marine life, including sharks, rays, turtles, and fish. The Shark Shipwreck Tunnel, penguin exhibit, and Rockpool Experience are particularly popular attractions at the aquarium.
+4. Take a day trip to the Australia Zoo: Made famous by the Crocodile Hunter, Steve Irwin, the Australia Zoo is just a short drive from Caloundra. It's home to a wide variety of Australian wildlife, including kangaroos, koalas, and crocodiles. Don't miss the daily wildlife shows!
 
-Ultimately, the choice between Kings Beach and Underwater World SEA LIFE Sunshine Coast will depend on your personal preferences and what you enjoy doing on vacation. Both options offer unique experiences that showcase the beauty of Caloundra's coastline and marine life.
+Best thing:
+ If you only have half a day and can choose just one activity, I would recommend visiting the beautiful Kings Beach in Caloundra. It offers a lovely stretch of sandy beach, perfect for swimming, sunbathing, or simply taking a leisurely stroll along the shoreline. The beach also has various amenities like picnic areas, BBQ facilities, and a playground for children. Plus, it provides stunning views of the Pacific Ocean and the Glass House Mountains in the distance. It's the perfect place to relax and soak up the sun on your vacation!
+
 */
