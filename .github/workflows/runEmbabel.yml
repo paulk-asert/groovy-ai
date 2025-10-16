@@ -45,11 +45,11 @@ jobs:
         run: ollama pull qwen3:8b
       - uses: gradle/actions/setup-gradle@v4
       - name: Run Holiday example
-        run: ./gradlew run.springai.Holiday
+        run: ./gradlew run.embabel.Holiday
         timeout-minutes: 60
       - name: Run Structured example
-        run: ./gradlew run.springai.Structured
+        run: ./gradlew run.embabel.Structured
         timeout-minutes: 60
       - name: Run Rated example
-        run: ./gradlew run.springai.Rated
+        run: ./gradlew run.embabel.Rated
         timeout-minutes: 60
