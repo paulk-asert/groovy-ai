@@ -50,6 +50,7 @@ dependencyManagement {
     }
 }
 
+// make run tasks for our Groovy scripts
 sourceSets.main.allSource.filter{ it.name.endsWith('.groovy') }.each { source ->
     var name = source.toURI().toString().replaceAll('.*/src/main/groovy/(.*)\\.groovy', '$1')
     name = name.replaceAll('/', '.')
