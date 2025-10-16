@@ -37,7 +37,7 @@ class ItineraryAgent {
     Alternatives generateItineraries(UserInput userInput, OperationContext context) {
         context.ai()
             .withLlm('mistral:7b')
-            .createObject("Generate 5 sets of: An itinerary of things to do while on $userInput.content?", Alternatives)
+            .createObject("Generate 5 alternative sets of: $userInput.content?", Alternatives)
     }
 
     @Action
@@ -62,16 +62,22 @@ class ItineraryAgent {
 void main() {
     try(var context = SpringApplication.run(Rated)) {
         println context.getBean(Autonomy)
-            .chooseAndRunAgent('A long-weekend holiday in Caloundra', ProcessOptions.DEFAULT).output
+            .chooseAndRunAgent('Itinerary for a long-weekend holiday in Caloundra', ProcessOptions.DEFAULT).output
     }
 }
 /*
 RatedItinerary[
     itinerary=Itinerary[itinerary=[
-        Activity(Visit Kings Beach, Caloundra, Friday, All day),
-        Activity(Sunset at Mooloolaba Beach, Mooloolaba, Friday, Evening),
-        Activity(Explore Bulcock Beach Markets, Caloundra, Saturday, Morning to Early Afternoon),
-        Activity(Snorkeling at Dicky Beach, Dicky Beach, Saturday, Afternoon),
-        Activity(Relax at Shelly Beach, Caloundra, Sunday, All day)]],
-    rating=Rating[percentage=80.0]]
+        Activity(Arrival, Caloundra, Friday, Afternoon),
+        Activity(Kings Beach Leisure Park, Kings Beach, Friday, Evening),
+        Activity(Dinner at Bulcock Street Tavern, Caloundra, Friday, Night),
+        Activity(Explore Powerboat Racing Complex, Caloundra, Saturday, Morning),
+        Activity(Lunch at Point Cartwright, Point Cartwright, Saturday, Afternoon),
+        Activity(Sunset Yoga on Mooloolaba Beach, Mooloolaba Beach, Saturday, Evening),
+        Activity(Dinner at Ricky's River Bar & Restaurant, Eumundi, Saturday, Night),
+        Activity(Visit the Ginger Factory, Yandina, Sunday, Morning),
+        Activity(Relax at Golden Beach, Golden Beach, Sunday, Afternoon),
+        Activity(Farewell Dinner, Caloundra, Sunday, Evening),
+        Activity(Departure, Caloundra, Monday, Morning)]],
+    rating=Rating[percentage=90.0]]
 */

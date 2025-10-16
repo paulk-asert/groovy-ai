@@ -13,28 +13,39 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: "Validate Gradle Wrapper"
+name: "Run Spring AI examples"
 
 on:
   workflow_dispatch:
   push:
     paths:
-      - 'gradlew'
-      - 'gradlew.bat'
-      - 'gradle/wrapper/**'
-  pull_request:
-    paths:
-      - 'gradlew'
-      - 'gradlew.bat'
-      - 'gradle/wrapper/**'
+      - 'src/main/groovy/domain/**'
+      - 'src/main/groovy/springai/**'
+      - 'src/main/resources/application.properties'
+      - '.github/workflows/runSpringAI.yml'
 
 permissions:
   contents: read
 
 jobs:
-  validation:
-    name: "Validation"
+  execute:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v5
-      - uses: gradle/actions/wrapper-validation@v5
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: 25
+          check-latest: true
+      - uses: ai-action/setup-ollama@v1
+      - name: Load model
+        run: ollama pull mistral:7b
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Run Spring AI Holiday example
+        run: ./gradlew run.springai.Holiday
+        timeout-minutes: 60
+      - name: Run Spring AI Structured example
+        run: ./gradlew run.springai.Structured
+        timeout-minutes: 60

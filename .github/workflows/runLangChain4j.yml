@@ -13,28 +13,34 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: "Validate Gradle Wrapper"
+name: "Run LangChain4j example"
 
 on:
   workflow_dispatch:
   push:
     paths:
-      - 'gradlew'
-      - 'gradlew.bat'
-      - 'gradle/wrapper/**'
-  pull_request:
-    paths:
-      - 'gradlew'
-      - 'gradlew.bat'
-      - 'gradle/wrapper/**'
+      - 'src/main/groovy/langchain4j/**'
+      - '.github/workflows/runLangChain4j.yml'
 
 permissions:
   contents: read
 
 jobs:
-  validation:
-    name: "Validation"
+  execute:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v5
-      - uses: gradle/actions/wrapper-validation@v5
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: 25
+          check-latest: true
+      - uses: ai-action/setup-ollama@v1
+      - name: Load model
+        run: ollama pull mistral:7b
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Run LangChain4j example
+        run: ./gradlew run.langchain4j.Holiday
+        timeout-minutes: 60
