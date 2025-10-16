@@ -41,6 +41,6 @@ jobs:
       - name: Load model
         run: ollama pull mistral:7b
       - uses: gradle/actions/setup-gradle@v4
-      - name: Run scripts with Gradle
+      - name: Run LangChain4j example
         run: ./gradlew run.langchain4j.Holiday
         timeout-minutes: 60

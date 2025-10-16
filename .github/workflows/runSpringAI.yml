@@ -21,6 +21,7 @@ on:
     paths:
       - 'src/main/groovy/domain/**'
       - 'src/main/groovy/springai/**'
+      - 'src/main/resources/application.properties'
       - '.github/workflows/runSpringAI.yml'
 
 permissions:
@@ -42,9 +43,9 @@ jobs:
       - name: Load model
         run: ollama pull mistral:7b
       - uses: gradle/actions/setup-gradle@v4
-      - name: Run Holiday example
+      - name: Run Spring AI Holiday example
         run: ./gradlew run.springai.Holiday
         timeout-minutes: 60
-      - name: Run Structured example
+      - name: Run Spring AI Structured example
         run: ./gradlew run.springai.Structured
         timeout-minutes: 60

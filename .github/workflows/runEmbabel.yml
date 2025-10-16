@@ -22,6 +22,7 @@ on:
       - 'src/main/groovy/domain/**'
       - 'src/main/groovy/embabel/**'
       - '.github/workflows/runEmbabel.yml'
+      - 'src/main/resources/application.properties'
 
 permissions:
   contents: read
@@ -44,12 +45,12 @@ jobs:
       - name: Load Qwen3 model
         run: ollama pull qwen3:8b
       - uses: gradle/actions/setup-gradle@v4
-      - name: Run Holiday example
+      - name: Run Embabel Holiday example
         run: ./gradlew run.embabel.Holiday
         timeout-minutes: 60
-      - name: Run Structured example
+      - name: Run Embabel Structured example
         run: ./gradlew run.embabel.Structured
         timeout-minutes: 60
-      - name: Run Rated example
+      - name: Run Embabel Rated example
         run: ./gradlew run.embabel.Rated
         timeout-minutes: 60
