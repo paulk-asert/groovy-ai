@@ -18,5 +18,8 @@ After cloning the repo, available tasks can be seen using:
 ./gradlew tasks --group=application
 ```
 
-If you don't want to clone locally, check out the results in the GitHub Actions logs:
-https://github.com/paulk-asert/groovy-ai/actions/workflows/runOllama4j/badge.svg
+If you don't want to clone locally, check out the results in the GitHub Actions logs: \
+[![Ollama4j examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runOllama4j.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runOllama4j.yml)
+[![LangChain4J examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runLangChain4j.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runLangChain4j.yml)
+[![Spring AI examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runSpringAI.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runSpringAI.yml)
+[![Embabel examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runEmbabel.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runEmbabel.yml)
