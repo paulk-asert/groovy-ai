@@ -36,7 +36,7 @@ class ItineraryAgent {
     @Action
     Alternatives generateItineraries(UserInput userInput, OperationContext context) {
         context.ai()
-            .withLlm('mistral:7b')
+            .withLlm('qwen3:8b')
             .createObject("Generate 5 alternative sets of: $userInput.content?", Alternatives)
     }
 
@@ -44,7 +44,7 @@ class ItineraryAgent {
     RatedAlternatives rateItineraries(Alternatives alternatives, OperationContext context) {
         new RatedAlternatives(alternatives.content.collect { itinerary ->
             var rating = context.ai()
-                .withLlm('qwen3:8b')
+                .withLlm('mistral:7b')
                 .createObject("Rate this itinerary on variety and number of activities: $itinerary?", Rating)
             new RatedItinerary(itinerary, rating)
         })
@@ -80,4 +80,23 @@ RatedItinerary[
         Activity(Farewell Dinner, Caloundra, Sunday, Evening),
         Activity(Departure, Caloundra, Monday, Morning)]],
     rating=Rating[percentage=90.0]]
+
+RatedItinerary[
+    itinerary=Itinerary[itinerary=[
+        Activity(Breakfast at a local café, Caloundra CBD, Friday, 9:00 AM),
+        Activity(Boat tour to the Great Sandy Strait, Great Sandy Strait, Friday, 10:30 AM),
+        Activity(Lunch on the boat, Great Sandy Strait, Friday, 1:30 PM),
+        Activity(Snorkeling or swimming, Great Sandy Strait, Friday, 2:30 PM),
+        Activity(Return to Caloundra and dinner, Caloundra, Friday, 5:00 PM),
+        Activity(Morning visit to the Caloundra Historical Museum, Caloundra Historical Museum, Saturday, 9:30 AM),
+        Activity(Lunch at a local café, Caloundra CBD, Saturday, 12:30 PM),
+        Activity(Afternoon at the Sippy Downs Markets, Sippy Downs, Saturday, 3:00 PM),
+        Activity(Dinner at a local restaurant, Sippy Downs, Saturday, 7:00 PM),
+        Activity(Morning walk along the beach, Caloundra Spit, Sunday, 9:00 AM),
+        Activity(Visit to Caloundra Wildlife Park, Caloundra Wildlife Park, Sunday, 11:00 AM),
+        Activity(Lunch at the park, Caloundra Wildlife Park, Sunday, 1:00 PM),
+        Activity(Afternoon return to Caloundra, Caloundra, Sunday, 4:00 PM),
+        Activity(Evening dinner and departure, Caloundra, Sunday, 7:00 PM)]],
+    rating=Rating[percentage=100.0]]
+18
 */
