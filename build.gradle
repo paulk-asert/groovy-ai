@@ -16,9 +16,25 @@
 
 plugins {
     id 'com.github.ben-manes.versions' version '0.53.0'
+    id 'org.nosphere.apache.rat' version '0.8.1'
+}
+
+var check = tasks.register('check') {
+    dependsOn 'rat'
+    subprojects { p ->
+        it.dependsOn(p.check)
+    }
+}
+
+repositories {
+    mavenCentral()
 }
 
 ext {
     groovyVersion = '5.0.2'
     slf4jVersion = '2.0.16'
+}
+
+tasks.named('rat') {
+    excludes = ['**/build/**', '.idea', 'gradle/wrapper', '**/.gradle', '**/*.log']
 }
