@@ -13,7 +13,7 @@ void main() {
                 .prompt("What are some interesting things to do while I am on vacation in Caloundra?")
                 .call()
                 .entity(Itinerary)
-        println "Response:\n" + response.itinerary.join('\n')
+        println "Response:\n" + response.display()
     }
 }
 /*

@@ -15,7 +15,8 @@
  */
 package domain
 
-// inspired by the class of the same name in:
-// https://github.com/danvega/groovyai/blob/master/src/main/groovy/dev/danvega/workshop/output/Itinerary.groovy
 record Itinerary(List<Activity> itinerary) {
+    String display() {
+        itinerary.join('\n')
+    }
 }

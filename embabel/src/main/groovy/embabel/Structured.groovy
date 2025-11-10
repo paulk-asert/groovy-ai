@@ -30,8 +30,7 @@ void main() {
             .ai()
             .withDefaultLlm()
             .createObject('What are some interesting things to do while I am on vacation in Caloundra?', Itinerary)
-            .itinerary
-            .join('\n')
+            .display()
     }
 }
 /*

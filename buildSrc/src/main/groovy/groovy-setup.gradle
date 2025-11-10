@@ -36,7 +36,7 @@ java {
 sourceSets.main.allSource.filter{ it.name.endsWith('.groovy') }.each { source ->
     var name = source.toURI().toString().replaceAll('.*/src/main/groovy/(.*)\\.groovy', '$1')
     name = name.replaceAll('/', '.')
-    if (name.startsWith('domain')) return
+    if (name.startsWith('domain') || name.startsWith('util')) return
     tasks.register("run.$name", JavaExec) {
         dependsOn compileGroovy
         group = 'Application'
