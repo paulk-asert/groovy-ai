@@ -47,6 +47,6 @@ jobs:
       - name: Run Micronaut AI Holiday example
         run: ./gradlew run.micronaut.Holiday
         timeout-minutes: 60
-#      - name: Run Micronaut AI Structured example
-#        run: ./gradlew run.micronaut.Structured
-#        timeout-minutes: 60
+      - name: Run Micronaut AI Structured example
+        run: ./gradlew run.micronaut.Structured
+        timeout-minutes: 60
