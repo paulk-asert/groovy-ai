@@ -13,12 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: "Run Ollama4j example"
+name: "Run Ollama4j examples"
 
 on:
   workflow_dispatch:
   push:
     paths:
+      - 'build.gradle'
       - 'src/main/groovy/ollama4j/**'
       - '.github/workflows/runOllama4j.yml'
 
