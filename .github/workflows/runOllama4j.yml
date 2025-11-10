@@ -20,7 +20,8 @@ on:
   push:
     paths:
       - 'build.gradle'
-      - 'src/main/groovy/ollama4j/**'
+      - 'ollama4j/build.gradle'
+      - 'ollama4j/src/main/**'
       - '.github/workflows/runOllama4j.yml'
 
 permissions:

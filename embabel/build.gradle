@@ -21,10 +21,8 @@ plugins {
 }
 
 var embabelVersion = '0.1.4'
-var springAiVersion = '1.0.3'
 
 repositories {
-//    mavenCentral()
     maven { url = 'https://repo.embabel.com/artifactory/libs-release' }
 }
 

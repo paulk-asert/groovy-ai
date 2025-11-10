@@ -19,10 +19,11 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'src/main/groovy/domain/**'
-      - 'src/main/groovy/embabel/**'
+      - 'build.gradle'
+      - 'embabel/build.gradle'
+      - 'common/src/main/**'
+      - 'embabel/src/main/**'
       - '.github/workflows/runEmbabel.yml'
-      - 'src/main/resources/application.properties'
 
 permissions:
   contents: read

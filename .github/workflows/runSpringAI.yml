@@ -19,9 +19,10 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'src/main/groovy/domain/**'
-      - 'src/main/groovy/springai/**'
-      - 'src/main/resources/application.properties'
+      - 'build.gradle'
+      - 'springai/build.gradle'
+      - 'common/src/main/**'
+      - 'springai/src/main/**'
       - '.github/workflows/runSpringAI.yml'
 
 permissions:

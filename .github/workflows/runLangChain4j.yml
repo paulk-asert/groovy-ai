@@ -13,13 +13,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: "Run LangChain4j example"
+name: "Run LangChain4j examples"
 
 on:
   workflow_dispatch:
   push:
     paths:
-      - 'src/main/groovy/langchain4j/**'
+      - 'build.gradle'
+      - 'langchain4j/build.gradle'
+      - 'langchain4j/src/main/**'
       - '.github/workflows/runLangChain4j.yml'
 
 permissions:
