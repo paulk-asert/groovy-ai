@@ -18,6 +18,7 @@ testoutput/
 *.iws
 .shelf
 *.model
+*.log
 
 .settings/
 .classpath
