@@ -17,13 +17,13 @@ package ollama4j
 
 import io.github.ollama4j.Ollama
 import io.github.ollama4j.models.chat.OllamaChatMessageRole
-import io.github.ollama4j.models.chat.OllamaChatRequestBuilder
+import io.github.ollama4j.models.chat.OllamaChatRequest
 
 var ollama = new Ollama(requestTimeoutSeconds: 300)
 println "Found ollama: ${ollama.ping()}"
 
 var prompt = 'What are 4 interesting things to do while I am on vacation in Caloundra?'
-var builder = OllamaChatRequestBuilder.builder()
+var builder = OllamaChatRequest.builder()
     .withModel('mistral:7b')
 
 var request = builder
