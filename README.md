@@ -25,7 +25,7 @@ Groovy AI chat code using Ollama4j, LangChain4j, Spring AI, Embabel, and Microna
 The examples are configured to use local LLMs via Ollama.
 They assume you have at least the `mistral:7b` model available.
 
-You can set that up manually, or use docker as follows:
+You can set that up manually, use GitHub actions like this repo does, or use docker as follows:
 
 ```bash
 docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
