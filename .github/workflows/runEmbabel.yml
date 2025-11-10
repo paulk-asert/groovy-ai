@@ -45,7 +45,7 @@ jobs:
         run: ollama pull mistral:7b
       - name: Load Qwen3 model
         run: ollama pull qwen3:8b
-      - uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v5
       - name: Run Embabel Holiday example
         run: ./gradlew run.embabel.Holiday
         timeout-minutes: 60
