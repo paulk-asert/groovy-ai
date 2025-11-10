@@ -34,7 +34,7 @@ docker exec -it ollama ollama run mistral:7b
 
 A second model is assumed for the `embabel.Rated` example.
 
-You can change LLMs or models in the `application.properties` file (for Spring AI and Embabel)
+You can change LLMs or models in the `application.properties` file (for Spring AI, Embabel, and Micronaut)
 or via the hard-coded values in the other examples.
 
 After cloning the repo, available tasks can be seen using:
@@ -47,4 +47,4 @@ If you don't want to clone locally, check out the results in the GitHub Actions 
 [![LangChain4J examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runLangChain4j.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runLangChain4j.yml) \
 [![Spring AI examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runSpringAI.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runSpringAI.yml)
 [![Embabel examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runEmbabel.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runEmbabel.yml)
-[![Micronaut examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runMicronaut.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runMicronaut.yml)
+[![Micronaut examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runMicronautAI.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runMicronautAI.yml)
