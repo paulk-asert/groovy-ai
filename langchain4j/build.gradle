@@ -15,10 +15,13 @@
  */
 
 plugins {
-    id 'com.github.ben-manes.versions' version '0.53.0'
+    id 'groovy-setup'
 }
 
-ext {
-    groovyVersion = '5.0.2'
-    slf4jVersion = '2.0.16'
+var langchain4jVersion = '1.8.0'
+
+dependencies {
+    project(':common')
+    implementation "org.slf4j:slf4j-simple:$slf4jVersion"
+    implementation "dev.langchain4j:langchain4j-ollama:$langchain4jVersion"
 }

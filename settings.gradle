@@ -1,0 +1,1 @@
+include('common', 'ollama4j', 'langchain4j', 'springai', 'embabel')

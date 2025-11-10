@@ -8,9 +8,17 @@ Groovy AI chat code using Ollama4j, L:angChain4j, Spring AI, and Embabel to find
 
 The examples are configured to use local LLMs via Ollama.
 They assume you have at least the `mistral:7b` model available.
+
+You can set that up manually, or use docker as follows:
+
+```bash
+docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+docker exec -it ollama ollama run mistral:7b
+```
+
 A second model is assumed for the `embabel.Rated` example.
 
-You can change models in the `application.properties` file (for Spring AI and Embabel)
+You can change LLMs or models in the `application.properties` file (for Spring AI and Embabel)
 or via the hard-coded values in the other examples.
 
 After cloning the repo, available tasks can be seen using:

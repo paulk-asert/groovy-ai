@@ -15,10 +15,5 @@
  */
 
 plugins {
-    id 'com.github.ben-manes.versions' version '0.53.0'
-}
-
-ext {
-    groovyVersion = '5.0.2'
-    slf4jVersion = '2.0.16'
+    id 'groovy-setup'
 }

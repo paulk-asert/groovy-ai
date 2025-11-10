@@ -15,10 +15,21 @@
  */
 
 plugins {
-    id 'com.github.ben-manes.versions' version '0.53.0'
+    id 'groovy-setup'
+    id 'org.springframework.boot' version '3.5.6'
+    id 'io.spring.dependency-management' version '1.1.7'
 }
 
-ext {
-    groovyVersion = '5.0.2'
-    slf4jVersion = '2.0.16'
+var springAiVersion = '1.0.3'
+
+dependencies {
+    implementation project(':common')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.ai:spring-ai-starter-model-ollama'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.ai:spring-ai-bom:$springAiVersion"
+    }
 }
