@@ -135,3 +135,4 @@ If you don't want to clone locally, check out the results in the GitHub Actions 
 [![Spring AI examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runSpringAI.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runSpringAI.yml)
 [![Embabel examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runEmbabel.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runEmbabel.yml)
 [![Micronaut examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runMicronautAI.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runMicronautAI.yml)
+[![Quarkus examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runQuarkus.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runQuarkus.yml)
