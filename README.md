@@ -115,6 +115,11 @@ RatedItinerary[
 
 ## Quarkus
 
+Quarkus needs special boot code to run.
+To run the example use the `quarkusRun` task.
+Also, `quarkusRun` doesn't seem to honor the toolchain setting,
+so instead run your Gradle build using JDK25.
+
 > Asking:
 > What are four things to do while visiting Minneapolis?
 > Answer:
