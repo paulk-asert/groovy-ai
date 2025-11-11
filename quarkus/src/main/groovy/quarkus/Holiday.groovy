@@ -13,5 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package quarkus
 
-include('common', 'ollama4j', 'langchain4j', 'springai', 'embabel', 'micronaut', 'quarkus')
+import io.quarkus.runtime.QuarkusApplication
+import io.quarkus.runtime.annotations.QuarkusMain
+import jakarta.inject.Inject
+import util.HolidayAssistant
+
+@QuarkusMain
+class Holiday implements QuarkusApplication {
+
+    @Inject
+    HolidayAssistant assistant
+
+    @Override
+    int run(String... args) {
+        def question = "What are four things to do while visiting Minneapolis?"
+        println "Asking: ${question}"
+        def answer = assistant.ask(question)
+        println "Answer: ${answer}"
+        return 0
+    }
+}

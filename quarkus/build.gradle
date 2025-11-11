@@ -14,4 +14,25 @@
  * limitations under the License.
  */
 
-include('common', 'ollama4j', 'langchain4j', 'springai', 'embabel', 'micronaut', 'quarkus')
+plugins {
+    id 'groovy-setup'
+    id 'io.quarkus' version '3.29.2'
+}
+
+var quarkusVersion = '3.29.2'
+
+dependencies {
+    implementation project(':common')
+    implementation platform("io.quarkus:quarkus-bom:$quarkusVersion")
+    implementation 'io.quarkus:quarkus-arc'
+    implementation 'io.quarkiverse.langchain4j:quarkus-langchain4j-ollama:1.4.0.CR2'
+    implementation 'io.quarkus:quarkus-test-common:3.29.2'
+}
+
+tasks.named('quarkusRun') {
+    jvmArgs = ['--enable-native-access=ALL-UNNAMED'] // avoid warning on JDK25
+}
+
+quarkus {
+    finalName = 'groovy-ai-quarkus'
+}

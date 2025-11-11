@@ -13,5 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package util
 
-include('common', 'ollama4j', 'langchain4j', 'springai', 'embabel', 'micronaut', 'quarkus')
+import dev.langchain4j.service.SystemMessage
+import dev.langchain4j.service.UserMessage
+import io.quarkiverse.langchain4j.RegisterAiService
+import jakarta.enterprise.context.ApplicationScoped
+
+@RegisterAiService
+@ApplicationScoped
+interface HolidayAssistant {
+
+    @SystemMessage("You are knowledgeable about places tourists might like to visit.")
+    String ask(@UserMessage String question)
+}
