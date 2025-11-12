@@ -33,7 +33,7 @@ docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
 docker exec -it ollama ollama run mistral:7b
 ```
 
-A second model is assumed for the `embabel.Rated` example.
+Some examples use the larger but slightly better `qwen3:8b` model.
 
 You can change LLMs or models in the `application.properties` file (for Spring AI, Embabel, and Micronaut)
 or via the hard-coded values in the other examples.
