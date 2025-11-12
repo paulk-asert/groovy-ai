@@ -15,19 +15,11 @@
  */
 package util
 
-import dev.langchain4j.agent.tool.Tool
-import domain.Weather
-import io.micronaut.context.annotation.Executable
-import jakarta.inject.Singleton
+import dev.langchain4j.model.chat.request.ChatRequestParameters
+import dev.langchain4j.model.ollama.OllamaChatModel
 
-@Singleton
-class WeatherTool {
-    @Tool('Gets the expected weather forecast including temperature for a given city and LocalDate')
-    @Executable
-    Weather getWeather(String city, LocalDate date) {
-        println "Looking up weather for $city on $date"
-        var fakeWeather = [Auckland: new Weather('sunny', 16, 26),
-                           'Mt Hutt': new Weather('hot', 30, 38)]
-        fakeWeather[city]
+class CustomOllamaChatModelBuilder extends OllamaChatModel.OllamaChatModelBuilder {
+    CustomOllamaChatModelBuilder(ChatRequestParameters defaultRequestParameters) {
+        this.defaultRequestParameters = defaultRequestParameters
     }
 }

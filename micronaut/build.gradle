@@ -29,6 +29,7 @@ dependencies {
     implementation platform('io.micronaut.langchain4j:micronaut-langchain4j-bom:1.4.0')
     implementation 'io.micronaut.langchain4j:micronaut-langchain4j-core'
     implementation 'io.micronaut.langchain4j:micronaut-langchain4j-ollama'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
 }
 
 micronaut {
