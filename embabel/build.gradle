@@ -20,11 +20,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.1.7'
 }
 
-var embabelVersion = '0.1.4'
-
-repositories {
-    maven { url = 'https://repo.embabel.com/artifactory/libs-release' }
-}
+var embabelVersion = '0.2.0'
 
 dependencies {
     implementation project(':common')
