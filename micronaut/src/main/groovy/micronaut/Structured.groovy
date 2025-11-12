@@ -34,8 +34,7 @@ interface HolidayBot {
 try(var context = ApplicationContext.run()) {
     println context.getBean(HolidayBot)
         .itinerary('Four great things to see in Auckland over a weekend.')
-        .itinerary
-        .join('\n')
+        .display()
 }
 
 /*
