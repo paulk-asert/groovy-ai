@@ -15,8 +15,13 @@
  */
 package langchain4j
 
-import dev.langchain4j.data.message.UserMessage
 import dev.langchain4j.model.ollama.OllamaChatModel
+import dev.langchain4j.memory.chat.MessageWindowChatMemory
+import dev.langchain4j.service.AiServices
+
+interface HolidayAssistant {
+    String chat(String message)
+}
 
 var model = OllamaChatModel.builder()
     .baseUrl("http://localhost:11434")
@@ -24,34 +29,40 @@ var model = OllamaChatModel.builder()
     .modelName("mistral:7b")
     .build()
 
+var chatMemory = MessageWindowChatMemory.withMaxMessages(10)
+
+var assistant = AiServices.builder(HolidayAssistant)
+    .chatModel(model)
+    .chatMemory(chatMemory)
+    .build()
+
 var prompt = 'What are 4 interesting things to do while I am on vacation in Caloundra?'
-var response = model.chat(new UserMessage(prompt))
+var response = assistant.chat(prompt)
 
 var prompt2 = 'If I had half a day and can only go to one, which would you recommend?'
-var response2 = model.chat(response.aiMessage(), new UserMessage(prompt2))
+var response2 = assistant.chat(prompt2)
 
 println """
 Four things:
-${response.aiMessage().text()}
+$response
 
 Best thing:
-${response2.aiMessage().text()}
+$response2
 """
 
 /*
 Four things:
- 1. Visit the Bulcock Beach: This is a beautiful patrolled beach that offers swimming, picnicking, and walking along the esplanade. It's also home to a weekly Sunday markets where you can find local produce, art, and crafts.
+ 1. Visit the Coastal Walk: The Caloundra Coastal Walk offers stunning views of the coastline, beaches, and the Pumicestone Passage. It's a great way to enjoy the outdoors and take in the beautiful scenery.
 
-2. Explore the Coastal Walk: The Caloundra Coastal Path offers stunning views of the coastline, Pumicestone Passage, and Bribie Island. It's a great way to enjoy the outdoors and get some exercise.
+2. Explore the Bulcock Beach: This is one of the most popular beaches in Caloundra. You can swim, sunbathe, or just relax on the beach. Nearby, you'll find shops, cafes, and restaurants for a post-beach refreshment.
 
-3. Visit the UnderWater World SEA LIFE Mooloolaba: This is a fantastic aquarium located in Mooloolaba, just a short drive from Caloundra. You can see a variety of marine life, including sharks, turtles, and seahorses.
+3. Visit the Australian Zoo: Made famous by Steve Irwin, the zoo is home to a wide variety of Australian wildlife. It's a great place for both children and adults to learn about local animals and conservation efforts.
 
-4. Take a Day Trip to the Glass House Mountains: Just a 30-minute drive away, these spectacular granite peaks provide great hiking opportunities and offer stunning views of the surrounding landscape. Don't miss the lookout at Tibrogargan for the best view!
+4. Take a day trip to the Glass House Mountains: Just a short drive from Caloundra, these stunning volcanic peaks offer hiking trails, scenic lookouts, and a unique geographical feature that's distinctive to the region.
 
 Best thing:
- If you only have half a day and can only choose one attraction, I would recommend visiting the UnderWater World SEA LIFE Mooloolaba. It's an excellent aquarium that offers a fascinating glimpse into the marine life of the region, and it's suitable for people of all ages.
+ If you only have half a day and can only go to one place, I would recommend visiting the Bulcock Beach. It offers a relaxing beach experience with beautiful views, as well as easy access to shops, cafes, and restaurants if you'd like to grab a bite to eat or do some souvenir shopping.
 
-The UnderWater World is home to a variety of marine animals, including sharks, turtles, stingrays, seahorses, and many more. You can also participate in interactive experiences such as feeding the sharks or holding a starfish. The aquarium also offers educational programs and behind-the-scenes tours for those interested in learning more about marine conservation.
+The Australian Zoo is also a great option, but it may take longer to get there, and you might not have enough time to fully enjoy everything the zoo has to offer in just half a day. The Glass House Mountains are another fantastic choice, but they require a bit more travel time as well. Bulcock Beach provides a perfect balance of relaxation and amenities within easy reach.
 
-While the Coastal Walk and Glass House Mountains are worth visiting if you have more time, they require more planning and travel time, so I would recommend UnderWater World SEA LIFE Mooloolaba as the best option for a half-day visit.
 */
