@@ -32,17 +32,24 @@ java {
     }
 }
 
+def runAll = tasks.register("run.${project.name}.All") {
+    group 'Application'
+}
+
 // register run tasks for our Groovy scripts (run.pkg.ScriptName)
 sourceSets.main.allSource.filter{ it.name.endsWith('.groovy') }.each { source ->
     var name = source.toURI().toString().replaceAll('.*/src/main/groovy/(.*)\\.groovy', '$1')
     name = name.replaceAll('/', '.')
     if (name.startsWith('domain') || name.startsWith('util')) return
-    tasks.register("run.$name", JavaExec) {
+    var subtask = tasks.register("run.$name", JavaExec) {
         dependsOn compileGroovy
         group = 'Application'
         description = "Run $source.name as a JVM application/Groovy script"
         classpath = sourceSets.main.runtimeClasspath
         mainClass = name
         jvmArgs = ['--enable-native-access=ALL-UNNAMED'] // avoid warning on JDK25
+    }
+    runAll.configure {
+        dependsOn subtask
     }
 }
