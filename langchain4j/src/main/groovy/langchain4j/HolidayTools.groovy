@@ -74,25 +74,19 @@ $response
 /*
 Preparing recommendations as at: 2025-11-12
 Interesting things:
-Here’s a weather-aware itinerary for Caloundra’s upcoming weekend (November 15–16, 2025):
+Here’s a weather-aware recommendation for Caloundra this coming weekend (November 15–16, 2025):
 
----
+**Saturday, November 15 (Sunny & Hot: 30°C–37°C)**
+☀️ **Beach Day at Caloundra Spit**
+- Explore the scenic Caloundra Spit, a 12km stretch of sand with wildlife, birdlife, and picnic spots.
+- Try snorkeling or swimming in the calm waters (avoid midday sun; visit early morning or late afternoon).
+- Tip: Stay hydrated, wear sunscreen, and bring a hat.
 
-**Saturday, November 15 (Sunny & Hot: 30–37°C)**
-🌞 **Recommended Activity:**
-**Great Sandy Strait Snorkeling Tour** – Explore vibrant marine life in calm, shallow waters. Pair with a beachside picnic at **Caloundra Beach** (bring sunscreen and plenty of water!).
+**Sunday, November 16 (Raining & Cool: 5°C–15°C)**
+🌧️ **Indoor Cultural Activities**
+- Visit the **Caloundra Art Gallery** or **Caloundra Library** for indoor browsing and local art exhibits.
+- Enjoy a cozy café visit (e.g., **The Coffee Bean & Tea Leaf**) with a book or light meal.
+- Tip: Pack an umbrella, layer clothing, and prioritize dry footwear.
 
-**Why it works:** Clear skies and warm temps perfect for water activities. Avoid midday sun; plan trips early.
-
----
-
-**Sunday, November 16 (Raining: 5–15°C)**
-🌧️ **Recommended Activity:**
-**Caloundra Cultural Centre Visit** – Explore local art, history, and Indigenous culture indoors. Follow with a warm cup of coffee at **The Beachside Coffee Co.** (grab a sweater for the cooler temps!).
-
-**Why it works:** Rainy weather suits indoor attractions. Dress in layers and prioritize dry, sheltered spots.
-
----
-
-Always check local event calendars for real-time updates!
+Safe travels! 🌊📚
 */
