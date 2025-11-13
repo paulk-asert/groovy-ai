@@ -39,14 +39,14 @@ var assistant = AiServices.builder(HolidayAssistant)
 var prompt = 'What are 4 interesting things to do while I am on vacation in Caloundra?'
 var response = assistant.chat(prompt)
 
-var prompt2 = 'If I had half a day and can only go to one, which would you recommend?'
+var prompt2 = "It might rain one of the mornings, can you give me a single best alternative if it rains?"
 var response2 = assistant.chat(prompt2)
 
 println """
 Four things:
 $response
 
-Best thing:
+If it rains:
 $response2
 """
 
@@ -60,9 +60,7 @@ Four things:
 
 4. Take a day trip to the Glass House Mountains: Just a short drive from Caloundra, these stunning volcanic peaks offer hiking trails, scenic lookouts, and a unique geographical feature that's distinctive to the region.
 
-Best thing:
- If you only have half a day and can only go to one place, I would recommend visiting the Bulcock Beach. It offers a relaxing beach experience with beautiful views, as well as easy access to shops, cafes, and restaurants if you'd like to grab a bite to eat or do some souvenir shopping.
-
-The Australian Zoo is also a great option, but it may take longer to get there, and you might not have enough time to fully enjoy everything the zoo has to offer in just half a day. The Glass House Mountains are another fantastic choice, but they require a bit more travel time as well. Bulcock Beach provides a perfect balance of relaxation and amenities within easy reach.
+If it rains:
+ If it rains during your visit to Caloundra and you're looking for an indoor activity as an alternative, I recommend visiting the SEA LIFE Sunshine Coast Oceanarium in Mooloolaba. It's one of the largest aquariums on the east coast of Australia and offers a wide variety of marine life to see, including sharks, turtles, seahorses, and stingrays. The exhibits are designed with both children and adults in mind, making it a fun experience for everyone. Plus, it's indoors, so you can enjoy the aquatic world without getting wet!
 
 */
