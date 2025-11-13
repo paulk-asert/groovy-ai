@@ -51,13 +51,13 @@ jobs:
       - name: Cache Mistral 7B
         uses: actions/cache@v4
         with:
-          path: ${{ env.OLLAMA_HOME }}/models/library/mistral:7b
+          path: ${{ env.OLLAMA_HOME }}/models/manifests/registry.ollama.ai/library/mistral
           key: ollama-mistral-${{ runner.os }}-v1
 
       - name: Cache Qwen3 8B
         uses: actions/cache@v4
         with:
-          path: ${{ env.OLLAMA_HOME }}/models/library/qwen3:8b
+          path: ${{ env.OLLAMA_HOME }}/models/manifests/registry.ollama.ai/library/qwen3
           key: ollama-qwen3-${{ runner.os }}-v1
 
       - uses: ai-action/setup-ollama@v1
@@ -70,6 +70,11 @@ jobs:
         run: |
           ollama list | grep "mistral:7b" || ollama pull mistral:7b
           ollama list | grep "qwen3:8b" || ollama pull qwen3:8b
+
+      - name: Check models after load
+        env:
+          OLLAMA_HOME: ${{ env.OLLAMA_HOME }}
+        run: find ${{ env.OLLAMA_HOME }}/models -type dir -print
 
       - uses: gradle/actions/setup-gradle@v5
       - name: Run LangChain4j examples
