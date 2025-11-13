@@ -30,6 +30,8 @@ permissions:
 jobs:
   execute:
     runs-on: ubuntu-latest
+    env:
+      OLLAMA_HOME: /home/runner/.ollama
 
     steps:
       - uses: actions/checkout@v5
@@ -41,15 +43,23 @@ jobs:
           java-version: 25
           check-latest: true
 
+      - name: Prepare Ollama directories
+        run: |
+          mkdir -p "$OLLAMA_HOME/models"
+          echo "OLLAMA_HOME=$OLLAMA_HOME" >> "$GITHUB_ENV"
+
       - name: Cache Ollama models
         uses: actions/cache@v4
         with:
-          path: ~/.ollama
-          key: ollama-models-${{ runner.os }}-${{ hashFiles('.github/workflows/runLangChain4j.yml') }}
+          path: ${{ env.OLLAMA_HOME }}/models
+          key: ollama-models-${{ runner.os }}-v1
           restore-keys: |
             ollama-models-${{ runner.os }}-
 
       - uses: ai-action/setup-ollama@v1
+        env:
+          OLLAMA_HOME: ${{ env.OLLAMA_HOME }}
+
       - name: Load models (if not cached)
         run: |
           ollama list | grep "mistral:7b" || ollama pull mistral:7b
