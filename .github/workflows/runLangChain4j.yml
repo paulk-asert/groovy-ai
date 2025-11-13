@@ -54,35 +54,56 @@ jobs:
         env:
           OLLAMA_HOME: ${{ env.OLLAMA_HOME }}
 
-      - name: Cache manifests
+      - name: Cache Ollama blobs0123
         uses: actions/cache@v4
         with:
-          path: ${{ env.OLLAMA_HOME }}/models/manifests
+          path: |
+            ~/.ollama/models/blobs/sha256-0*
+            ~/.ollama/models/blobs/sha256-1*
+            ~/.ollama/models/blobs/sha256-2*
+            ~/.ollama/models/blobs/sha256-3*
+          key: ollama-blobs0123-${{ runner.os }}-v1
+
+      - name: Cache Ollama blobs4567
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.ollama/models/blobs/sha256-4*
+            ~/.ollama/models/blobs/sha256-5*
+            ~/.ollama/models/blobs/sha256-6*
+            ~/.ollama/models/blobs/sha256-7*
+          key: ollama-blobs4567-${{ runner.os }}-v1
+
+      - name: Cache Ollama blobs89ab
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.ollama/models/blobs/sha256-8*
+            ~/.ollama/models/blobs/sha256-9*
+            ~/.ollama/models/blobs/sha256-a*
+            ~/.ollama/models/blobs/sha256-b*
+          key: ollama-blobs89ab-${{ runner.os }}-v1
+
+      - name: Cache Ollama blobscdef
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.ollama/models/blobs/sha256-c*
+            ~/.ollama/models/blobs/sha256-d*
+            ~/.ollama/models/blobs/sha256-e*
+            ~/.ollama/models/blobs/sha256-f*
+          key: ollama-blobscdef-${{ runner.os }}-v1
+
+      - name: Cache Ollama manifests
+        uses: actions/cache@v4
+        with:
+          path: ~/.ollama/models/manifests
           key: ollama-manifests-${{ runner.os }}-v1
-          restore-keys: |
-            ollama-manifests-${{ runner.os }}-
 
-      - name: Restore cached blobs
-        run: |
-          for key in $(gh cache list --limit 100 --json key --jq '.[].key'); do
-            gh cache restore --key "$key" "$OLLAMA_HOME/models/blobs/"
-          done
-
-      - name: Ensure required models are present
+      - name: Download models if needed
         run: |
           for model in mistral:7b qwen3:8b; do
             ollama list | grep "$model" || ollama pull "$model"
-          done
-
-      - name: Caching blob files
-        shell: bash
-        run: |
-          for blob in $OLLAMA_HOME/models/blobs/sha256-*; do
-            # strip path -> cache key friendly name
-            key="ollama-${{ runner.os }}-$(basename "$blob")"
-            echo "Attempting cache for: $key"
-            gh cache list --limit 1 --key "$key" || \
-              gh cache save "$blob" --key "$key"
           done
 
       - uses: gradle/actions/setup-gradle@v5
