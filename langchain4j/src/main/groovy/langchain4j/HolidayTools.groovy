@@ -40,7 +40,7 @@ LocalDate getWeekend() {
 Weather getWeather(String location, LocalDate date) {
     var fakeWeather = [0: [Caloundra: new Weather('Sunny and Hot', 30, 37)],
                        1: [Caloundra: new Weather('Raining', 5, 15)]]
-    fakeWeather[fakeDay++][location]
+    fakeWeather[fakeDay++ % fakeWeather.size()][location]
 }
 
 var model = OllamaChatModel.builder()
