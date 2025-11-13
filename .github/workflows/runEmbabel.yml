@@ -41,27 +41,67 @@ jobs:
           java-version: 25
           check-latest: true
 
-      - name: Cache Ollama models
-        uses: actions/cache@v4
-        with:
-          path: ~/.ollama
-          key: ollama-models-${{ runner.os }}-${{ hashFiles('.github/workflows/runEmbabel.yml') }}
-          restore-keys: |
-            ollama-models-${{ runner.os }}-
+      - name: Prepare Ollama directories
+        run: |
+          mkdir -p "$OLLAMA_HOME/models/blobs"
+          mkdir -p "$OLLAMA_HOME/models/manifests"
+          echo "OLLAMA_HOME=$OLLAMA_HOME" >> "$GITHUB_ENV"
 
       - uses: ai-action/setup-ollama@v1
-      - name: Load models (if not cached)
+
+      - name: Cache Ollama blobs0123
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-0*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-1*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-2*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-3*
+          key: ollama-blobs0123-${{ runner.os }}-v1
+
+      - name: Cache Ollama blobs4567
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-4*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-5*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-6*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-7*
+          key: ollama-blobs4567-${{ runner.os }}-v1
+
+      - name: Cache Ollama blobs89AB
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-8*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-9*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-a*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-b*
+          key: ollama-blobs89AB-${{ runner.os }}-v1
+
+      - name: Cache Ollama blobsCDEF
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-c*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-d*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-e*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-f*
+          key: ollama-blobsCDEF-${{ runner.os }}-v1
+
+      - name: Cache Ollama manifests
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.OLLAMA_HOME }}/models/manifests
+          key: ollama-manifests-${{ runner.os }}-v1
+
+      - name: Download models if needed
         run: |
-          ollama list | grep "mistral:7b" || ollama pull mistral:7b
-          ollama list | grep "qwen3:8b" || ollama pull qwen3:8b
+          for model in mistral:7b qwen3:8b; do
+            ollama list | grep "$model" || ollama pull "$model"
+          done
 
       - uses: gradle/actions/setup-gradle@v5
-      - name: Run Embabel Holiday example
-        run: ./gradlew run.embabel.Holiday
-        timeout-minutes: 60
-      - name: Run Embabel Structured example
-        run: ./gradlew run.embabel.Structured
-        timeout-minutes: 60
-      - name: Run Embabel Rated example
-        run: ./gradlew run.embabel.Rated
+      - name: Run Embabel examples
+        run: ./gradlew run.embabel.All
         timeout-minutes: 60
