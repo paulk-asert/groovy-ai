@@ -74,7 +74,7 @@ jobs:
       - name: Check models after load
         env:
           OLLAMA_HOME: ${{ env.OLLAMA_HOME }}
-        run: find ${{ env.OLLAMA_HOME }}/models -type dir -print
+        run: find ${{ env.OLLAMA_HOME }}/models -type d
 
       - uses: gradle/actions/setup-gradle@v5
       - name: Run LangChain4j examples
