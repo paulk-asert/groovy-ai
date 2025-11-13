@@ -51,53 +51,51 @@ jobs:
           echo "OLLAMA_HOME=$OLLAMA_HOME" >> "$GITHUB_ENV"
 
       - uses: ai-action/setup-ollama@v1
-        env:
-          OLLAMA_HOME: ${{ env.OLLAMA_HOME }}
 
       - name: Cache Ollama blobs0123
         uses: actions/cache@v4
         with:
           path: |
-            ~/.ollama/models/blobs/sha256-0*
-            ~/.ollama/models/blobs/sha256-1*
-            ~/.ollama/models/blobs/sha256-2*
-            ~/.ollama/models/blobs/sha256-3*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-0*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-1*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-2*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-3*
           key: ollama-blobs0123-${{ runner.os }}-v1
 
       - name: Cache Ollama blobs4567
         uses: actions/cache@v4
         with:
           path: |
-            ~/.ollama/models/blobs/sha256-4*
-            ~/.ollama/models/blobs/sha256-5*
-            ~/.ollama/models/blobs/sha256-6*
-            ~/.ollama/models/blobs/sha256-7*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-4*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-5*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-6*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-7*
           key: ollama-blobs4567-${{ runner.os }}-v1
 
-      - name: Cache Ollama blobs89ab
+      - name: Cache Ollama blobs89AB
         uses: actions/cache@v4
         with:
           path: |
-            ~/.ollama/models/blobs/sha256-8*
-            ~/.ollama/models/blobs/sha256-9*
-            ~/.ollama/models/blobs/sha256-a*
-            ~/.ollama/models/blobs/sha256-b*
-          key: ollama-blobs89ab-${{ runner.os }}-v1
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-8*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-9*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-a*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-b*
+          key: ollama-blobs89AB-${{ runner.os }}-v1
 
-      - name: Cache Ollama blobscdef
+      - name: Cache Ollama blobsCDEF
         uses: actions/cache@v4
         with:
           path: |
-            ~/.ollama/models/blobs/sha256-c*
-            ~/.ollama/models/blobs/sha256-d*
-            ~/.ollama/models/blobs/sha256-e*
-            ~/.ollama/models/blobs/sha256-f*
-          key: ollama-blobscdef-${{ runner.os }}-v1
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-c*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-d*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-e*
+            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-f*
+          key: ollama-blobsCDEF-${{ runner.os }}-v1
 
       - name: Cache Ollama manifests
         uses: actions/cache@v4
         with:
-          path: ~/.ollama/models/manifests
+          path: ${{ env.OLLAMA_HOME }}/models/manifests
           key: ollama-manifests-${{ runner.os }}-v1
 
       - name: Download models if needed
