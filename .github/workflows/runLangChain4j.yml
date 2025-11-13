@@ -45,36 +45,44 @@ jobs:
 
       - name: Prepare Ollama directories
         run: |
-          mkdir -p "$OLLAMA_HOME/models"
+          mkdir -p "$OLLAMA_HOME/models/blobs"
+          mkdir -p "$OLLAMA_HOME/models/manifests"
           echo "OLLAMA_HOME=$OLLAMA_HOME" >> "$GITHUB_ENV"
-
-      - name: Cache Mistral 7B
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.OLLAMA_HOME }}/models/manifests/registry.ollama.ai/library/mistral
-          key: ollama-mistral-${{ runner.os }}-v1
-
-      - name: Cache Qwen3 8B
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.OLLAMA_HOME }}/models/manifests/registry.ollama.ai/library/qwen3
-          key: ollama-qwen3-${{ runner.os }}-v1
 
       - uses: ai-action/setup-ollama@v1
         env:
           OLLAMA_HOME: ${{ env.OLLAMA_HOME }}
 
-      - name: Load models (if not cached)
-        env:
-          OLLAMA_HOME: ${{ env.OLLAMA_HOME }}
-        run: |
-          ollama list | grep "mistral:7b" || ollama pull mistral:7b
-          ollama list | grep "qwen3:8b" || ollama pull qwen3:8b
+      - name: Cache manifests
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.OLLAMA_HOME }}/models/manifests
+          key: ollama-manifests-${{ runner.os }}-v1
+          restore-keys: |
+            ollama-manifests-${{ runner.os }}-
 
-      - name: Check models after load
-        env:
-          OLLAMA_HOME: ${{ env.OLLAMA_HOME }}
-        run: find ${{ env.OLLAMA_HOME }}/models -type d
+      - name: Restore cached blobs
+        run: |
+          for key in $(gh cache list --limit 100 --json key --jq '.[].key'); do
+            gh cache restore --key "$key" "$OLLAMA_HOME/models/blobs/"
+          done
+
+      - name: Ensure required models are present
+        run: |
+          for model in mistral:7b qwen3:8b; do
+            ollama list | grep "$model" || ollama pull "$model"
+          done
+
+      - name: Caching blob files
+        shell: bash
+        run: |
+          for blob in $OLLAMA_HOME/models/blobs/sha256-*; do
+            # strip path -> cache key friendly name
+            key="ollama-${{ runner.os }}-$(basename "$blob")"
+            echo "Attempting cache for: $key"
+            gh cache list --limit 1 --key "$key" || \
+              gh cache save "$blob" --key "$key"
+          done
 
       - uses: gradle/actions/setup-gradle@v5
       - name: Run LangChain4j examples
