@@ -48,18 +48,17 @@ jobs:
           mkdir -p "$OLLAMA_HOME/models"
           echo "OLLAMA_HOME=$OLLAMA_HOME" >> "$GITHUB_ENV"
 
-      - name: Check Ollama directories
-        run: |
-          echo "OLLAMA_HOME=$OLLAMA_HOME"
-          ls -R $OLLAMA_HOME || echo "OLLAMA_HOME missing"
-
-      - name: Cache Ollama models
+      - name: Cache Mistral 7B
         uses: actions/cache@v4
         with:
-          path: ${{ env.OLLAMA_HOME }}/models
-          key: ollama-models-${{ runner.os }}-v1
-          restore-keys: |
-            ollama-models-${{ runner.os }}-
+          path: ${{ env.OLLAMA_HOME }}/models/library/mistral:7b
+          key: ollama-mistral-${{ runner.os }}-v1
+
+      - name: Cache Qwen3 8B
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.OLLAMA_HOME }}/models/library/qwen3:8b
+          key: ollama-qwen3-${{ runner.os }}-v1
 
       - uses: ai-action/setup-ollama@v1
         env:
@@ -71,11 +70,6 @@ jobs:
         run: |
           ollama list | grep "mistral:7b" || ollama pull mistral:7b
           ollama list | grep "qwen3:8b" || ollama pull qwen3:8b
-
-      - name: Verify models after pull
-        run: |
-          echo "After pull, OLLAMA_HOME contains:"
-          du -h --max-depth=2 $OLLAMA_HOME
 
       - uses: gradle/actions/setup-gradle@v5
       - name: Run LangChain4j examples
