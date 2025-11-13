@@ -48,6 +48,11 @@ jobs:
           mkdir -p "$OLLAMA_HOME/models"
           echo "OLLAMA_HOME=$OLLAMA_HOME" >> "$GITHUB_ENV"
 
+      - name: Check Ollama directories
+        run: |
+          echo "OLLAMA_HOME=$OLLAMA_HOME"
+          ls -R $OLLAMA_HOME || echo "OLLAMA_HOME missing"
+
       - name: Cache Ollama models
         uses: actions/cache@v4
         with:
@@ -61,9 +66,16 @@ jobs:
           OLLAMA_HOME: ${{ env.OLLAMA_HOME }}
 
       - name: Load models (if not cached)
+        env:
+          OLLAMA_HOME: ${{ env.OLLAMA_HOME }}
         run: |
           ollama list | grep "mistral:7b" || ollama pull mistral:7b
           ollama list | grep "qwen3:8b" || ollama pull qwen3:8b
+
+      - name: Verify models after pull
+        run: |
+          echo "After pull, OLLAMA_HOME contains:"
+          du -h --max-depth=2 $OLLAMA_HOME
 
       - uses: gradle/actions/setup-gradle@v5
       - name: Run LangChain4j examples
