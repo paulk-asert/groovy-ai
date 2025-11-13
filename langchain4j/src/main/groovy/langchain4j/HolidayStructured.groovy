@@ -40,10 +40,15 @@ var bot = AiServices.builder(HolidayBot)
     .chatMemory(chatMemory)
     .build()
 
-var prompt = 'What are 4 interesting things to do for a long weekend vacation in Caloundra?'
+var prompt = '''
+What are 4 interesting things to do for a long weekend vacation in Caloundra?
+Provide location, and suggested non-overlapping day and time for each activity.
+'''
 var response = bot.extractActivitiesFrom(prompt)
 
-var prompt2 = 'If I had half a day and can only go to one, which would you recommend?'
+var prompt2 = '''
+If my only spare time is Sunday morning, and I can only go to one activity, which would you recommend?
+'''
 var response2 = bot.extractActivitiesFrom(prompt2)
 
 println """
@@ -56,13 +61,11 @@ ${response2.join('\n')}
 
 /*
 Four things:
-Activity(Visit Kings Beach, Caloundra, Queensland, Australia, null, Full day or half-day, depending on your preference and activities chosen at the beach such as swimming, surfing, or sunbathing.)
-Activity(Explore the Bulcock Beach Markets, Bulcock Street, Caloundra, Queensland, Australia, null, Saturday mornings from 8 am to 1 pm for shopping local produce, arts and crafts, food vendors, and live music.)
-Activity(Hike the Glass House Mountains, Glass House Mountains National Park, Beerburrum, Queensland, Australia, null, A full day trip to explore the 12 volcanic plugs and hike various trails with spectacular views.)
-Activity(Relax at the Spa on Kings, 59 Bulcock St, Caloundra, Queensland, Australia, null, Spend a relaxing afternoon at this day spa offering massages, facials, and various beauty treatments.)
+Activity(Visit Australia Zoo, Beerwah, Queensland (Approx. 30 minutes drive from Caloundra), Day 1 - Friday, 9:00 AM - 5:00 PM)
+Activity(Explore Kings Beach and the Coastal Walk, Caloundra, Queensland, Day 2 - Saturday, 8:00 AM - Afternoon)
+Activity(Relax at Bulcock Beach Market, Bulcock Street, Caloundra, Day 3 - Sunday, 6:00 AM - 1:00 PM)
+Activity(Explore the Glass House Mountains, Glass House Mountains, Queensland (Approx. 45 minutes drive from Caloundra), Day 4 - Monday, 9:00 AM - 3:00 PM)
 
 Best thing:
-Activity(Visit Kings Beach, Caloundra, Queensland, Australia, null, If you only have half a day and want to enjoy the beach, Kings Beach is the best option for swimming, surfing, or sunbathing.)
-Activity(Bulcock Beach Markets, Bulcock Street, Caloundra, Queensland, Australia, null, If you're interested in shopping local produce, arts and crafts, food vendors, and live music, the Bulcock Beach Markets would be a great choice. However, it is only open on Saturday mornings.)
-Activity(Relax at the Spa on Kings, 59 Bulcock St, Caloundra, Queensland, Australia, null, If you're looking to relax and indulge in a spa day, The Spa on Kings offers massages, facials, and various beauty treatments. A half-day trip would be sufficient for a rejuvenating experience.)
+Activity(Relax at Bulcock Beach Market, Bulcock Street, Caloundra, Sunday, 6:00 AM - 1:00 PM)
 */
