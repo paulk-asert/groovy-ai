@@ -25,7 +25,7 @@ void main() {
     try(var context = SpringApplication.run(Holiday)) {
         var chatClient = context.getBean(ChatClient.Builder).build()
         var response = chatClient
-                .prompt("What are some interesting things to do while I am on vacation in Caloundra?")
+                .prompt("What are some interesting things to do while over a long weekend in Caloundra?")
                 .call()
                 .entity(Itinerary)
         println "Response:\n" + response.display()
