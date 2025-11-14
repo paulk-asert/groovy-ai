@@ -23,14 +23,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 void main() {
     try(var context = SpringApplication.run(Holiday)) {
         var chatClient = context.getBean(ChatClient.Builder).build()
-        var response = chatClient
+        println chatClient
                 .prompt("What are four interesting things to do while I am on vacation in Caloundra?")
                 .call()
-        println "Response:\n" + response.content()
+                .content()
     }
 }
 /*
-Response:
  1. Visit the beautiful beaches: Caloundra is known for its stunning beaches, with some of the most popular ones being Kings Beach, Shelly Beach, and Moffat Beach. These beaches offer a variety of activities such as swimming, surfing, fishing, and picnicking.
 
 2. Explore the Underwater World Sea Life: This is an aquarium located at the Caloundra Road, Caloundra. It's home to thousands of marine animals including sharks, turtles, seahorses, and stingrays. You can also enjoy interactive experiences like feeding the seals or diving with sharks.
