@@ -29,7 +29,7 @@ void main() {
         println context.getBean(OperationContext)
             .ai()
             .withDefaultLlm()
-            .createObject('What are four interesting things to do while I am on vacation in Caloundra?', Itinerary)
+            .createObject('What are some interesting things to do while I am on vacation in Caloundra?', Itinerary)
             .display()
     }
 }
