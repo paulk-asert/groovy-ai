@@ -37,7 +37,7 @@ class WeekendTool {
 class WeatherTool {
     static Integer fakeDay = 0
 
-    @Tool(description = 'The expected domain.Weather including weather forecast, min and max temperature in Celsius for a given location and LocalDate')
+    @Tool(description = 'The expected weather including forecast, min and max temperature in Celsius for a given location and LocalDate')
     Weather getWeather(String location, LocalDate date) {
         var fakeWeather = [0: [Caloundra: new Weather('Sunny and Hot', 30, 37)],
                            1: [Caloundra: new Weather('Raining', 5, 15)]]
