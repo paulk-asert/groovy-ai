@@ -28,31 +28,16 @@ void main() {
         println context.getBean(OperationContext)
             .ai()
             .withDefaultLlm()
-            .generateText('What are some interesting things to do while I am on vacation in Caloundra?')
+            .generateText('What are four interesting things to do while I am on vacation in Caloundra?')
     }
 }
 
 /*
-Caloundra, located on the Sunshine Coast in Queensland, Australia, offers a variety of activities for tourists. Here are some suggestions for an enjoyable vacation:
+ 1. Visit the Bulcock Beach: This is a popular beach in Caloundra, perfect for swimming, sunbathing, and enjoying various water sports. There's also a picturesque esplanade with cafes, shops, and art galleries nearby.
 
-1. Visit the beautiful beaches: Caloundra has several beautiful beaches, such as Kings Beach, Shelly Beach, and Moffat Beach, where you can swim, sunbathe, or surf.
+2. Explore the Kings Beach Park: Located next to Kings Beach, this park offers a variety of facilities including picnic areas, BBQ facilities, playgrounds, and beautiful views of the ocean. It's a great spot for families with children.
 
-2. Explore the Coastal Walk: Take a leisurely stroll along the Coastal Walk, which offers stunning views of the ocean, coastal cliffs, and nearby islands.
+3. Visit the Australian Zoo: Made famous by Steve Irwin, the Australian Zoo is just a short drive from Caloundra. Here you can see a wide variety of Australian wildlife, including kangaroos, koalas, and crocodiles.
 
-3. Visit the Underwater World SEA LIFE Mooloolaba Aquarium: Discover an amazing underwater world filled with sea turtles, sharks, seahorses, and more.
-
-4. Spend a day at Australia Zoo: Home to over 1,200 animals and the late Steve Irwin's family, this iconic zoo offers up-close encounters with some of Australia's most famous wildlife.
-
-5. Visit the Glastonbury Estate Winery: Taste locally produced wines at this picturesque winery, which also features a restaurant and beautiful gardens.
-
-6. Explore the Bulcock Beach Esplanade: This vibrant area offers a variety of shops, cafes, and restaurants, as well as regular markets on weekends.
-
-7. Take a day trip to Fraser Island: Known for its stunning beaches, crystal-clear waters, and rainforests, Fraser Island is just a short boat ride away from Caloundra.
-
-8. Enjoy the Pumicestone Passage: Go boating, kayaking, or fishing in this beautiful waterway that separates Bribie Island from the mainland.
-
-9. Visit the Powerboat Park: Watch high-speed powerboats compete in various races at this popular watersports venue.
-
-10. Relax at a spa or wellness center: Pamper yourself with a massage, beauty treatment, or yoga class at one of Caloundra's many wellness centers.
-
+4. Take a day trip to the Glass House Mountains: These are a series of 13 steep sided, volcanic plugs that dominate the local landscape. You can hike some of the mountains, or simply enjoy their unique beauty from various lookout points. Some popular ones include Mount Ngungun and Mount Beerwah.
 */

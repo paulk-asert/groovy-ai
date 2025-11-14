@@ -25,11 +25,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 @SpringBootApplication
 @EnableAgents(loggingTheme = LoggingThemes.STAR_WARS)
 void main() {
-    try(var context = SpringApplication.run(Structured)) {
+    try(var context = SpringApplication.run(HolidayStructured)) {
         println context.getBean(OperationContext)
             .ai()
             .withDefaultLlm()
-            .createObject('What are some interesting things to do while I am on vacation in Caloundra?', Itinerary)
+            .createObject('What are four interesting things to do while I am on vacation in Caloundra?', Itinerary)
             .display()
     }
 }

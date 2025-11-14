@@ -23,7 +23,6 @@ import jakarta.enterprise.context.ApplicationScoped
 @RegisterAiService
 @ApplicationScoped
 interface HolidayAssistant {
-
     @SystemMessage("You are knowledgeable about places tourists might like to visit.")
     String ask(@UserMessage String question)
 }

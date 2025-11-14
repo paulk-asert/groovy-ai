@@ -39,7 +39,12 @@ var assistant = AiServices.builder(HolidayAssistant)
 var prompt = 'What are 4 interesting things to do while I am on vacation in Caloundra?'
 var response = assistant.chat(prompt)
 
-var prompt2 = "It might rain one of the mornings, can you give me a single best alternative if it rains?"
+var prompt2 = '''
+It might rain at some point on the weekend, so can you give me
+a very short description of a single backup alternative if it rains?
+Make it different to your previous suggestions since I am not
+sure which ones I will have already seen by the time it rains.
+'''
 var response2 = assistant.chat(prompt2)
 
 println """
@@ -52,15 +57,14 @@ $response2
 
 /*
 Four things:
- 1. Visit the Coastal Walk: The Caloundra Coastal Walk offers stunning views of the coastline, beaches, and the Pumicestone Passage. It's a great way to enjoy the outdoors and take in the beautiful scenery.
+ 1. Visit the beautiful beaches: Caloundra is known for its stunning beaches, with Mooloolaba Beach and Kings Beach being particularly popular. You can spend your days swimming, sunbathing, or even surfing.
 
-2. Explore the Bulcock Beach: This is one of the most popular beaches in Caloundra. You can swim, sunbathe, or just relax on the beach. Nearby, you'll find shops, cafes, and restaurants for a post-beach refreshment.
+2. Explore the Underwater World SEA LIFE Sunshine Coast: This aquarium offers an amazing opportunity to get up close and personal with a variety of marine life, including sharks, stingrays, turtles, and seals.
 
-3. Visit the Australian Zoo: Made famous by Steve Irwin, the zoo is home to a wide variety of Australian wildlife. It's a great place for both children and adults to learn about local animals and conservation efforts.
+3. Visit the Bulcock Beach Esplanade: This is a great spot for shopping, dining, and people-watching. The esplanade offers a range of boutiques, cafes, and restaurants. Don't forget to check out the local markets that are held regularly.
 
-4. Take a day trip to the Glass House Mountains: Just a short drive from Caloundra, these stunning volcanic peaks offer hiking trails, scenic lookouts, and a unique geographical feature that's distinctive to the region.
+4. Take a day trip to Australia Zoo: Made famous by the Crocodile Hunter, Steve Irwin, this zoo is a must-visit for animal lovers. It's home to a wide variety of Australian wildlife and offers interactive experiences and shows throughout the day.
 
 If it rains:
- If it rains during your visit to Caloundra and you're looking for an indoor activity as an alternative, I recommend visiting the SEA LIFE Sunshine Coast Oceanarium in Mooloolaba. It's one of the largest aquariums on the east coast of Australia and offers a wide variety of marine life to see, including sharks, turtles, seahorses, and stingrays. The exhibits are designed with both children and adults in mind, making it a fun experience for everyone. Plus, it's indoors, so you can enjoy the aquatic world without getting wet!
-
-*/
+ If it rains, an indoor activity that you might enjoy is visiting the Queensland Air Museum in Caboolture, which is a short drive from Caloundra. The museum houses one of Australia's largest collections of aircraft and aviation artifacts, including military planes, helicopters, and memorabilia. It offers a fascinating look at the history of Australian aviation and is suitable for all ages.
+ */

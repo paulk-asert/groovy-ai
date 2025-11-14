@@ -62,7 +62,7 @@ class ItineraryAgent {
 void main() {
     try(var context = SpringApplication.run(Rated)) {
         println context.getBean(Autonomy)
-            .chooseAndRunAgent('Itinerary for a long-weekend holiday in Caloundra', ProcessOptions.DEFAULT).output
+            .chooseAndRunAgent('Itinerary for a relaxing long-weekend holiday in Caloundra', ProcessOptions.DEFAULT).output
     }
 }
 /*

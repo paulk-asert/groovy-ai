@@ -39,7 +39,7 @@ def runAll = tasks.register("run.${project.name}.All") {
 // register run tasks for our Groovy scripts (run.pkg.ScriptName)
 sourceSets.main.allSource.filter{ it.name.endsWith('.groovy') }.each { source ->
     var path = source.absolutePath
-    if (path.startsWith('domain') || path.startsWith('util')) return
+    if (path.contains('domain') || path.contains('util')) return
     var name = "${project.name}.${source.name - '.groovy'}"
     var subtask = tasks.register("run.$name", JavaExec) {
         dependsOn compileGroovy
