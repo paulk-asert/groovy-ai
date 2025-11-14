@@ -21,6 +21,7 @@ on:
     paths:
       - 'build.gradle'
       - 'langchain4j/build.gradle'
+      - 'common/src/main/**'
       - 'langchain4j/src/main/**'
       - '.github/workflows/runLangChain4j.yml'
 

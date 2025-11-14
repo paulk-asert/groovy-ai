@@ -31,9 +31,13 @@ permissions:
 jobs:
   execute:
     runs-on: ubuntu-latest
+    env:
+      OLLAMA_HOME: /home/runner/.ollama
+      GH_TOKEN: ${{ github.token }}
 
     steps:
       - uses: actions/checkout@v5
+
       - name: Set up JDK
         uses: actions/setup-java@v5
         with:
