@@ -41,8 +41,9 @@ var bot = AiServices.builder(HolidayBot)
     .build()
 
 var prompt = '''
-What are 4 interesting things to do for a long weekend vacation in Caloundra?
-Provide location, and suggested non-overlapping day and time for each activity.
+What are 4 interesting things to do for a weekend away in Caloundra?
+Return holiday activity suggestions as structured JSON matching Itinerary.
+Give a description, location, day of weekend, and suggested time of day for each of the four activities.
 '''
 var response = bot.extractActivitiesFrom(prompt)
 
@@ -61,11 +62,11 @@ ${response2.join('\n')}
 
 /*
 Four things:
-Activity(Visit Australia Zoo, Beerwah, Queensland (Approx. 30 minutes drive from Caloundra), Day 1 - Friday, 9:00 AM - 5:00 PM)
-Activity(Explore Kings Beach and the Coastal Walk, Caloundra, Queensland, Day 2 - Saturday, 8:00 AM - Afternoon)
-Activity(Relax at Bulcock Beach Market, Bulcock Street, Caloundra, Day 3 - Sunday, 6:00 AM - 1:00 PM)
-Activity(Explore the Glass House Mountains, Glass House Mountains, Queensland (Approx. 45 minutes drive from Caloundra), Day 4 - Monday, 9:00 AM - 3:00 PM)
+Activity(Visit Kings Beach, Kings Beach, Caloundra, Saturday, Morning/Afternoon)
+Activity(Explore the Coastal Walk from Bulcock Beach to Shelly Beach, Bulcock Beach to Shelly Beach, Caloundra, Saturday, Early Afternoon/Late Afternoon)
+Activity(Relax at the Day Spa on Golden Beach, Golden Beach, Caloundra, Sunday, Morning/Afternoon)
+Activity(Enjoy Sunset Dinner Cruise, Pelican Waters or Mooloolaba, Caloundra, Sunday, Late Afternoon/Evening)
 
 Best thing:
-Activity(Relax at Bulcock Beach Market, Bulcock Street, Caloundra, Sunday, 6:00 AM - 1:00 PM)
+Activity(Relax at the Day Spa on Golden Beach, Golden Beach, Caloundra, Sunday, Morning)
 */
