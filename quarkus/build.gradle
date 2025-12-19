@@ -16,17 +16,20 @@
 
 plugins {
     id 'groovy-setup'
-    id 'io.quarkus' version '3.29.2'
+    id 'io.quarkus' version '3.30.4'
 }
 
-var quarkusVersion = '3.29.2'
+var quarkusVersion = '3.30.4'
 
 dependencies {
     implementation project(':common')
     implementation platform("io.quarkus:quarkus-bom:$quarkusVersion")
     implementation 'io.quarkus:quarkus-arc'
-    implementation 'io.quarkiverse.langchain4j:quarkus-langchain4j-ollama:1.4.0.CR2'
-    implementation 'io.quarkus:quarkus-test-common:3.29.2'
+    implementation 'io.quarkiverse.langchain4j:quarkus-langchain4j-ollama:1.4.2'
+    implementation "io.quarkus:quarkus-test-common:$quarkusVersion"
+    // explicit netty not normally needed but added here to avoid JDK25 warning from 4.1.130
+    runtimeOnly 'io.netty:netty-common:4.2.9.Final'
+    runtimeOnly 'io.netty:netty-buffer:4.2.9.Final'
 }
 
 tasks.named('quarkusRun') {
