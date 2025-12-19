@@ -33,7 +33,7 @@ java {
 }
 
 def runAll = tasks.register("run.${project.name}.All") {
-    group 'Application'
+    group = 'Application'
 }
 
 // register run tasks for our Groovy scripts (run.pkg.ScriptName)
