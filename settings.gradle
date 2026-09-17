@@ -14,4 +14,4 @@
  * limitations under the License.
  */
 
-include('common', 'ollama4j', 'langchain4j', 'springai', 'embabel', 'micronaut', 'quarkus')
+include('common', 'ollama4j', 'langchain4j', 'springai', 'embabel', 'micronaut'/*, 'quarkus'*/)

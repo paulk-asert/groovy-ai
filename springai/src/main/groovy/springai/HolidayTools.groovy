@@ -55,7 +55,7 @@ Factor in expected weather when making recommendations. Do not hallucinate weath
         var chatClient = context.getBean(ChatClient.Builder).build()
         var weekend = context.getBean(WeekendTool)
         var weather = context.getBean(WeatherTool)
-        var options = OllamaChatOptions.builder().model('qwen3:8b').build()
+        var options = OllamaChatOptions.builder().model('qwen3:8b')
         println chatClient
                 .prompt(prompt)
                 .options(options)

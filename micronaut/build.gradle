@@ -16,7 +16,8 @@
 
 plugins {
     id 'groovy-setup'
-    id 'io.micronaut.application' version '4.6.1'
+    id 'io.micronaut.application' version '5.0.2'
+    id 'org.graalvm.buildtools.native' version '1.1.13' apply false
 }
 
 dependencies {
@@ -26,13 +27,14 @@ dependencies {
     implementation "org.apache.groovy:groovy-datetime:$groovyVersion"
     implementation "org.apache.groovy:groovy-json:$groovyVersion"
     runtimeOnly "org.slf4j:slf4j-simple:$slf4jVersion"
-    implementation platform('io.micronaut.langchain4j:micronaut-langchain4j-bom:1.4.0')
+    implementation platform('io.micronaut.langchain4j:micronaut-langchain4j-bom:2.2.0')
     implementation 'io.micronaut.langchain4j:micronaut-langchain4j-core'
     implementation 'io.micronaut.langchain4j:micronaut-langchain4j-ollama'
+    runtimeOnly 'dev.langchain4j:langchain4j-http-client-jdk'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
 }
 
 micronaut {
-    version '4.10.1'
+    version '5.1.5'
     runtime 'none'  // no embedded server
 }

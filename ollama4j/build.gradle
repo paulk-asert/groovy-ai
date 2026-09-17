@@ -18,10 +18,10 @@ plugins {
     id 'groovy-setup'
 }
 
-var ollama4jVersion = '1.1.4'
+var ollama4jVersion = '1.1.7'
 
 dependencies {
-    project(':common')
+    implementation project(':common')
     implementation "io.github.ollama4j:ollama4j:$ollama4jVersion"
     implementation "org.slf4j:slf4j-simple:$slf4jVersion"
 }

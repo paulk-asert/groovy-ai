@@ -38,6 +38,8 @@ Some examples use the larger but slightly better `qwen3:8b` model.
 You can change LLMs or models in the `application.properties` file (for Spring AI, Embabel, and Micronaut)
 or via the hard-coded values in the other examples.
 
+The build requires Gradle to be run using JDK25 or later.
+
 After cloning the repo, available tasks can be seen using:
 ```
 ./gradlew tasks --group=application
