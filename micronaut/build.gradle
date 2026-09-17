@@ -22,7 +22,7 @@ plugins {
 
 dependencies {
     implementation project(':common')
-    implementation 'io.micronaut:micronaut-inject-groovy'
+    compileOnly 'io.micronaut:micronaut-inject-groovy'
     implementation 'io.micronaut:micronaut-runtime'
     implementation "org.apache.groovy:groovy-datetime:$groovyVersion"
     implementation "org.apache.groovy:groovy-json:$groovyVersion"
@@ -37,4 +37,29 @@ dependencies {
 micronaut {
     version '5.1.5'
     runtime 'none'  // no embedded server
+}
+
+var nativeScripts = ['Holiday', 'Structured', 'Tools']
+var nativeRunTasks = nativeScripts.collect { 'run.micronaut.' + it }
+
+graalvmNative {
+    toolchainDetection = false
+    agent {
+        // record reflection metadata when running the scripts with -Pagent
+        tasksToInstrumentPredicate = { t -> t.name in nativeRunTasks }
+        metadataCopy {
+            inputTaskNames.addAll(nativeRunTasks)
+            outputDirectories.add('src/main/resources/META-INF/native-image/groovy-ai/micronaut')
+            mergeWithExisting = true
+        }
+    }
+    binaries {
+        nativeScripts.each { script ->
+            create(script.toLowerCase()) {
+                imageName = script.toLowerCase()
+                mainClass = "micronaut.$script"
+                classpath(tasks.named('jar'), configurations.named('nativeImageClasspath'))
+            }
+        }
+    }
 }

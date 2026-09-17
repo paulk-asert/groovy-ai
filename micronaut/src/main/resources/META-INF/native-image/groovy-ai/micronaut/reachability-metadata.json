@@ -1,0 +1,5157 @@
+{
+  "reflection": [
+    {
+      "type": "apple.security.AppleProvider",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.fasterxml.jackson.databind.PropertyNamingStrategies$SnakeCaseStrategy",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.fasterxml.jackson.databind.deser.BeanDeserializerModifier[]"
+    },
+    {
+      "type": "com.fasterxml.jackson.databind.deser.Deserializers[]"
+    },
+    {
+      "type": "com.fasterxml.jackson.databind.deser.KeyDeserializers[]"
+    },
+    {
+      "type": "com.fasterxml.jackson.databind.deser.ValueInstantiators[]"
+    },
+    {
+      "type": "com.fasterxml.jackson.databind.ext.Java7SupportImpl",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.fasterxml.jackson.databind.ser.BeanSerializerModifier[]"
+    },
+    {
+      "type": "com.fasterxml.jackson.databind.ser.Serializers[]"
+    },
+    {
+      "type": "com.fasterxml.jackson.datatype.jsr310.JavaTimeModule"
+    },
+    {
+      "type": "com.sun.crypto.provider.AESCipher$General",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.ARCFOURCipher",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.ChaCha20Cipher$ChaCha20Poly1305",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.DESCipher",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.DESedeCipher",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.DHParameters",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.GaloisCounterMode$AESGCM",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.sun.crypto.provider.TlsMasterSecretGenerator",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "dev.langchain4j.http.client.HttpClientBuilder"
+    },
+    {
+      "type": "dev.langchain4j.http.client.jdk.JdkHttpClientBuilderFactory"
+    },
+    {
+      "type": "dev.langchain4j.model.chat.ChatModel"
+    },
+    {
+      "type": "dev.langchain4j.model.chat.request.ChatRequestParameters"
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.FormatSerializer",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.Function",
+      "methods": [
+        {
+          "name": "getDescription",
+          "parameterTypes": []
+        },
+        {
+          "name": "getName",
+          "parameterTypes": []
+        },
+        {
+          "name": "getParameters",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.FunctionCall",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        },
+        {
+          "name": "getArguments",
+          "parameterTypes": []
+        },
+        {
+          "name": "getIndex",
+          "parameterTypes": []
+        },
+        {
+          "name": "getName",
+          "parameterTypes": []
+        },
+        {
+          "name": "setArguments",
+          "parameterTypes": [
+            "java.util.Map"
+          ]
+        },
+        {
+          "name": "setIndex",
+          "parameterTypes": [
+            "java.lang.Integer"
+          ]
+        },
+        {
+          "name": "setName",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.Message",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        },
+        {
+          "name": "getAdditionalFields",
+          "parameterTypes": []
+        },
+        {
+          "name": "getContent",
+          "parameterTypes": []
+        },
+        {
+          "name": "getImages",
+          "parameterTypes": []
+        },
+        {
+          "name": "getRole",
+          "parameterTypes": []
+        },
+        {
+          "name": "getThinking",
+          "parameterTypes": []
+        },
+        {
+          "name": "getToolCalls",
+          "parameterTypes": []
+        },
+        {
+          "name": "setContent",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setRole",
+          "parameterTypes": [
+            "dev.langchain4j.model.ollama.Role"
+          ]
+        },
+        {
+          "name": "setThinking",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setToolCalls",
+          "parameterTypes": [
+            "java.util.List"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.OllamaBaseChatModel"
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.OllamaBaseChatModel$Builder"
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.OllamaBaseChatModel$BuilderBeanInfo"
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.OllamaBaseChatModel$BuilderCustomizer"
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.OllamaBaseChatModelBeanInfo"
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.OllamaBaseChatModelCustomizer"
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.OllamaChatModel",
+      "methods": [
+        {
+          "name": "builder",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.OllamaChatModel$OllamaChatModelBuilder",
+      "methods": [
+        {
+          "name": "baseUrl",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "build",
+          "parameterTypes": []
+        },
+        {
+          "name": "modelName",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "timeout",
+          "parameterTypes": [
+            "java.time.Duration"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.OllamaChatModel$OllamaChatModelBuilderBeanInfo"
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.OllamaChatModel$OllamaChatModelBuilderCustomizer"
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.OllamaChatModelBeanInfo"
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.OllamaChatModelCustomizer"
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.OllamaChatRequest",
+      "methods": [
+        {
+          "name": "getFormat",
+          "parameterTypes": []
+        },
+        {
+          "name": "getKeepAlive",
+          "parameterTypes": []
+        },
+        {
+          "name": "getMessages",
+          "parameterTypes": []
+        },
+        {
+          "name": "getModel",
+          "parameterTypes": []
+        },
+        {
+          "name": "getOptions",
+          "parameterTypes": []
+        },
+        {
+          "name": "getStream",
+          "parameterTypes": []
+        },
+        {
+          "name": "getThink",
+          "parameterTypes": []
+        },
+        {
+          "name": "getTools",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.OllamaChatResponse",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        },
+        {
+          "name": "setCreatedAt",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setDone",
+          "parameterTypes": [
+            "java.lang.Boolean"
+          ]
+        },
+        {
+          "name": "setDoneReason",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setEvalCount",
+          "parameterTypes": [
+            "java.lang.Integer"
+          ]
+        },
+        {
+          "name": "setMessage",
+          "parameterTypes": [
+            "dev.langchain4j.model.ollama.Message"
+          ]
+        },
+        {
+          "name": "setModel",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setPromptEvalCount",
+          "parameterTypes": [
+            "java.lang.Integer"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.Options",
+      "methods": [
+        {
+          "name": "getMainGPU",
+          "parameterTypes": []
+        },
+        {
+          "name": "getMinP",
+          "parameterTypes": []
+        },
+        {
+          "name": "getMirostat",
+          "parameterTypes": []
+        },
+        {
+          "name": "getMirostatEta",
+          "parameterTypes": []
+        },
+        {
+          "name": "getMirostatTau",
+          "parameterTypes": []
+        },
+        {
+          "name": "getNumBatch",
+          "parameterTypes": []
+        },
+        {
+          "name": "getNumCtx",
+          "parameterTypes": []
+        },
+        {
+          "name": "getNumGPU",
+          "parameterTypes": []
+        },
+        {
+          "name": "getNumKeep",
+          "parameterTypes": []
+        },
+        {
+          "name": "getNumPredict",
+          "parameterTypes": []
+        },
+        {
+          "name": "getNumThread",
+          "parameterTypes": []
+        },
+        {
+          "name": "getRepeatLastN",
+          "parameterTypes": []
+        },
+        {
+          "name": "getRepeatPenalty",
+          "parameterTypes": []
+        },
+        {
+          "name": "getSeed",
+          "parameterTypes": []
+        },
+        {
+          "name": "getStop",
+          "parameterTypes": []
+        },
+        {
+          "name": "getTemperature",
+          "parameterTypes": []
+        },
+        {
+          "name": "getTopK",
+          "parameterTypes": []
+        },
+        {
+          "name": "getTopP",
+          "parameterTypes": []
+        },
+        {
+          "name": "getTypicalP",
+          "parameterTypes": []
+        },
+        {
+          "name": "getUseMmap",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.Parameters",
+      "methods": [
+        {
+          "name": "getProperties",
+          "parameterTypes": []
+        },
+        {
+          "name": "getRequired",
+          "parameterTypes": []
+        },
+        {
+          "name": "getType",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.Role",
+      "methods": [
+        {
+          "name": "serialize",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.Tool",
+      "methods": [
+        {
+          "name": "getFunction",
+          "parameterTypes": []
+        },
+        {
+          "name": "getType",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "dev.langchain4j.model.ollama.ToolCall",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        },
+        {
+          "name": "getFunction",
+          "parameterTypes": []
+        },
+        {
+          "name": "getId",
+          "parameterTypes": []
+        },
+        {
+          "name": "setFunction",
+          "parameterTypes": [
+            "dev.langchain4j.model.ollama.FunctionCall"
+          ]
+        },
+        {
+          "name": "setId",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "domain.Activity",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.String",
+            "java.lang.String",
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "domain.ActivityBeanInfo"
+    },
+    {
+      "type": "domain.ActivityCustomizer"
+    },
+    {
+      "type": "domain.Itinerary",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.util.List"
+          ]
+        },
+        {
+          "name": "display",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "domain.ItineraryBeanInfo"
+    },
+    {
+      "type": "domain.ItineraryCustomizer"
+    },
+    {
+      "type": "domain.Weather",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.String",
+            "int",
+            "int"
+          ]
+        },
+        {
+          "name": "forecast",
+          "parameterTypes": []
+        },
+        {
+          "name": "maxTemp",
+          "parameterTypes": []
+        },
+        {
+          "name": "minTemp",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "domain.WeatherBeanInfo"
+    },
+    {
+      "type": "domain.WeatherCustomizer"
+    },
+    {
+      "type": "groovy.beans.ListenerList"
+    },
+    {
+      "type": "groovy.io.FileType"
+    },
+    {
+      "type": "groovy.lang.Binding"
+    },
+    {
+      "type": "groovy.lang.BindingBeanInfo"
+    },
+    {
+      "type": "groovy.lang.BindingCustomizer"
+    },
+    {
+      "type": "groovy.lang.Buildable"
+    },
+    {
+      "type": "groovy.lang.Closure"
+    },
+    {
+      "type": "groovy.lang.EmptyRange"
+    },
+    {
+      "type": "groovy.lang.ExpandoMetaClass"
+    },
+    {
+      "type": "groovy.lang.ExpandoMetaClassBeanInfo"
+    },
+    {
+      "type": "groovy.lang.ExpandoMetaClassCustomizer"
+    },
+    {
+      "type": "groovy.lang.GString"
+    },
+    {
+      "type": "groovy.lang.GString$1"
+    },
+    {
+      "type": "groovy.lang.GString$1BeanInfo"
+    },
+    {
+      "type": "groovy.lang.GString$1Customizer"
+    },
+    {
+      "type": "groovy.lang.GStringBeanInfo"
+    },
+    {
+      "type": "groovy.lang.GStringCustomizer"
+    },
+    {
+      "type": "groovy.lang.GroovyObject",
+      "methods": [
+        {
+          "name": "getProperty",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "invokeMethod",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.Object"
+          ]
+        },
+        {
+          "name": "setProperty",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "groovy.lang.GroovyObjectBeanInfo"
+    },
+    {
+      "type": "groovy.lang.GroovyObjectCustomizer"
+    },
+    {
+      "type": "groovy.lang.GroovyObjectSupport"
+    },
+    {
+      "type": "groovy.lang.GroovyObjectSupportBeanInfo"
+    },
+    {
+      "type": "groovy.lang.GroovyObjectSupportCustomizer"
+    },
+    {
+      "type": "groovy.lang.GroovySystem"
+    },
+    {
+      "type": "groovy.lang.IntRange"
+    },
+    {
+      "type": "groovy.lang.ListWithDefault"
+    },
+    {
+      "type": "groovy.lang.MetaClass",
+      "methods": [
+        {
+          "name": "invokeMethod",
+          "parameterTypes": [
+            "java.lang.Class",
+            "java.lang.Object",
+            "java.lang.String",
+            "java.lang.Object[]",
+            "boolean",
+            "boolean"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "groovy.lang.MetaClassImpl"
+    },
+    {
+      "type": "groovy.lang.MetaClassImplBeanInfo"
+    },
+    {
+      "type": "groovy.lang.MetaClassImplCustomizer"
+    },
+    {
+      "type": "groovy.lang.MetaMember"
+    },
+    {
+      "type": "groovy.lang.MetaMethod",
+      "methods": [
+        {
+          "name": "doMethodInvoke",
+          "parameterTypes": [
+            "java.lang.Object",
+            "java.lang.Object[]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "groovy.lang.MetaObjectProtocol",
+      "methods": [
+        {
+          "name": "getProperty",
+          "parameterTypes": [
+            "java.lang.Object",
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "invokeConstructor",
+          "parameterTypes": [
+            "java.lang.Object[]"
+          ]
+        },
+        {
+          "name": "invokeMethod",
+          "parameterTypes": [
+            "java.lang.Object",
+            "java.lang.String",
+            "java.lang.Object[]"
+          ]
+        },
+        {
+          "name": "invokeStaticMethod",
+          "parameterTypes": [
+            "java.lang.Object",
+            "java.lang.String",
+            "java.lang.Object[]"
+          ]
+        },
+        {
+          "name": "setProperty",
+          "parameterTypes": [
+            "java.lang.Object",
+            "java.lang.String",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "groovy.lang.MetaProperty",
+      "methods": [
+        {
+          "name": "getProperty",
+          "parameterTypes": [
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "groovy.lang.MutableMetaClass"
+    },
+    {
+      "type": "groovy.lang.ObjectRange"
+    },
+    {
+      "type": "groovy.lang.Range"
+    },
+    {
+      "type": "groovy.lang.Script",
+      "methods": [
+        {
+          "name": "println",
+          "parameterTypes": [
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "groovy.lang.ScriptBeanInfo"
+    },
+    {
+      "type": "groovy.lang.ScriptCustomizer"
+    },
+    {
+      "type": "groovy.lang.SpreadMap"
+    },
+    {
+      "type": "groovy.lang.Tuple2"
+    },
+    {
+      "type": "groovy.lang.Writable"
+    },
+    {
+      "type": "groovy.lang.groovydoc.Groovydoc"
+    },
+    {
+      "type": "groovy.runtime.metaclass.CustomMetaClassCreationHandle"
+    },
+    {
+      "type": "groovy.runtime.metaclass.dev.langchain4j.model.ollama.OllamaChatModel$OllamaChatModelBuilderMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.dev.langchain4j.model.ollama.OllamaChatModelMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.domain.ActivityMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.domain.ItineraryMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.domain.WeatherMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.groovy.lang.BindingMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.groovy.lang.ExpandoMetaClassMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.groovy.lang.GString$1MetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.groovy.lang.GroovyObjectMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.groovy.lang.GroovyObjectSupportMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.groovy.lang.ScriptMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.io.micronaut.context.ApplicationContextMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.io.micronaut.context.DefaultApplicationContextMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.io.micronaut.langchain4j.tools.ToolRegistryMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.java.lang.ObjectMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.java.time.DayOfWeekMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.java.time.DurationMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.java.time.LocalDateMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.java.time.temporal.TemporalAdjustersMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.java.util.ImmutableCollections$ListNMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.java.util.LinkedHashMapMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.micronaut.AppRunnerMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.micronaut.HolidayAssistant$InterceptedMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.micronaut.HolidayBot$InterceptedMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.micronaut.HolidayMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.micronaut.StructuredMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.micronaut.ToolsMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.org.codehaus.groovy.runtime.GStringImplMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.org.codehaus.groovy.runtime.InvokerHelperMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.util.$WeatherTool$DefinitionMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.util.$WeekendTool$DefinitionMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.util.AiModelFactoryMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.util.WeatherAwareBot$InterceptedMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.util.WeatherToolMetaClass"
+    },
+    {
+      "type": "groovy.runtime.metaclass.util.WeekendToolMetaClass"
+    },
+    {
+      "type": "groovy.util.BufferedIterator"
+    },
+    {
+      "type": "groovy.util.ProxyGenerator",
+      "methods": [
+        {
+          "name": "instantiateAggregate",
+          "parameterTypes": [
+            "java.util.Map",
+            "java.util.List"
+          ]
+        },
+        {
+          "name": "instantiateAggregateFromBaseClass",
+          "parameterTypes": [
+            "java.util.Map",
+            "java.lang.Class"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "groovy.util.function.DoubleComparator"
+    },
+    {
+      "type": "groovy.util.function.FloatComparator"
+    },
+    {
+      "type": "groovy.util.function.FloatUnaryOperator"
+    },
+    {
+      "type": "groovy.util.function.IntComparator"
+    },
+    {
+      "type": "groovy.util.function.LongComparator"
+    },
+    {
+      "type": "groovy.util.regex.BalancedGroup$MatchOptions"
+    },
+    {
+      "type": "io.micronaut.aop.Intercepted"
+    },
+    {
+      "type": "io.micronaut.aop.Introduced"
+    },
+    {
+      "type": "io.micronaut.aop.internal.InterceptorRegistryBean",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.AbstractBeanContextConditional"
+    },
+    {
+      "type": "io.micronaut.context.AbstractBeanContextConditionalBeanInfo"
+    },
+    {
+      "type": "io.micronaut.context.AbstractBeanContextConditionalCustomizer"
+    },
+    {
+      "type": "io.micronaut.context.AbstractInitializableBeanDefinition"
+    },
+    {
+      "type": "io.micronaut.context.AbstractInitializableBeanDefinitionAndReference"
+    },
+    {
+      "type": "io.micronaut.context.AbstractInitializableBeanDefinitionAndReferenceBeanInfo"
+    },
+    {
+      "type": "io.micronaut.context.AbstractInitializableBeanDefinitionAndReferenceCustomizer"
+    },
+    {
+      "type": "io.micronaut.context.AbstractInitializableBeanDefinitionBeanInfo"
+    },
+    {
+      "type": "io.micronaut.context.AbstractInitializableBeanDefinitionCustomizer"
+    },
+    {
+      "type": "io.micronaut.context.ApplicationContext",
+      "methods": [
+        {
+          "name": "run",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.ApplicationContextBeanInfo"
+    },
+    {
+      "type": "io.micronaut.context.ApplicationContextConfiguration"
+    },
+    {
+      "type": "io.micronaut.context.ApplicationContextCustomizer"
+    },
+    {
+      "type": "io.micronaut.context.BeanContext"
+    },
+    {
+      "type": "io.micronaut.context.BeanContextConfigurable"
+    },
+    {
+      "type": "io.micronaut.context.BeanDefinitionRegistry",
+      "methods": [
+        {
+          "name": "getBeanDefinition",
+          "parameterTypes": [
+            "java.lang.Class"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.BeanLocator",
+      "methods": [
+        {
+          "name": "getBean",
+          "parameterTypes": [
+            "java.lang.Class"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.BeanResolutionContext"
+    },
+    {
+      "type": "io.micronaut.context.ConfigurableApplicationContext"
+    },
+    {
+      "type": "io.micronaut.context.ConfigurableBeanContext"
+    },
+    {
+      "type": "io.micronaut.context.DefaultApplicationContext"
+    },
+    {
+      "type": "io.micronaut.context.DefaultApplicationContextBeanInfo"
+    },
+    {
+      "type": "io.micronaut.context.DefaultApplicationContextCustomizer"
+    },
+    {
+      "type": "io.micronaut.context.DefaultBeanContext"
+    },
+    {
+      "type": "io.micronaut.context.DefaultBeanContextBeanInfo"
+    },
+    {
+      "type": "io.micronaut.context.DefaultBeanContextCustomizer"
+    },
+    {
+      "type": "io.micronaut.context.EnvironmentConfigurable"
+    },
+    {
+      "type": "io.micronaut.context.ExecutionHandleLocator"
+    },
+    {
+      "type": "io.micronaut.context.LifeCycle",
+      "methods": [
+        {
+          "name": "close",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.PropertyResolverDelegate"
+    },
+    {
+      "type": "io.micronaut.context.Qualifier"
+    },
+    {
+      "type": "io.micronaut.context.RuntimeBeanDefinition"
+    },
+    {
+      "type": "io.micronaut.context.annotation.Prototype"
+    },
+    {
+      "type": "io.micronaut.context.beans.DefaultBeanDefinitionService$BeanDefinitionProducer"
+    },
+    {
+      "type": "io.micronaut.context.env.ClasspathPropertySourceImporter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.env.ClasspathWildcardPropertySourceImporter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.env.ConfigTreePropertySourceImporter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.env.EnvPropertySourceImporter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.env.Environment"
+    },
+    {
+      "type": "io.micronaut.context.env.FilePropertySourceImporter",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.env.PropertyPlaceholderResolver"
+    },
+    {
+      "type": "io.micronaut.context.env.PropertySource"
+    },
+    {
+      "type": "io.micronaut.context.event.ApplicationEventPublisher"
+    },
+    {
+      "type": "io.micronaut.context.event.ApplicationEventPublisherFactory",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.processor.ExecutableMethodProcessor",
+      "methods": [
+        {
+          "name": "process",
+          "parameterTypes": [
+            "io.micronaut.inject.BeanDefinition",
+            "io.micronaut.inject.ExecutableMethod"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.propagation.$PropagatedContextConfigurationProperties$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.propagation.instrument.execution.$ExecutorServiceInstrumenter$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.time.$InstantSourceFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.context.time.$InstantSourceFactory$SystemClock0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.core.annotation.AnnotationMetadata"
+    },
+    {
+      "type": "io.micronaut.core.annotation.AnnotationMetadataDelegate"
+    },
+    {
+      "type": "io.micronaut.core.annotation.AnnotationMetadataProvider"
+    },
+    {
+      "type": "io.micronaut.core.annotation.AnnotationMetadataResolver"
+    },
+    {
+      "type": "io.micronaut.core.annotation.AnnotationSource"
+    },
+    {
+      "type": "io.micronaut.core.async.converters.ReactiveTypeConverterRegistrar",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.core.attr.AttributeHolder"
+    },
+    {
+      "type": "io.micronaut.core.attr.MutableAttributeHolder"
+    },
+    {
+      "type": "io.micronaut.core.beans.BeanInfo"
+    },
+    {
+      "type": "io.micronaut.core.convert.ArgumentConversionContext"
+    },
+    {
+      "type": "io.micronaut.core.convert.ConversionContext"
+    },
+    {
+      "type": "io.micronaut.core.convert.ConversionServiceProvider"
+    },
+    {
+      "type": "io.micronaut.core.naming.Named"
+    },
+    {
+      "type": "io.micronaut.core.order.Ordered"
+    },
+    {
+      "type": "io.micronaut.core.type.Argument"
+    },
+    {
+      "type": "io.micronaut.core.type.ArgumentCoercible"
+    },
+    {
+      "type": "io.micronaut.core.type.Argument[]"
+    },
+    {
+      "type": "io.micronaut.core.value.PropertyResolver"
+    },
+    {
+      "type": "io.micronaut.core.value.ValueResolver"
+    },
+    {
+      "type": "io.micronaut.discovery.$DefaultCompositeDiscoveryClient$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.discovery.$DefaultServiceInstanceIdGenerator$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.discovery.cloud.digitalocean.$DigitalOceanInstanceMetadata$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.discovery.cloud.digitalocean.$DigitalOceanMetadataConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.discovery.cloud.digitalocean.$DigitalOceanMetadataResolver$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.discovery.config.$DefaultCompositeConfigurationClient$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.health.$DefaultCurrentHealthStatus$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.health.$HealthStatus$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.health.$HeartbeatConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.health.$HeartbeatDiscoveryClientCondition$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.health.$HeartbeatTask$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.HttpTypeConverterRegistrar",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.bind.$DefaultRequestBinderRegistry$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.bind.binders.$DefaultBodyAnnotationBinder$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.body.$ByteArrayBodyHandler$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.body.$ByteBodyWriter$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.body.$ByteBufferBodyHandler$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.body.$CharSequenceBodyWriter$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.body.$ConversionTextPlainHandler$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.body.$DefaultMessageBodyHandlerRegistry$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.body.$StringBodyReader$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.body.$TextPlainObjectBodyReader$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.body.$TextPlainObjectBodyWriter$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.body.$TextStreamBodyWriter$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.body.$WritableBodyWriter$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$BeanConfiguration",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$DefaultHttpClientConfiguration$DefaultConnectionPoolConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$DefaultHttpClientConfiguration$DefaultHttp2ClientConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$DefaultHttpClientConfiguration$DefaultWebSocketCompressionConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$DefaultHttpClientConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$DefaultLoadBalancerResolver$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$ServiceHttpClientCondition$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$ServiceHttpClientConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$ServiceHttpClientConfiguration$ServiceConnectionPoolConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$ServiceHttpClientConfiguration$ServiceHttp2ClientConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$ServiceHttpClientConfiguration$ServiceSslClientConfiguration$DefaultKeyConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$ServiceHttpClientConfiguration$ServiceSslClientConfiguration$DefaultKeyStoreConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$ServiceHttpClientConfiguration$ServiceSslClientConfiguration$DefaultTrustStoreConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$ServiceHttpClientConfiguration$ServiceSslClientConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$ServiceHttpClientConfiguration$ServiceWebSocketCompressionConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$ServiceHttpClientFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$ServiceHttpClientFactory$HealthCheckStarter1$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.$ServiceHttpClientFactory$ServiceInstanceList0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.bind.$DefaultHttpClientBinderRegistry$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.filter.$DefaultHttpClientFilterResolver$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.interceptor.$HttpClientIntroductionAdvice$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.interceptor.configuration.$DefaultClientVersioningConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.interceptor.configuration.$NamedClientVersioningConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.loadbalance.$DiscoveryClientLoadBalancerFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.loadbalance.$ServiceInstanceListLoadBalancerFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.client.loadbalance.LoadBalancerConverters",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.codec.$CodecConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.converters.$HttpConverterRegistrar$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.converters.SharedHttpConvertersRegistrar",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.expression.$RequestConditionContext$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.form.$FormConfigurationProperties$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.hateoas.$AbstractResource$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.hateoas.$DefaultLink$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.hateoas.$GenericResource$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.hateoas.$JsonError$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.hateoas.$Resource$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.hateoas.$VndError$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.resource.$ResourceLoaderFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.resource.$ResourceLoaderFactory$FileSystemResourceLoader1$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.resource.$ResourceLoaderFactory$GetBase64ResourceLoader3$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.resource.$ResourceLoaderFactory$GetClassPathResourceLoader0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.resource.$ResourceLoaderFactory$GetStringResourceLoader2$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.resource.$ResourceLoaderFactory$ResourceResolver4$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$ClientSslConfiguration$DefaultKeyConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$ClientSslConfiguration$DefaultKeyStoreConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$ClientSslConfiguration$DefaultTrustStoreConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$ClientSslConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$DefaultSslConfiguration$DefaultKeyConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$DefaultSslConfiguration$DefaultKeyStoreConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$DefaultSslConfiguration$DefaultTrustStoreConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$DefaultSslConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$FileCertificateProvider$Config$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$FileCertificateProvider$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$ResourceCertificateProvider$Config$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$ResourceCertificateProvider$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$SelfSignedCertificateProvider$Config$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$SelfSignedCertificateProvider$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$ServerSslConfiguration$DefaultKeyConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$ServerSslConfiguration$DefaultKeyStoreConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$ServerSslConfiguration$DefaultTrustStoreConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.ssl.$ServerSslConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.uri.$DefaultFormUrlEncodedDecoder$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.util.$HtmlEntityEncodingHtmlSanitizer$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.http.util.$OutgoingHttpRequestProcessorImpl$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.inject.BeanConfiguration"
+    },
+    {
+      "type": "io.micronaut.inject.BeanContextConditional"
+    },
+    {
+      "type": "io.micronaut.inject.BeanDefinition",
+      "methods": [
+        {
+          "name": "getRequiredMethod",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.Class[]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.inject.BeanDefinitionReference"
+    },
+    {
+      "type": "io.micronaut.inject.BeanIdentifier"
+    },
+    {
+      "type": "io.micronaut.inject.BeanType"
+    },
+    {
+      "type": "io.micronaut.inject.ExecutableMethod"
+    },
+    {
+      "type": "io.micronaut.inject.InjectableBeanDefinition"
+    },
+    {
+      "type": "io.micronaut.inject.InstantiatableBeanDefinition"
+    },
+    {
+      "type": "io.micronaut.inject.QualifiedBeanType"
+    },
+    {
+      "type": "io.micronaut.inject.annotation.AnnotationConvertersRegistrar",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.inject.provider.BeanProviderDefinition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.inject.provider.JakartaProviderBeanDefinition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.inject.provider.JavaxProviderBeanDefinition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.inject.proxy.InterceptedBean"
+    },
+    {
+      "type": "io.micronaut.json.$JsonObjectSerializer$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.json.bind.$JsonBeanPropertyBinder$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.json.body.$JsonMessageHandler$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.json.codec.$JsonMediaTypeCodec$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.json.codec.$JsonStreamMediaTypeCodec$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.json.convert.$JsonConverterRegistrar$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.aiservices.$AiServiceFactory$CreateAiServices0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.aiservices.$AiServiceFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.embedding.$BeanConfiguration",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.embedding.$InMemoryEmbeddingStoreConfig$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.embedding.$InMemoryEmbeddingStoreFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.embedding.$InMemoryEmbeddingStoreFactory$EmbeddingStore1$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.embedding.$InMemoryEmbeddingStoreFactory$PrimaryStore0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.evaluation.$EvaluationRequest$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.evaluation.$EvaluationResult$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.http.client.$MicronautLangChain4jHttpClientBuilder$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.interceptor.$AiServiceInterceptor$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$CommonOllamaChatModelConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$DefaultOllamaChatModelConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$DefaultOllamaEmbeddingModelConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$DefaultOllamaStreamingChatModelConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$NamedOllamaChatModelConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$NamedOllamaEmbeddingModelConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$NamedOllamaStreamingChatModelConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$OllamaChatModelFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$OllamaChatModelFactory$Model2$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$OllamaChatModelFactory$NamedBuilder0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$OllamaChatModelFactory$PrimaryBuilder1$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$OllamaEmbeddingModelFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$OllamaEmbeddingModelFactory$Model2$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$OllamaEmbeddingModelFactory$NamedBuilder0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$OllamaEmbeddingModelFactory$PrimaryBuilder1$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$OllamaStreamingChatModelFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$OllamaStreamingChatModelFactory$Model2$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$OllamaStreamingChatModelFactory$NamedBuilder0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.ollama.$OllamaStreamingChatModelFactory$PrimaryBuilder1$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.store.memory.chat.$MessageWindowChatMemoryConfigurationProperties$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.store.memory.chat.$MessageWindowChatMemoryFactory$CreateMessageWindowChatMemoryBuilder0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.store.memory.chat.$MessageWindowChatMemoryFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.store.memory.chat.inmemory.$BeanConfiguration",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.store.memory.chat.inmemory.$InMemoryChatMemoryConfigurationProperties$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.store.memory.chat.inmemory.$InMemoryChatMemoryStoreFactory$ChatMemoryStore0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.store.memory.chat.inmemory.$InMemoryChatMemoryStoreFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.store.memory.chat.inmemory.$InMemoryMessageWindowChatMemoryProvider$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.tools.$ToolRegistry$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.tools.ToolRegistry",
+      "methods": [
+        {
+          "name": "getAllTools",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.langchain4j.tools.ToolRegistryBeanInfo"
+    },
+    {
+      "type": "io.micronaut.langchain4j.tools.ToolRegistryCustomizer"
+    },
+    {
+      "type": "io.micronaut.logging.$LogLevel$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.logging.$PropertiesLoggingLevelsConfigurer$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.logging.$PropertiesLoggingLevelsConfigurer$PropertiesLoggingLevelsConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.logging.LoggingConverterRegistrar",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.logging.impl.$Log4jLoggingSystem$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.logging.impl.$LogbackLoggingSystem$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.retry.$DefaultCircuitBreakerOperationsFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.retry.$DefaultRetryOperationsFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.retry.annotation.$DefaultRetryPredicate$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.retry.annotation.$RetryPredicate$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.retry.intercept.$DefaultRetryInterceptor$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.retry.intercept.$RecoveryInterceptor$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.$ApplicationConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.$ApplicationConfiguration$InstanceConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.beans.$MapperIntroduction$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.beans.$MapperMethodProcessor$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.context.$CompositeMessageSource$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.context.env.$ConfigurationIntroductionAdvice$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.context.scope.$ThreadLocalCustomScope$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.context.scope.refresh.$RefreshInterceptor$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.context.scope.refresh.$RefreshScope$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.context.scope.refresh.$RefreshScopeCondition$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.converters.time.TimeConverterRegistrar",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.graceful.$GracefulShutdownConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.graceful.$GracefulShutdownListener$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.graceful.$GracefulShutdownManager$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.http.codec.$MediaTypeCodecRegistryFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.http.codec.$MediaTypeCodecRegistryFactory$MediaTypeCodecRegistry0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.http.codec.$TextPlainCodec$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.http.scope.$RequestCustomScope$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.runtime.server.watch.event.$FileWatchRestartListener$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.$DefaultTaskExceptionHandler$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.$LoomSupport$LoomCondition$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.$ScheduledExecutorTaskScheduler$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.async.$AsyncInterceptor$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.executor.$DefaultExecutorSelector$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.executor.$DefaultThreadFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.executor.$DefaultThreadFactory$ThreadFactory0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.executor.$ExecutorFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.executor.$ExecutorFactory$EventLoopGroupThreadFactory0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.executor.$ExecutorFactory$ExecutorService1$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.executor.$IOExecutorServiceConfig$Blocking2$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.executor.$IOExecutorServiceConfig$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.executor.$IOExecutorServiceConfig$Io0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.executor.$IOExecutorServiceConfig$Virtual1$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.executor.$ScheduledExecutorServiceConfig$Configuration0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.executor.$ScheduledExecutorServiceConfig$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.executor.$UserExecutorConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.io.watch.$DefaultWatchThread$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.io.watch.$FileWatchCondition$Introspection",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.io.watch.$FileWatchConfiguration$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.io.watch.$WatchServiceFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.io.watch.$WatchServiceFactory$WatchService0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.processor.$ScheduledMethodProcessor$ApplicationEventListener$scheduleTasks1$Intercepted$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "io.micronaut.scheduling.processor.$ScheduledMethodProcessor$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.beans.PropertyVetoException"
+    },
+    {
+      "type": "java.io.BufferedInputStream"
+    },
+    {
+      "type": "java.io.BufferedOutputStream"
+    },
+    {
+      "type": "java.io.BufferedReader"
+    },
+    {
+      "type": "java.io.BufferedWriter"
+    },
+    {
+      "type": "java.io.Closeable"
+    },
+    {
+      "type": "java.io.DataInputStream"
+    },
+    {
+      "type": "java.io.DataOutputStream"
+    },
+    {
+      "type": "java.io.File"
+    },
+    {
+      "type": "java.io.Flushable"
+    },
+    {
+      "type": "java.io.InputStream"
+    },
+    {
+      "type": "java.io.ObjectInputStream"
+    },
+    {
+      "type": "java.io.ObjectOutputStream"
+    },
+    {
+      "type": "java.io.OutputStream"
+    },
+    {
+      "type": "java.io.PrintStream"
+    },
+    {
+      "type": "java.io.PrintWriter"
+    },
+    {
+      "type": "java.io.Reader"
+    },
+    {
+      "type": "java.io.Serializable"
+    },
+    {
+      "type": "java.io.Writer"
+    },
+    {
+      "type": "java.lang.Appendable"
+    },
+    {
+      "type": "java.lang.AutoCloseable"
+    },
+    {
+      "type": "java.lang.Boolean",
+      "jniAccessible": true,
+      "methods": [
+        {
+          "name": "getBoolean",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.CharSequence"
+    },
+    {
+      "type": "java.lang.Character"
+    },
+    {
+      "type": "java.lang.Class",
+      "methods": [
+        {
+          "name": "forName",
+          "parameterTypes": [
+            "java.lang.String",
+            "boolean",
+            "java.lang.ClassLoader"
+          ]
+        },
+        {
+          "name": "getPermittedSubclasses",
+          "parameterTypes": []
+        },
+        {
+          "name": "getRecordComponents",
+          "parameterTypes": []
+        },
+        {
+          "name": "isRecord",
+          "parameterTypes": []
+        },
+        {
+          "name": "isSealed",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.lang.ClassLoader"
+    },
+    {
+      "type": "java.lang.Class[]"
+    },
+    {
+      "type": "java.lang.Cloneable"
+    },
+    {
+      "type": "java.lang.Comparable"
+    },
+    {
+      "type": "java.lang.Double"
+    },
+    {
+      "type": "java.lang.Enum"
+    },
+    {
+      "type": "java.lang.EnumBeanInfo"
+    },
+    {
+      "type": "java.lang.EnumCustomizer"
+    },
+    {
+      "type": "java.lang.Float"
+    },
+    {
+      "type": "java.lang.Integer"
+    },
+    {
+      "type": "java.lang.Iterable"
+    },
+    {
+      "type": "java.lang.Long"
+    },
+    {
+      "type": "java.lang.Number",
+      "methods": [
+        {
+          "name": "byteValue",
+          "parameterTypes": []
+        },
+        {
+          "name": "doubleValue",
+          "parameterTypes": []
+        },
+        {
+          "name": "floatValue",
+          "parameterTypes": []
+        },
+        {
+          "name": "intValue",
+          "parameterTypes": []
+        },
+        {
+          "name": "longValue",
+          "parameterTypes": []
+        },
+        {
+          "name": "shortValue",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.lang.Object",
+      "methods": [
+        {
+          "name": "equals",
+          "parameterTypes": [
+            "java.lang.Object"
+          ]
+        },
+        {
+          "name": "toString",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.lang.ObjectBeanInfo"
+    },
+    {
+      "type": "java.lang.ObjectCustomizer"
+    },
+    {
+      "type": "java.lang.Object[]"
+    },
+    {
+      "type": "java.lang.Process"
+    },
+    {
+      "type": "java.lang.ProcessBuilder"
+    },
+    {
+      "type": "java.lang.Readable"
+    },
+    {
+      "type": "java.lang.Record"
+    },
+    {
+      "type": "java.lang.RecordBeanInfo"
+    },
+    {
+      "type": "java.lang.RecordCustomizer"
+    },
+    {
+      "type": "java.lang.Short"
+    },
+    {
+      "type": "java.lang.String"
+    },
+    {
+      "type": "java.lang.StringBuffer"
+    },
+    {
+      "type": "java.lang.StringBuilder"
+    },
+    {
+      "type": "java.lang.String[]"
+    },
+    {
+      "type": "java.lang.System$Logger"
+    },
+    {
+      "type": "java.lang.Thread"
+    },
+    {
+      "type": "java.lang.Throwable"
+    },
+    {
+      "type": "java.lang.constant.Constable"
+    },
+    {
+      "type": "java.lang.constant.ConstantDesc"
+    },
+    {
+      "type": "java.lang.module.ModuleFinder"
+    },
+    {
+      "type": "java.lang.reflect.AccessibleObject"
+    },
+    {
+      "type": "java.lang.reflect.AnnotatedElement"
+    },
+    {
+      "type": "java.lang.reflect.Proxy",
+      "methods": [
+        {
+          "name": "newProxyInstance",
+          "parameterTypes": [
+            "java.lang.ClassLoader",
+            "java.lang.Class[]",
+            "java.lang.reflect.InvocationHandler"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.lang.reflect.RecordComponent",
+      "methods": [
+        {
+          "name": "getName",
+          "parameterTypes": []
+        },
+        {
+          "name": "getType",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.lang.reflect.TypeVariable"
+    },
+    {
+      "type": "java.math.BigDecimal",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "double"
+          ]
+        },
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "long"
+          ]
+        },
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.math.BigInteger"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.math.BigInteger",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.net.ServerSocket"
+    },
+    {
+      "type": "java.net.Socket"
+    },
+    {
+      "type": "java.net.URI"
+    },
+    {
+      "type": "java.net.URL"
+    },
+    {
+      "type": "java.nio.charset.Charset"
+    },
+    {
+      "type": "java.security.AlgorithmParametersSpi"
+    },
+    {
+      "type": "java.security.KeyStoreSpi"
+    },
+    {
+      "type": "java.time.Clock"
+    },
+    {
+      "type": "java.time.DayOfWeek",
+      "fields": [
+        {
+          "name": "SATURDAY"
+        }
+      ]
+    },
+    {
+      "type": "java.time.DayOfWeekBeanInfo"
+    },
+    {
+      "type": "java.time.DayOfWeekCustomizer"
+    },
+    {
+      "type": "java.time.Duration",
+      "methods": [
+        {
+          "name": "ofMinutes",
+          "parameterTypes": [
+            "long"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.time.DurationBeanInfo"
+    },
+    {
+      "type": "java.time.DurationCustomizer"
+    },
+    {
+      "type": "java.time.InstantSource"
+    },
+    {
+      "type": "java.time.LocalDate",
+      "methods": [
+        {
+          "name": "now",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.time.LocalDateBeanInfo"
+    },
+    {
+      "type": "java.time.LocalDateCustomizer"
+    },
+    {
+      "type": "java.time.ZoneId"
+    },
+    {
+      "type": "java.time.chrono.ChronoLocalDate",
+      "methods": [
+        {
+          "name": "with",
+          "parameterTypes": [
+            "java.time.temporal.TemporalAdjuster"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.time.chrono.ChronoPeriod"
+    },
+    {
+      "type": "java.time.temporal.Temporal"
+    },
+    {
+      "type": "java.time.temporal.TemporalAccessor"
+    },
+    {
+      "type": "java.time.temporal.TemporalAdjuster"
+    },
+    {
+      "type": "java.time.temporal.TemporalAdjusters",
+      "methods": [
+        {
+          "name": "nextOrSame",
+          "parameterTypes": [
+            "java.time.DayOfWeek"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.time.temporal.TemporalAdjustersBeanInfo"
+    },
+    {
+      "type": "java.time.temporal.TemporalAdjustersCustomizer"
+    },
+    {
+      "type": "java.time.temporal.TemporalAmount"
+    },
+    {
+      "type": "java.time.temporal.TemporalField"
+    },
+    {
+      "type": "java.time.temporal.TemporalQuery"
+    },
+    {
+      "type": "java.time.temporal.TemporalUnit"
+    },
+    {
+      "type": "java.util.AbstractCollection"
+    },
+    {
+      "type": "java.util.AbstractCollectionBeanInfo"
+    },
+    {
+      "type": "java.util.AbstractCollectionCustomizer"
+    },
+    {
+      "type": "java.util.AbstractMap"
+    },
+    {
+      "type": "java.util.AbstractMapBeanInfo"
+    },
+    {
+      "type": "java.util.AbstractMapCustomizer"
+    },
+    {
+      "type": "java.util.ArrayList",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.util.Collection"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.util.BitSet"
+    },
+    {
+      "type": "java.util.Calendar"
+    },
+    {
+      "type": "java.util.Collection"
+    },
+    {
+      "type": "java.util.Collections",
+      "methods": [
+        {
+          "name": "singletonMap",
+          "parameterTypes": [
+            "java.lang.Object",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.util.Collections$UnmodifiableCollection"
+    },
+    {
+      "type": "java.util.Collections$UnmodifiableList"
+    },
+    {
+      "type": "java.util.Collections$UnmodifiableRandomAccessList"
+    },
+    {
+      "type": "java.util.Comparator"
+    },
+    {
+      "type": "java.util.Deque"
+    },
+    {
+      "type": "java.util.Enumeration"
+    },
+    {
+      "type": "java.util.HashMap"
+    },
+    {
+      "type": "java.util.HashMapBeanInfo"
+    },
+    {
+      "type": "java.util.HashMapCustomizer"
+    },
+    {
+      "type": "java.util.HashSet",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.util.Collection"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.util.ImmutableCollections$AbstractImmutableCollection"
+    },
+    {
+      "type": "java.util.ImmutableCollections$AbstractImmutableCollectionBeanInfo"
+    },
+    {
+      "type": "java.util.ImmutableCollections$AbstractImmutableCollectionCustomizer"
+    },
+    {
+      "type": "java.util.ImmutableCollections$AbstractImmutableList"
+    },
+    {
+      "type": "java.util.ImmutableCollections$AbstractImmutableListBeanInfo"
+    },
+    {
+      "type": "java.util.ImmutableCollections$AbstractImmutableListCustomizer"
+    },
+    {
+      "type": "java.util.ImmutableCollections$ListN"
+    },
+    {
+      "type": "java.util.ImmutableCollections$ListNBeanInfo"
+    },
+    {
+      "type": "java.util.ImmutableCollections$ListNCustomizer"
+    },
+    {
+      "type": "java.util.Iterator"
+    },
+    {
+      "type": "java.util.LinkedHashMap"
+    },
+    {
+      "type": "java.util.LinkedHashMapBeanInfo"
+    },
+    {
+      "type": "java.util.LinkedHashMapCustomizer"
+    },
+    {
+      "type": "java.util.List"
+    },
+    {
+      "type": "java.util.Locale"
+    },
+    {
+      "type": "java.util.Map"
+    },
+    {
+      "type": "java.util.Map$Entry"
+    },
+    {
+      "type": "java.util.NavigableMap"
+    },
+    {
+      "type": "java.util.NavigableSet"
+    },
+    {
+      "type": "java.util.Objects",
+      "methods": [
+        {
+          "name": "nonNull",
+          "parameterTypes": [
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "java.util.Optional"
+    },
+    {
+      "type": "java.util.OptionalDouble"
+    },
+    {
+      "type": "java.util.OptionalInt"
+    },
+    {
+      "type": "java.util.OptionalLong"
+    },
+    {
+      "type": "java.util.Queue"
+    },
+    {
+      "type": "java.util.Random"
+    },
+    {
+      "type": "java.util.RandomAccess"
+    },
+    {
+      "type": "java.util.ResourceBundle"
+    },
+    {
+      "type": "java.util.SequencedCollection"
+    },
+    {
+      "type": "java.util.SequencedMap"
+    },
+    {
+      "type": "java.util.Set"
+    },
+    {
+      "type": "java.util.SortedMap"
+    },
+    {
+      "type": "java.util.SortedSet"
+    },
+    {
+      "type": "java.util.Spliterator"
+    },
+    {
+      "type": "java.util.TimeZone"
+    },
+    {
+      "type": "java.util.Timer"
+    },
+    {
+      "type": "java.util.TimerTask"
+    },
+    {
+      "type": "java.util.concurrent.BlockingQueue"
+    },
+    {
+      "type": "java.util.concurrent.ExecutorService"
+    },
+    {
+      "type": "java.util.concurrent.Future"
+    },
+    {
+      "type": "java.util.concurrent.TimeUnit"
+    },
+    {
+      "type": "java.util.concurrent.atomic.AtomicBoolean"
+    },
+    {
+      "type": "java.util.function.BiConsumer"
+    },
+    {
+      "type": "java.util.function.BiFunction"
+    },
+    {
+      "type": "java.util.function.BiPredicate"
+    },
+    {
+      "type": "java.util.function.BinaryOperator"
+    },
+    {
+      "type": "java.util.function.Consumer"
+    },
+    {
+      "type": "java.util.function.DoubleConsumer"
+    },
+    {
+      "type": "java.util.function.DoubleFunction"
+    },
+    {
+      "type": "java.util.function.DoublePredicate"
+    },
+    {
+      "type": "java.util.function.DoubleUnaryOperator"
+    },
+    {
+      "type": "java.util.function.Function"
+    },
+    {
+      "type": "java.util.function.IntConsumer"
+    },
+    {
+      "type": "java.util.function.IntFunction"
+    },
+    {
+      "type": "java.util.function.IntPredicate"
+    },
+    {
+      "type": "java.util.function.IntUnaryOperator"
+    },
+    {
+      "type": "java.util.function.LongConsumer"
+    },
+    {
+      "type": "java.util.function.LongFunction"
+    },
+    {
+      "type": "java.util.function.LongPredicate"
+    },
+    {
+      "type": "java.util.function.LongUnaryOperator"
+    },
+    {
+      "type": "java.util.function.ObjIntConsumer"
+    },
+    {
+      "type": "java.util.function.Predicate"
+    },
+    {
+      "type": "java.util.function.Supplier"
+    },
+    {
+      "type": "java.util.function.ToDoubleFunction"
+    },
+    {
+      "type": "java.util.function.ToIntFunction"
+    },
+    {
+      "type": "java.util.function.ToLongFunction"
+    },
+    {
+      "type": "java.util.regex.Matcher"
+    },
+    {
+      "type": "java.util.regex.Pattern"
+    },
+    {
+      "type": "java.util.stream.BaseStream"
+    },
+    {
+      "type": "java.util.stream.DoubleStream"
+    },
+    {
+      "type": "java.util.stream.IntStream"
+    },
+    {
+      "type": "java.util.stream.LongStream"
+    },
+    {
+      "type": "java.util.stream.Stream"
+    },
+    {
+      "type": "jdk.internal.jrtfs.JrtFileSystemProvider"
+    },
+    {
+      "type": "jdk.internal.reflect.CallerSensitive"
+    },
+    {
+      "type": "micronaut.$AppRunner$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "micronaut.$HolidayAssistant$Intercepted$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "micronaut.$HolidayBot$Intercepted$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "micronaut.AppRunner",
+      "methods": [
+        {
+          "name": "run",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "micronaut.AppRunnerBeanInfo"
+    },
+    {
+      "type": "micronaut.AppRunnerCustomizer"
+    },
+    {
+      "type": "micronaut.Holiday",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "groovy.lang.Binding"
+          ]
+        },
+        {
+          "name": "run",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "micronaut.HolidayAssistant",
+      "methods": [
+        {
+          "name": "activities",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "micronaut.HolidayAssistant$Intercepted"
+    },
+    {
+      "type": "micronaut.HolidayAssistant$InterceptedBeanInfo"
+    },
+    {
+      "type": "micronaut.HolidayAssistant$InterceptedCustomizer"
+    },
+    {
+      "type": "micronaut.HolidayBeanInfo"
+    },
+    {
+      "type": "micronaut.HolidayBot",
+      "methods": [
+        {
+          "name": "itinerary",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "micronaut.HolidayBot$Intercepted"
+    },
+    {
+      "type": "micronaut.HolidayBot$InterceptedBeanInfo"
+    },
+    {
+      "type": "micronaut.HolidayBot$InterceptedCustomizer"
+    },
+    {
+      "type": "micronaut.HolidayCustomizer"
+    },
+    {
+      "type": "micronaut.Structured",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "groovy.lang.Binding"
+          ]
+        },
+        {
+          "name": "run",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "micronaut.StructuredBeanInfo"
+    },
+    {
+      "type": "micronaut.StructuredCustomizer"
+    },
+    {
+      "type": "micronaut.Tools",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "groovy.lang.Binding"
+          ]
+        },
+        {
+          "name": "run",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "micronaut.ToolsBeanInfo"
+    },
+    {
+      "type": "micronaut.ToolsCustomizer"
+    },
+    {
+      "type": "org.apache.groovy.datetime.extensions.DateTimeExtensions"
+    },
+    {
+      "type": "org.apache.groovy.datetime.extensions.DateTimeStaticExtensions"
+    },
+    {
+      "type": "org.codehaus.groovy.reflection.ParameterTypes"
+    },
+    {
+      "type": "org.codehaus.groovy.reflection.stdclasses.CachedSAMClass",
+      "methods": [
+        {
+          "name": "coerceToSAM",
+          "parameterTypes": [
+            "groovy.lang.Closure",
+            "java.lang.reflect.Method",
+            "java.lang.Class"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.ConvertedClosure",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "groovy.lang.Closure",
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.DefaultGroovyMethods",
+      "methods": [
+        {
+          "name": "getAt",
+          "parameterTypes": [
+            "java.util.Map",
+            "java.lang.Object"
+          ]
+        },
+        {
+          "name": "getAt",
+          "parameterTypes": [
+            "java.util.Map",
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "groovyToString",
+          "parameterTypes": [
+            "java.util.Collection"
+          ]
+        },
+        {
+          "name": "println",
+          "parameterTypes": [
+            "java.lang.Object"
+          ]
+        },
+        {
+          "name": "println",
+          "parameterTypes": [
+            "java.lang.Object",
+            "java.io.PrintWriter"
+          ]
+        },
+        {
+          "name": "println",
+          "parameterTypes": [
+            "java.lang.Object",
+            "java.lang.Object"
+          ]
+        },
+        {
+          "name": "with",
+          "parameterTypes": [
+            "java.lang.Object",
+            "groovy.lang.Closure"
+          ]
+        },
+        {
+          "name": "with",
+          "parameterTypes": [
+            "java.lang.Object",
+            "boolean",
+            "groovy.lang.Closure"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.DefaultGroovyMethodsSupport"
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.DefaultGroovyStaticMethods"
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.DgmProxyFactory"
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.GStringImpl"
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.GStringImplBeanInfo"
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.GStringImplCustomizer"
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.GroovyCategorySupport",
+      "methods": [
+        {
+          "name": "hasCategoryInCurrentThread",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.InvokerHelper",
+      "methods": [
+        {
+          "name": "getMetaClass",
+          "parameterTypes": [
+            "java.lang.Object"
+          ]
+        },
+        {
+          "name": "runScript",
+          "parameterTypes": [
+            "java.lang.Class",
+            "java.lang.String[]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.InvokerHelperBeanInfo"
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.InvokerHelperCustomizer"
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.MethodClosure"
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.NullObject"
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.ProcessResult"
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.NumberNumberDiv",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.NumberNumberMinus",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.NumberNumberMultiply",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.NumberNumberPlus",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.BooleanArrayGetAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.BooleanArrayPutAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.ByteArrayGetAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.ByteArrayPutAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.CharacterArrayGetAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.CharacterArrayPutAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.DoubleArrayGetAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.DoubleArrayPutAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.FloatArrayGetAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.FloatArrayPutAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.IntegerArrayGetAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.IntegerArrayPutAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.LongArrayGetAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.LongArrayPutAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.ObjectArrayGetAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.ObjectArrayPutAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.ShortArrayGetAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.dgmimpl.arrays.ShortArrayPutAtMetaMethod",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.typehandling.DefaultTypeTransformation",
+      "methods": [
+        {
+          "name": "asArray",
+          "parameterTypes": [
+            "java.lang.Object",
+            "java.lang.Class"
+          ]
+        },
+        {
+          "name": "castToType",
+          "parameterTypes": [
+            "java.lang.Object",
+            "java.lang.Class"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.runtime.typehandling.GroovyCastException",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Object",
+            "java.lang.Class"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.vmplugin.v10.PluginDefaultGroovyMethods"
+    },
+    {
+      "type": "org.codehaus.groovy.vmplugin.v8.IndyGuardsFiltersAndSignatures",
+      "methods": [
+        {
+          "name": "invokeGroovyObjectInvoker",
+          "parameterTypes": [
+            "groovy.lang.MissingMethodException",
+            "java.lang.Object",
+            "java.lang.String",
+            "java.lang.Object[]"
+          ]
+        },
+        {
+          "name": "invokeReflectively",
+          "parameterTypes": [
+            "org.codehaus.groovy.reflection.CachedMethod",
+            "java.lang.Object",
+            "java.lang.Object[]"
+          ]
+        },
+        {
+          "name": "isNull",
+          "parameterTypes": [
+            "java.lang.Object"
+          ]
+        },
+        {
+          "name": "isSameMetaClass",
+          "parameterTypes": [
+            "groovy.lang.MetaClass",
+            "java.lang.Object"
+          ]
+        },
+        {
+          "name": "sameClass",
+          "parameterTypes": [
+            "java.lang.Class",
+            "java.lang.Object"
+          ]
+        },
+        {
+          "name": "sameClasses",
+          "parameterTypes": [
+            "java.lang.Class",
+            "java.lang.Class",
+            "java.lang.Class",
+            "java.lang.Class",
+            "java.lang.Object",
+            "java.lang.Object",
+            "java.lang.Object",
+            "java.lang.Object"
+          ]
+        },
+        {
+          "name": "sameClasses",
+          "parameterTypes": [
+            "java.lang.Class",
+            "java.lang.Class",
+            "java.lang.Class",
+            "java.lang.Object",
+            "java.lang.Object",
+            "java.lang.Object"
+          ]
+        },
+        {
+          "name": "sameClasses",
+          "parameterTypes": [
+            "java.lang.Class",
+            "java.lang.Class",
+            "java.lang.Object",
+            "java.lang.Object"
+          ]
+        },
+        {
+          "name": "sameClasses",
+          "parameterTypes": [
+            "java.lang.Class[]",
+            "java.lang.Object[]"
+          ]
+        },
+        {
+          "name": "setBeanProperties",
+          "parameterTypes": [
+            "groovy.lang.MetaClass",
+            "java.lang.Object",
+            "java.util.Map"
+          ]
+        },
+        {
+          "name": "setProperty",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.lang.Class",
+            "java.lang.Object",
+            "java.lang.Object"
+          ]
+        },
+        {
+          "name": "unwrap",
+          "parameterTypes": [
+            "groovy.lang.GroovyRuntimeException"
+          ]
+        },
+        {
+          "name": "unwrap",
+          "parameterTypes": [
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.vmplugin.v8.IndyInterface",
+      "methods": [
+        {
+          "name": "aotDispatch",
+          "parameterTypes": [
+            "org.codehaus.groovy.vmplugin.v8.CacheableCallSite",
+            "java.lang.Class",
+            "java.lang.String",
+            "int",
+            "java.lang.Boolean",
+            "java.lang.Boolean",
+            "java.lang.Boolean",
+            "java.lang.Object[]"
+          ]
+        },
+        {
+          "name": "fromCacheHandle",
+          "parameterTypes": [
+            "org.codehaus.groovy.vmplugin.v8.CacheableCallSite",
+            "java.lang.Class",
+            "java.lang.String",
+            "int",
+            "java.lang.Boolean",
+            "java.lang.Boolean",
+            "java.lang.Boolean",
+            "java.lang.Object",
+            "java.lang.Object[]"
+          ]
+        },
+        {
+          "name": "invokeColdReflective",
+          "parameterTypes": [
+            "org.codehaus.groovy.vmplugin.v8.ColdReflectiveMethodHandleWrapper",
+            "java.lang.Object[]"
+          ]
+        },
+        {
+          "name": "selectMethodHandle",
+          "parameterTypes": [
+            "org.codehaus.groovy.vmplugin.v8.CacheableCallSite",
+            "java.lang.Class",
+            "java.lang.String",
+            "int",
+            "java.lang.Boolean",
+            "java.lang.Boolean",
+            "java.lang.Boolean",
+            "java.lang.Object",
+            "java.lang.Object[]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "org.codehaus.groovy.vmplugin.v8.PluginDefaultGroovyMethods"
+    },
+    {
+      "type": "org.codehaus.groovy.vmplugin.v9.PluginDefaultGroovyMethods"
+    },
+    {
+      "type": "org.slf4j.Logger"
+    },
+    {
+      "type": "org.slf4j.simple.SimpleServiceProvider"
+    },
+    {
+      "type": "org.w3c.dom.Element"
+    },
+    {
+      "type": "sun.net.www.protocol.http.Handler",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.pkcs12.PKCS12KeyStore",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.pkcs12.PKCS12KeyStore$DualFormatPKCS12",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.DSA$SHA224withDSA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.DSA$SHA256withDSA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.MD5",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.NativePRNG",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.security.SecureRandomParameters"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA2$SHA224",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA2$SHA256",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA5$SHA384",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA5$SHA512",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.X509Factory",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.rsa.PSSParameters",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.rsa.RSAKeyFactory$Legacy",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.rsa.RSAPSSSignature",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.rsa.RSASignature$SHA224withRSA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.ssl.KeyManagerFactoryImpl$SunX509",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.ssl.SSLContextImpl$DefaultSSLContext",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.ssl.TrustManagerFactoryImpl$PKIXFactory",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.AuthorityInfoAccessExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.AuthorityKeyIdentifierExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.BasicConstraintsExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.CRLDistributionPointsExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.CertificatePoliciesExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.ExtendedKeyUsageExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.KeyUsageExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.NetscapeCertTypeExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.PrivateKeyUsageExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.x509.SubjectKeyIdentifierExtension",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.lang.Boolean",
+            "java.lang.Object"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData"
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData_en"
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData_en_US"
+    },
+    {
+      "type": "sun.util.resources.cldr.CalendarData"
+    },
+    {
+      "type": "util.$AiModelFactory$ChatModel0$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "util.$AiModelFactory$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "util.$WeatherAwareBot$Intercepted$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "util.$WeatherTool$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "util.$WeatherTool$DefinitionBeanInfo"
+    },
+    {
+      "type": "util.$WeatherTool$DefinitionCustomizer"
+    },
+    {
+      "type": "util.$WeekendTool$Definition",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "util.$WeekendTool$DefinitionBeanInfo"
+    },
+    {
+      "type": "util.$WeekendTool$DefinitionCustomizer"
+    },
+    {
+      "type": "util.AiModelFactory"
+    },
+    {
+      "type": "util.AiModelFactoryBeanInfo"
+    },
+    {
+      "type": "util.AiModelFactoryCustomizer"
+    },
+    {
+      "type": "util.WeatherAwareBot",
+      "methods": [
+        {
+          "name": "chat",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "util.WeatherAwareBot$Intercepted"
+    },
+    {
+      "type": "util.WeatherAwareBot$InterceptedBeanInfo"
+    },
+    {
+      "type": "util.WeatherAwareBot$InterceptedCustomizer"
+    },
+    {
+      "type": "util.WeatherTool",
+      "methods": [
+        {
+          "name": "getWeather",
+          "parameterTypes": [
+            "java.lang.String",
+            "java.time.LocalDate"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "util.WeatherToolBeanInfo"
+    },
+    {
+      "type": "util.WeatherToolCustomizer"
+    },
+    {
+      "type": "util.WeekendTool",
+      "methods": [
+        {
+          "name": "getWeekend",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "util.WeekendToolBeanInfo"
+    },
+    {
+      "type": "util.WeekendToolCustomizer"
+    },
+    {
+      "type": {
+        "proxy": [
+          "micronaut.HolidayAssistant"
+        ]
+      }
+    },
+    {
+      "type": {
+        "proxy": [
+          "micronaut.HolidayBot"
+        ]
+      }
+    },
+    {
+      "type": {
+        "proxy": [
+          "util.WeatherAwareBot"
+        ]
+      }
+    }
+  ],
+  "resources": [
+    {
+      "glob": "META-INF/dgminfo"
+    },
+    {
+      "glob": "META-INF/groovy/org.codehaus.groovy.runtime.ExtensionModule"
+    },
+    {
+      "glob": "META-INF/micronaut"
+    },
+    {
+      "glob": "META-INF/services/com.fasterxml.jackson.databind.Module"
+    },
+    {
+      "glob": "META-INF/services/dev.langchain4j.http.client.HttpClientBuilderFactory"
+    },
+    {
+      "glob": "META-INF/services/dev.langchain4j.model.ollama.spi.OllamaChatModelBuilderFactory"
+    },
+    {
+      "glob": "META-INF/services/dev.langchain4j.service.ParameterNameResolver"
+    },
+    {
+      "glob": "META-INF/services/dev.langchain4j.service.guardrail.spi.GuardrailServiceBuilderFactory"
+    },
+    {
+      "glob": "META-INF/services/dev.langchain4j.spi.json.JsonCodecFactory"
+    },
+    {
+      "glob": "META-INF/services/dev.langchain4j.spi.observability.AiServiceListenerRegistrarFactory"
+    },
+    {
+      "glob": "META-INF/services/dev.langchain4j.spi.prompt.PromptTemplateFactory"
+    },
+    {
+      "glob": "META-INF/services/dev.langchain4j.spi.services.AiServicesFactory"
+    },
+    {
+      "glob": "META-INF/services/dev.langchain4j.spi.services.TokenStreamAdapter"
+    },
+    {
+      "glob": "META-INF/services/io.micronaut.context.ApplicationContextConfigurer"
+    },
+    {
+      "glob": "META-INF/services/io.micronaut.context.env.PropertySourceImporter"
+    },
+    {
+      "glob": "META-INF/services/io.micronaut.context.env.PropertySourceLoader"
+    },
+    {
+      "glob": "META-INF/services/io.micronaut.core.beans.BeanIntrospectionReference"
+    },
+    {
+      "glob": "META-INF/services/io.micronaut.core.convert.TypeConverterRegistrar"
+    },
+    {
+      "glob": "META-INF/services/io.micronaut.core.optim.StaticOptimizations$Loader"
+    },
+    {
+      "glob": "META-INF/services/java.net.spi.InetAddressResolverProvider"
+    },
+    {
+      "glob": "META-INF/services/java.net.spi.URLStreamHandlerProvider"
+    },
+    {
+      "glob": "META-INF/services/java.nio.channels.spi.SelectorProvider"
+    },
+    {
+      "glob": "META-INF/services/java.nio.file.spi.FileSystemProvider"
+    },
+    {
+      "glob": "META-INF/services/java.time.zone.ZoneRulesProvider"
+    },
+    {
+      "glob": "META-INF/services/org.codehaus.groovy.runtime.ExtensionModule"
+    },
+    {
+      "glob": "META-INF/services/org.slf4j.spi.SLF4JServiceProvider"
+    },
+    {
+      "glob": "application.properties"
+    },
+    {
+      "glob": "groovy/concurrent/AsyncScope.class"
+    },
+    {
+      "glob": "simplelogger.properties"
+    },
+    {
+      "module": "java.base",
+      "glob": "jdk/internal/icu/impl/data/icudt76b/nfc.nrm"
+    }
+  ]
+}

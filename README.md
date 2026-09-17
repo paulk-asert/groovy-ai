@@ -114,6 +114,29 @@ Running the `Rated` script:
     3. Waiheke Island - A chilled-out paradise with beaches and vineyards, perfect for a day trip or longer stay.
     4. Auckland Zoo - Get up close and personal with some of New Zealand's native critters, as well as exotic animals from around the world. Kiwi, eh?
 
+### Micronaut native
+
+The Micronaut examples can also be compiled to GraalVM native executables,
+making use of the native-image support in Groovy 6.
+Run Gradle using a GraalVM JDK25 and use the `nativeHolidayCompile`,
+`nativeStructuredCompile` or `nativeToolsCompile` tasks, e.g.:
+
+```
+./gradlew :micronaut:nativeToolsCompile
+micronaut/build/native/nativeToolsCompile/tools
+```
+
+The reflection metadata for our scripts is in
+`micronaut/src/main/resources/META-INF/native-image`.
+If you change the examples, regenerate it by running them with the
+native-image agent and copying the result
+(new entries are merged into the existing file, so delete it first to drop stale entries):
+
+```
+./gradlew run.micronaut.Holiday run.micronaut.Structured run.micronaut.Tools -Pagent
+./gradlew :micronaut:metadataCopy
+```
+
 ## Quarkus
 
 Quarkus needs special boot code to run.
