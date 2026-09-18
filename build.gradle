@@ -15,7 +15,7 @@
  */
 
 plugins {
-    id 'io.github.ben-manes.versions' version '0.63.1'
+    id 'io.github.ben-manes.versions' version '0.64.0'
     id 'org.nosphere.apache.rat' version '0.11.0'
 }
 
@@ -32,4 +32,21 @@ repositories {
 
 tasks.named('rat') {
     excludes = ['**/build/**', '.idea', 'gradle/wrapper', '**/.gradle', '**/*.log']
+}
+
+// alpha/beta/milestone/RC/CR versions are only of interest for dependencies
+// where we already use such a version, e.g. Groovy release candidates
+static boolean isNonStable(String version) {
+    var stableKeyword = ['RELEASE', 'FINAL', 'GA'].any { version.toUpperCase().contains(it) }
+    stableKeyword ? false : !(version ==~ /^[0-9,.v-]+(-r)?$/)
+}
+
+// use -PallowUnstable to see such versions for all dependencies
+var allowUnstable = providers.gradleProperty('allowUnstable').present
+
+tasks.named('dependencyUpdates') {
+    gradleReleaseChannel = allowUnstable ? 'release-candidate' : 'current'
+    rejectVersionIf {
+        !allowUnstable && isNonStable(candidate.version) && !isNonStable(currentVersion)
+    }
 }

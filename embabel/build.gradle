@@ -28,4 +28,12 @@ dependencies {
     implementation "com.embabel.agent:embabel-agent-api:$embabelVersion"
     implementation "com.embabel.agent:embabel-agent-starter-shell:$embabelVersion"
     implementation "com.embabel.agent:embabel-agent-starter-ollama:$embabelVersion"
+    // not pulled in by the Embabel starter but ChatClientAutoConfiguration refers to it
+    runtimeOnly 'org.springframework.ai:spring-ai-autoconfigure-model-tool'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.ai:spring-ai-bom:$springAiVersion"
+    }
 }
