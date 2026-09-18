@@ -22,7 +22,7 @@ import io.github.ollama4j.models.chat.OllamaChatRequest
 var ollama = new Ollama(requestTimeoutSeconds: 300)
 println "Found ollama: ${ollama.ping()}"
 
-var prompt = 'What are 4 interesting things to do while I am on vacation in Caloundra?'
+var prompt = 'What are 4 interesting things to do while I am on vacation in Glasgow?'
 var builder = OllamaChatRequest.builder()
     .withModel('mistral:7b')
 
@@ -43,18 +43,28 @@ result = ollama.chat(request, null)
 println "Best thing:\n$result.responseModel.message.response"
 
 /*
+
 Found ollama: true
 
 Four things:
- 1. Visit the beautiful beaches: Caloundra is famous for its stunning beaches, including Kings Beach, Moffat Beach, and Bulcock Beach. Spend your days soaking up the sun, swimming, or surfing.
+ 1. Visit the Glasgow Cathedral: This historic cathedral is a must-see in Glasgow. It's one of the 5 great medieval churches
+ of Scotland and offers a glimpse into the city's rich history. The adjoining Necropolis cemetery also provides stunning views of the city.
 
-2. Explore the UnderWater World SeaLife Aquarium: This marine attraction offers a unique opportunity to interact with various sea creatures. You can even have a close encounter with sharks and turtles!
+2. Explore the Kelvingrove Art Gallery and Museum: This world-class museum houses over 8,000 objects, including works by
+artists like Botticelli, Monet, and Rembrandt. It's a great place to spend a day learning about art, history, and science.
 
-3. Visit the Glastonbury Estate: For those who love history, this beautiful estate is worth a visit. It was built in the 1920s and features a variety of artifacts and memorabilia from World War I and II.
+3. Stroll through Glasgow Green Park: One of the city's oldest parks, Glasgow Green offers beautiful landscapes,
+a bandstand, a skate park, and even a mini-golf course. It's a perfect spot for a picnic or a leisurely walk.
 
-4. Take a day trip to the Australia Zoo: Made famous by the Crocodile Hunter, Steve Irwin, the Australia Zoo is just a short drive from Caloundra. It's home to a wide variety of Australian wildlife, including kangaroos, koalas, and crocodiles. Don't miss the daily wildlife shows!
+4. Take a tour of The Tenement House: This well-preserved Victorian dwelling provides a unique insight into the lives of
+Glasgow's middle class during the early 20th century. The guided tours are informative and engaging, offering a glimpse into a bygone era.
 
 Best thing:
- If you only have half a day and can choose just one activity, I would recommend visiting the beautiful Kings Beach in Caloundra. It offers a lovely stretch of sandy beach, perfect for swimming, sunbathing, or simply taking a leisurely stroll along the shoreline. The beach also has various amenities like picnic areas, BBQ facilities, and a playground for children. Plus, it provides stunning views of the Pacific Ocean and the Glass House Mountains in the distance. It's the perfect place to relax and soak up the sun on your vacation!
+Given that you have only half a day and want to see a mix of history, culture, and local life, I would recommend visiting
+the Kelvingrove Art Gallery and Museum. It's centrally located, easily accessible, and offers an extensive collection of
+art and artifacts that provide a fascinating glimpse into Glasgow's past and present. Plus, it's free to enter, making it
+a great value for your time.
+If you prefer outdoor activities or want to experience the local vibe, Glasgow Green Park is another excellent choice.
+You can take a leisurely stroll through the park, enjoy the scenery, and even grab a bite at one of the nearby cafes or food trucks.
 
 */
