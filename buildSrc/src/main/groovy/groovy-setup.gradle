@@ -40,6 +40,8 @@ def runAll = tasks.register("run.${project.name}.All") {
 sourceSets.main.allSource.filter{ it.name.endsWith('.groovy') }.each { source ->
     var path = source.absolutePath
     if (path.contains('domain') || path.contains('util')) return
+    // Quarkus apps have no main method, they are launched by the quarkusRun task
+    if (source.text.contains('@QuarkusMain')) return
     var name = "${project.name}.${source.name - '.groovy'}"
     var subtask = tasks.register("run.$name", JavaExec) {
         dependsOn compileGroovy
