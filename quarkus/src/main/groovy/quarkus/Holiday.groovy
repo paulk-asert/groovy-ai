@@ -28,10 +28,10 @@ class Holiday implements QuarkusApplication {
 
     @Override
     int run(String... args) {
-        def question = "What are four things to do while visiting Minneapolis?"
-        println "Asking: ${question}"
+        def question = 'What are four things to do while visiting Minneapolis?'
+        println "Asking: $question"
         def answer = assistant.ask(question)
-        println "Answer: ${answer}"
+        println "Answer: $answer"
         return 0
     }
 }
