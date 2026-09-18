@@ -38,8 +38,12 @@ jobs:
       - name: Set up GraalVM
         uses: graalvm/setup-graalvm@v1
         with:
+          # 25.2 or later needed: earlier versions unconditionally substitute
+          # vmplugin.v7.IndyInterface.invalidateSwitchPoints, a method current
+          # Groovy versions no longer have, and the image build fails
+          version: '25.2'
           distribution: 'graalvm-community'
-          java-version: 25
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Cache Ollama models
         uses: actions/cache@v4

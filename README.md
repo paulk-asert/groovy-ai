@@ -118,7 +118,9 @@ Running the `Rated` script:
 
 The Micronaut examples can also be compiled to GraalVM native executables,
 making use of the native-image support in Groovy 6.
-Run Gradle using a GraalVM JDK25 and use the `nativeHolidayCompile`,
+Run Gradle using GraalVM 25.2 or later (earlier versions fail with
+`Could not find target method ... invalidateSwitchPoints`, a Groovy method
+they expect but current Groovy versions no longer have) and use the `nativeHolidayCompile`,
 `nativeStructuredCompile` or `nativeToolsCompile` tasks, e.g.:
 
 ```
