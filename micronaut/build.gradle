@@ -28,6 +28,8 @@ dependencies {
     implementation "org.apache.groovy:groovy-json:$groovyVersion"
     runtimeOnly "org.slf4j:slf4j-simple:$slf4jVersion"
     implementation platform('io.micronaut.langchain4j:micronaut-langchain4j-bom:2.2.0')
+    // maps langchain4j's @Tool onto @Executable(processOnStartup = true) at compile time
+    compileOnly 'io.micronaut.langchain4j:micronaut-langchain4j-processor'
     implementation 'io.micronaut.langchain4j:micronaut-langchain4j-core'
     implementation 'io.micronaut.langchain4j:micronaut-langchain4j-ollama'
     runtimeOnly 'dev.langchain4j:langchain4j-http-client-jdk'

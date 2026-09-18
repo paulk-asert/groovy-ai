@@ -33,15 +33,7 @@ try(var context = ApplicationContext.run()) {
     }
 */
     println '----'
-    var toolRegistry = context.getBean(ToolRegistry)
-//    println toolRegistry.allTools
-    var weatherBeanDef = context.getBeanDefinition(WeatherTool)
-    var getWeather = weatherBeanDef.getRequiredMethod('getWeather', String, LocalDate)
-    toolRegistry.process(weatherBeanDef, getWeather)
-    var weekendBeanDef = context.getBeanDefinition(WeekendTool)
-    var getWeekend = weekendBeanDef.getRequiredMethod('getWeekend')
-    toolRegistry.process(weekendBeanDef, getWeekend)
-    println toolRegistry.allTools
+    println context.getBean(ToolRegistry).allTools
 
     println '----'
     var bot = context.getBean(WeatherAwareBot)

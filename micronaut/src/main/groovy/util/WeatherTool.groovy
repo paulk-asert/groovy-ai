@@ -17,13 +17,11 @@ package util
 
 import dev.langchain4j.agent.tool.Tool
 import domain.Weather
-import io.micronaut.context.annotation.Executable
 import jakarta.inject.Singleton
 
 @Singleton
 class WeatherTool {
     @Tool('Gets the expected weather forecast including temperature for a given city and LocalDate')
-    @Executable
     Weather getWeather(String city, LocalDate date) {
         println "Looking up weather for $city on $date"
         var fakeWeather = [Auckland: new Weather('sunny', 16, 26),
