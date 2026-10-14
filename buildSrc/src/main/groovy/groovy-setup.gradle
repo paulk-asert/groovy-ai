@@ -48,7 +48,7 @@ sourceSets.main.allSource.filter{ it.name.endsWith('.groovy') }.each { source ->
         group = 'Application'
         description = "Run $source.name as a JVM application/Groovy script"
         classpath = sourceSets.main.runtimeClasspath
-        mainClass = name
+        mainClass = name.replace('-', '_') // package names can't contain hyphens
         jvmArgs = ['--enable-native-access=ALL-UNNAMED'] // avoid warning on JDK25
     }
     runAll.configure {

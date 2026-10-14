@@ -21,7 +21,8 @@ Examples for this blog post:
 https://groovy.apache.org/blog/groovy-ai
 
 Groovy AI chat code to find holiday activity suggestions
-using Ollama4j, LangChain4j, Spring AI, Embabel, Micronaut, and Quarkus.
+using Ollama4j, LangChain4j, Spring AI, Embabel, Micronaut, and Quarkus,
+plus hosted-model examples using OpenRouter and the ASF llmao gateway.
 
 The examples are configured to use local LLMs via Ollama.
 They assume you have at least the `mistral:7b` model available.
@@ -157,6 +158,83 @@ so instead run your Gradle build using JDK25.
 
     4. Attend a concert or sporting event: Minneapolis is home to several major sports teams, including the Minnesota Vikings (NFL), Minnesota Timberwolves (NBA), and Minnesota Twins (MLB). The city also has a thriving music scene, with venues like First Avenue and the Orpheum Theatre hosting concerts by popular artists. Additionally, the Walker Art Center offers free outdoor performances during the summer months at its Sculpture Garden.
 
+## OpenAI-compatible (llmao and OpenRouter)
+
+The `openai-compatible` examples talk to any OpenAI-compatible endpoint:
+
+* [OpenRouter](https://openrouter.ai) is a hosted service in front of hundreds of models
+  (Claude, GPT, Gemini, Llama, Mistral, and more).
+* [llmao](https://github.com/apache/tooling-llmao) is the ASF LLM gateway at `llm.apache.org`,
+  giving ASF committers access to Foundation-sanctioned models such as `qwen3.8-27b` and `gemma4-26b`.
+
+The `Holiday` script uses just the JDK `HttpClient` and Groovy's JSON support,
+while `HolidayStructured` reuses LangChain4j's OpenAI module with a different base URL.
+The endpoint is chosen by which API key is set: `LLMAO_API_KEY`, then `OPENROUTER_API_KEY`.
+
+Like the other examples, these run with no extra setup: if neither key is set,
+they use Ollama's OpenAI-compatible endpoint (`http://localhost:11434/v1`) with `mistral:7b`.
+The output's first line shows which endpoint was used:
+
+    Using mistral:7b via Ollama (http://localhost:11434/v1)
+
+    Four things:
+    Activity(Visit Kings Beach, Kings Beach, Caloundra, Saturday, Morning to Afternoon)
+    Activity(Explore Bulcock Beach Esplanade, Bulcock Beach Esplanade, Caloundra, Saturday, Afternoon to Evening)
+    Activity(Glass Bottom Boat Tour to Dicky Beach, Coastal Waters near Dicky Beach, Sunday, Morning)
+    Activity(Sundowner at Moffat Headland, Moffat Headland, Caloundra, Sunday, Evening)
+
+    Best thing:
+    Activity(Glass Bottom Boat Tour to Dicky Beach, Coastal Waters near Dicky Beach, Sunday, Morning)
+
+### Using llmao
+
+1. Sign in at https://llm.apache.org with your ASF id and create a personal access token under **My Keys**
+   (the secret is only shown once). The [Models page](https://llm.apache.org/models) lists the available model ids.
+2. Set the token (and optionally the model, default `qwen3.8-27b`) and run the examples:
+
+   ```bash
+   export LLMAO_API_KEY=<your personal access token>
+   export LLMAO_MODEL=gemma4-26b   # optional
+   ./gradlew run.openai-compatible.All
+   ```
+
+   or in PowerShell:
+
+   ```powershell
+   $env:LLMAO_API_KEY = '<your personal access token>'
+   $env:LLMAO_MODEL = 'gemma4-26b'   # optional
+   ./gradlew run.openai-compatible.All
+   ```
+
+Requests to llmao turn off Qwen3's reasoning mode (`enable_thinking: false`),
+as reasoning can use up the output budget and return an empty answer.
+
+### Using OpenRouter
+
+1. Create an account at https://openrouter.ai and create an API key at https://openrouter.ai/settings/keys.
+2. The default model (`mistralai/mistral-small-3.2-24b-instruct`) is paid, so add a few dollars of credit.
+   Alternatively, pick one of the free models (ids ending in `:free`, rate-limited and subject to change)
+   from https://openrouter.ai/models. For `HolidayStructured`, the model must support structured outputs.
+3. Set the key (and optionally the model) and run the examples:
+
+   ```bash
+   export OPENROUTER_API_KEY=sk-or-...
+   export OPENROUTER_MODEL=openai/gpt-4o-mini   # optional
+   ./gradlew run.openai-compatible.All
+   ```
+
+   or in PowerShell:
+
+   ```powershell
+   $env:OPENROUTER_API_KEY = 'sk-or-...'
+   $env:OPENROUTER_MODEL = 'openai/gpt-4o-mini'   # optional
+   ./gradlew run.openai-compatible.All
+   ```
+
+The `runOpenAICompatible` GitHub workflow reads repository secrets named `LLMAO_API_KEY` and/or `OPENROUTER_API_KEY`
+(Settings → Secrets and variables → Actions). For llmao, request a key for the script under **Request a key**
+on **My Keys** rather than using your personal token. Without either secret (e.g. on forks), the workflow skips the examples.
+
 If you don't want to clone locally, check out the results in the GitHub Actions logs: \
 [![Ollama4j examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runOllama4j.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runOllama4j.yml)
 [![LangChain4J examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runLangChain4j.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runLangChain4j.yml)
@@ -164,3 +242,4 @@ If you don't want to clone locally, check out the results in the GitHub Actions 
 [![Embabel examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runEmbabel.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runEmbabel.yml)
 [![Micronaut examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runMicronautAI.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runMicronautAI.yml)
 [![Quarkus examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runQuarkus.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runQuarkus.yml)
+[![OpenAI-compatible examples](https://github.com/paulk-asert/groovy-ai/actions/workflows/runOpenAICompatible.yml/badge.svg)](https://github.com/paulk-asert/groovy-ai/actions/workflows/runOpenAICompatible.yml)
