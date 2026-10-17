@@ -20,6 +20,7 @@ plugins {
 
 repositories {
     mavenCentral()
+    maven { url = 'https://maven-central.storage-download.googleapis.com/maven2/' } // backup only for CI resilience
 }
 
 dependencies {

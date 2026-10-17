@@ -25,4 +25,7 @@ dependencies {
     implementation "org.slf4j:slf4j-simple:$slf4jVersion"
     implementation "dev.langchain4j:langchain4j-ollama:$langchain4jVersion"
     implementation "dev.langchain4j:langchain4j:$langchain4jVersion"
+    implementation "org.apache.groovy:groovy-markdown:$groovyVersion"
+    // groovy-markdown brings in commonmark itself, but the GFM table extension is extra
+    implementation 'org.commonmark:commonmark-ext-gfm-tables:0.30.0'
 }

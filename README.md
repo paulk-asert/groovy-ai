@@ -75,6 +75,23 @@ Example output follows.
 
     4. Take a day trip to the Glass House Mountains: Just a short drive from Caloundra, these iconic volcanic plugs offer breathtaking views and hiking trails for all levels of fitness. You can also visit the Kondalilla National Park for waterfalls and rainforest walks.
 
+Running the `Markdown` script, which asks for a Markdown table rather than JSON and slurps it
+into `Activity` records using Groovy's `MarkdownSlurper`. Unlike `HolidayStructured`, this needs
+no structured-output support from the model, since every chat model can write a Markdown table:
+
+    | Activity                  | Location              | Day      | Time               |
+    |---------------------------|-----------------------|----------|--------------------|
+    | Glasshouse Mountains Hike | Mount Tibrogargan     | Saturday | 8:00 AM - 12:00 PM |
+    | Bulcock Beach Picnic      | Bulcock Beach         | Sunday   | 11:00 AM - 2:00 PM |
+    | visit Australia Zoo       | Australia Zoo         | Saturday | 9:00 AM - 5:00 PM  |
+    | Sunset Cruise             | Marina Park Caloundra | Saturday | 6:00 PM - 8:30 PM  |
+
+    Activities:
+    Activity(Glasshouse Mountains Hike, Mount Tibrogargan, Saturday, 8:00 AM - 12:00 PM)
+    Activity(Bulcock Beach Picnic, Bulcock Beach, Sunday, 11:00 AM - 2:00 PM)
+    Activity(visit Australia Zoo, Australia Zoo, Saturday, 9:00 AM - 5:00 PM)
+    Activity(Sunset Cruise, Marina Park Caloundra, Saturday, 6:00 PM - 8:30 PM)
+
 ## Spring AI
 
 Running the `Structured` script:
