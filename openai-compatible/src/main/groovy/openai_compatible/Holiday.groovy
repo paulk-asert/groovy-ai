@@ -15,29 +15,36 @@
  */
 package openai_compatible
 
-import groovy.json.JsonOutput
-import groovy.json.JsonSlurper
-import java.net.http.HttpClient
-import java.net.http.HttpRequest
-import java.net.http.HttpResponse
+import groovy.http.Body
+import groovy.http.HttpBuilderClient
+import groovy.http.Post
 import util.Provider
 
 // llmao, OpenRouter, and Ollama all expose an OpenAI-compatible API,
-// so plain JDK HTTP + Groovy JSON is all we need
+// so Groovy's declarative HTTP client is all we need: the interface IS the client
+@HttpBuilderClient('http://localhost:11434/v1')
+interface ChatApi {
+    @Post('chat/completions')
+    Map chatCompletion(@Body Map request)
+}
+
 var provider = Provider.fromEnv()
 println "Using $provider"
 
+// the base URL needs its trailing slash, otherwise resolving 'chat/completions'
+// against it would discard the provider's path (e.g. the '/v1' in Ollama's URL)
+var api = ChatApi.create {
+    baseUri "$provider.baseUrl/"
+    header 'Authorization', "Bearer $provider.apiKey"
+    requestTimeout Duration.ofMinutes(5)
+}
+
 String prompt = 'What are 4 interesting things to do while I am on vacation in Caloundra?'
-var body = JsonOutput.toJson([
+// the request body is serialized as JSON, the response parsed back into a Map,
+// and any 4xx/5xx becomes an exception carrying the provider's error message
+var json = api.chatCompletion([
     model: provider.model,
     messages: [[role: 'user', content: prompt]]
 ] + provider.extraBody)
-var request = HttpRequest.newBuilder(URI.create("$provider.baseUrl/chat/completions"))
-    .header('Authorization', "Bearer $provider.apiKey")
-    .header('Content-Type', 'application/json')
-    .POST(HttpRequest.BodyPublishers.ofString(body))
-    .build()
-var response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString())
-var json = new JsonSlurper().parseText(response.body())
-assert response.statusCode() == 200, json.error?.message
+
 println "Response:\n" + json.choices[0].message.content

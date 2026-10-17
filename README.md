@@ -167,9 +167,14 @@ The `openai-compatible` examples talk to any OpenAI-compatible endpoint:
 * [llmao](https://github.com/apache/tooling-llmao) is the ASF LLM gateway at `llm.apache.org`,
   giving ASF committers access to Foundation-sanctioned models such as `qwen3.8-27b` and `gemma4-26b`.
 
-The `Holiday` script uses just the JDK `HttpClient` and Groovy's JSON support,
+The `Holiday` script uses Groovy's declarative HTTP client (`@HttpBuilderClient`),
 while `HolidayStructured` reuses LangChain4j's OpenAI module with a different base URL.
-The endpoint is chosen by which API key is set: `LLMAO_API_KEY`, then `OPENROUTER_API_KEY`.
+Both pick their endpoint from whichever API key is set: `LLMAO_API_KEY`, then `OPENROUTER_API_KEY`.
+
+`HolidayParallel` instead asks *every* configured provider the same question, fanning the
+calls out with Groovy's `collectParallel` so the endpoints answer concurrently, and prints
+the replies side by side. With two providers configured it also times a one-at-a-time run
+for comparison.
 
 Like the other examples, these run with no extra setup: if neither key is set,
 they use Ollama's OpenAI-compatible endpoint (`http://localhost:11434/v1`) with `mistral:7b`.
