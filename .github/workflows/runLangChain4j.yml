@@ -100,7 +100,7 @@ jobs:
 
       - name: Download models if needed
         run: |
-          for model in mistral:7b qwen3:8b; do
+          for model in mistral:7b qwen3:8b tev1; do
             ollama list | grep "$model" || ollama pull "$model"
           done
 

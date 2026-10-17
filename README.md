@@ -34,7 +34,12 @@ docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
 docker exec -it ollama ollama run mistral:7b
 ```
 
-Some examples use the larger but slightly better `qwen3:8b` model.
+Some examples use the larger but slightly better `qwen3:8b` model,
+and the decision example needs `tev1`, a decision model rather than a chat model:
+
+```bash
+ollama pull tev1
+```
 
 You can change LLMs or models in the `application.properties` file (for Spring AI, Embabel, and Micronaut)
 or via the hard-coded values in the other examples.
@@ -91,6 +96,19 @@ no structured-output support from the model, since every chat model can write a 
     Activity(Bulcock Beach Picnic, Bulcock Beach, Sunday, 11:00 AM - 2:00 PM)
     Activity(visit Australia Zoo, Australia Zoo, Saturday, 9:00 AM - 5:00 PM)
     Activity(Sunset Cruise, Marina Park Caloundra, Saturday, 6:00 PM - 8:30 PM)
+
+Running the `Decision` script. A decision model is not a chat model: one request carries a
+state plus several named, typed questions, and each answer returns with probabilities and a
+calibrated confidence. Ollama 0.35+ serves this "System One" API at `/v1/systemone`, which is
+where `langchain4j-typesafe` points by default, so no extra configuration is needed. Repeated
+runs give identical numbers, unlike a chat model:
+
+    Beach on Saturday?  yes (probability 0.687)
+    Pick for Sunday?    gallery  "Browsing the Caloundra Regional Gallery"
+                        beach=0.001, gallery=0.993, hike=0.006
+                        confidence 0.958
+    Effort for a hike?  1.72 on a 0..2 scale
+    Tokens used:        496 in, 0 out
 
 ## Spring AI
 

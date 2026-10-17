@@ -37,7 +37,7 @@ dependencies {
 }
 
 micronaut {
-    version '5.1.5'
+    version '5.2.2'
     runtime 'none'  // no embedded server
 }
 
