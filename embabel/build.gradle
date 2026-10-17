@@ -20,7 +20,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.1.7'
 }
 
-var embabelVersion = '1.5.2'
+var embabelVersion = '1.5.3'
 
 dependencies {
     implementation project(':common')

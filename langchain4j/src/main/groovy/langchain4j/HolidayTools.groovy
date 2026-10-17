@@ -19,6 +19,8 @@ import dev.langchain4j.agent.tool.Tool
 import dev.langchain4j.memory.chat.MessageWindowChatMemory
 import dev.langchain4j.model.ollama.OllamaChatModel
 import dev.langchain4j.service.AiServices
+import dev.langchain4j.service.tool.ToolArgumentsErrorHandler
+import dev.langchain4j.service.tool.ToolExecutionErrorHandler
 import domain.Weather
 import groovy.transform.Field
 
@@ -57,6 +59,9 @@ var assistant = AiServices.builder(HolidayAssistantTools)
     .chatModel(model)
     .chatMemory(chatMemory)
     .tools(this)
+    // the upcoming langchain4j defaults, set explicitly to avoid a future breaking change
+    .toolArgumentsErrorHandler(ToolArgumentsErrorHandler.sendExceptionMessageToLlm())
+    .toolExecutionErrorHandler(ToolExecutionErrorHandler.failInvocationUnlessVisibleToLlm())
     .build()
 
 var prompt = '''

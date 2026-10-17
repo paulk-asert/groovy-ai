@@ -32,6 +32,11 @@ java {
     }
 }
 
+// retain parameter names in bytecode so AI frameworks can infer tool parameter names
+tasks.withType(GroovyCompile).configureEach {
+    groovyOptions.parameters = true
+}
+
 def runAll = tasks.register("run.${project.name}.All") {
     group = 'Application'
 }
