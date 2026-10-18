@@ -229,9 +229,21 @@
           "parameterTypes": []
         },
         {
+          "name": "setAdditionalFields",
+          "parameterTypes": [
+            "java.util.Map"
+          ]
+        },
+        {
           "name": "setContent",
           "parameterTypes": [
             "java.lang.String"
+          ]
+        },
+        {
+          "name": "setImages",
+          "parameterTypes": [
+            "java.util.List"
           ]
         },
         {
@@ -354,6 +366,10 @@
         {
           "name": "getTools",
           "parameterTypes": []
+        },
+        {
+          "name": "getTruncate",
+          "parameterTypes": []
         }
       ]
     },
@@ -378,6 +394,12 @@
         },
         {
           "name": "setDoneReason",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        },
+        {
+          "name": "setError",
           "parameterTypes": [
             "java.lang.String"
           ]
