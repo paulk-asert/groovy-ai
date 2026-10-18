@@ -57,7 +57,11 @@ sourceSets.main.allSource.filter{ it.name.endsWith('.groovy') }.each { source ->
         mainClass = name.replace('-', '_') // package names can't contain hyphens
         jvmArgs = ['--enable-native-access=ALL-UNNAMED'] // avoid warning on JDK25
     }
-    runAll.configure {
-        dependsOn subtask
+    // a script marked 'standalone:' still gets its own run task but is left out of the
+    // All task, e.g. when it needs a large model the other examples don't
+    if (!source.text.contains('// standalone:')) {
+        runAll.configure {
+            dependsOn subtask
+        }
     }
 }

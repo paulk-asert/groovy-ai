@@ -22,6 +22,9 @@ import dev.langchain4j.model.decision.request.YesNoQuestion
 import dev.langchain4j.model.typesafe.TypeSafeDecisionModel
 import domain.Weather
 
+// standalone: tev1 is a 4.4GB download, so this is left out of run.langchain4j.All
+// and run by its own workflow; use ./gradlew run.langchain4j.HolidayDecision
+//
 // A decision model is not a chat model: one request carries a state and several named,
 // typed questions, and each answer comes back with probabilities and a calibrated
 // confidence. Ollama 0.35+ serves this "System One" API at /v1/systemone, which is
@@ -68,10 +71,10 @@ Tokens used:        ${response.tokenUsage().inputTokenCount()} in, ${response.to
 """
 
 /*
-Beach on Saturday?  yes (probability 0.687)
+Beach on Saturday?  yes (probability 0.684)
 Pick for Sunday?    gallery  "Browsing the Caloundra Regional Gallery"
                     beach=0.001, gallery=0.993, hike=0.006
-                    confidence 0.958
-Effort for a hike?  1.72 on a 0..2 scale
+                    confidence 0.957
+Effort for a hike?  1.71 on a 0..2 scale
 Tokens used:        496 in, 0 out
 */

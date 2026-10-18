@@ -26,11 +26,27 @@ record Provider(String name, String baseUrl, String apiKey, String model, Map<St
     }
 
     /**
-     * Every configured hosted provider, for asking them all the same question.
-     * Local Ollama is only the fallback when no hosted key is set, since CI runs
-     * the hosted examples without an Ollama server.
+     * Every configured hosted provider, falling back to local Ollama when no hosted
+     * key is set, since CI runs the hosted examples without an Ollama server.
      */
     static List<Provider> allFromEnv() {
+        hostedFromEnv() ?: [ollama()]
+    }
+
+    /**
+     * Every configured hosted provider plus local Ollama, so a hosted answer can
+     * always be compared against a local one.
+     */
+    static List<Provider> allWithOllama() {
+        hostedFromEnv() + ollama()
+    }
+
+    /** The local Ollama endpoint, which needs no API key. */
+    static Provider ollama() {
+        new Provider('Ollama', 'http://localhost:11434/v1', 'ollama', 'mistral:7b', [:])
+    }
+
+    private static List<Provider> hostedFromEnv() {
         var env = System.getenv()
         List<Provider> hosted = []
         if (env.LLMAO_API_KEY) {
@@ -42,7 +58,7 @@ record Provider(String name, String baseUrl, String apiKey, String model, Map<St
             hosted << new Provider('OpenRouter', 'https://openrouter.ai/api/v1', env.OPENROUTER_API_KEY,
                 env.OPENROUTER_MODEL ?: 'mistralai/mistral-small-3.2-24b-instruct', [:])
         }
-        hosted ?: [new Provider('Ollama', 'http://localhost:11434/v1', 'ollama', 'mistral:7b', [:])]
+        hosted
     }
 
     String toString() { "$model via $name ($baseUrl)" }

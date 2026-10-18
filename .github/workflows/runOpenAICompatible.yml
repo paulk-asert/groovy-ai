@@ -46,10 +46,14 @@ jobs:
           java-version: 25
           check-latest: true
 
+      # Ollama is the fallback when neither secret is set (e.g. on forks), and HolidayParallel
+      # always queries it alongside any hosted provider, so it is needed either way
+      - uses: ai-action/setup-ollama@v1
+      - name: Load model
+        run: ollama pull mistral:7b
+
       - uses: gradle/actions/setup-gradle@v5
-      # without either secret (e.g. on forks) the scripts would fall back to Ollama, which isn't installed here;
-      # if both are set, llmao is used
+      # if both secrets are set, llmao is the provider the single-provider examples use
       - name: Run OpenAI-compatible examples
-        if: env.LLMAO_API_KEY != '' || env.OPENROUTER_API_KEY != ''
         run: ./gradlew run.openai-compatible.All
         timeout-minutes: 30

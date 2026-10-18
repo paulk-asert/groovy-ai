@@ -46,16 +46,21 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Cache Ollama models
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
-          path: ~/.ollama
-          key: ollama-models-${{ runner.os }}-${{ hashFiles('.github/workflows/runMicronautNative.yml') }}
+          path: ~/.ollama/models
+          # keyed on the models, not the workflow file: editing this file should not
+          # discard a multi-GB model cache
+          key: ollama-models-${{ runner.os }}-mistral7b-qwen3_8b
           restore-keys: |
             ollama-models-${{ runner.os }}-
 
       - uses: ai-action/setup-ollama@v1
+      # only qwen3:8b is used here, but all the Ollama workflows share one cache entry,
+      # so pull both to keep that shared entry complete whichever workflow populates it
       - name: Load models (if not cached)
         run: |
+          ollama list | grep "mistral:7b" || ollama pull mistral:7b
           ollama list | grep "qwen3:8b" || ollama pull qwen3:8b
 
       - uses: gradle/actions/setup-gradle@v5

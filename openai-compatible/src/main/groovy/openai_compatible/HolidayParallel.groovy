@@ -28,10 +28,14 @@ interface CompareApi {
     Map chatCompletion(@Body Map request)
 }
 
-var providers = Provider.allFromEnv()
+// local Ollama is always included, so there is a local answer to compare against
+var providers = Provider.allWithOllama()
 println "Asking ${providers.size()} provider(s): ${providers*.name.join(', ')}"
 
 var prompt = 'Name one must-see attraction in Caloundra and say why in one sentence.'
+
+// the model that answered is worth keeping: a gateway can route to a different one
+record Reply(String servedBy, String text) { }
 
 var ask = { Provider provider ->
     var api = CompareApi.create {
@@ -40,13 +44,14 @@ var ask = { Provider provider ->
         requestTimeout Duration.ofMinutes(5)
     }
     try {
-        api.chatCompletion([
+        var json = api.chatCompletion([
             model: provider.model,
             messages: [[role: 'user', content: prompt]]
-        ] + provider.extraBody).choices[0].message.content.trim()
+        ] + provider.extraBody)
+        new Reply(json.model, json.choices[0].message.content.trim())
     } catch (RuntimeException e) {
         // a 4xx/5xx from one provider shouldn't lose the other answers
-        "<no answer: $e.message>"
+        new Reply('-', "<no answer: $e.message>".toString())
     }
 }
 
@@ -65,7 +70,7 @@ if (providers.size() > 1) {
     printf 'one at a time    : %,d ms%n', sequential.millis
 }
 
-// collectParallel preserves order, so answers still line up with their providers
-[providers, parallel.result].transpose().each { provider, answer ->
-    println "\n$provider.name ($provider.model):\n  $answer"
+// collectParallel preserves order, so replies still line up with their providers
+[providers, parallel.result].transpose().each { provider, reply ->
+    println "\n$provider.name (asked ${provider.model}, served by ${reply.servedBy()}):\n  ${reply.text()}"
 }

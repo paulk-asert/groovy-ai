@@ -47,4 +47,6 @@ var json = api.chatCompletion([
     messages: [[role: 'user', content: prompt]]
 ] + provider.extraBody)
 
+// a gateway may route to a different model than asked for, so report what answered
+println "Served by: $json.model"
 println "Response:\n" + json.choices[0].message.content

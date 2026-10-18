@@ -101,14 +101,17 @@ Running the `Decision` script. A decision model is not a chat model: one request
 state plus several named, typed questions, and each answer returns with probabilities and a
 calibrated confidence. Ollama 0.35+ serves this "System One" API at `/v1/systemone`, which is
 where `langchain4j-typesafe` points by default, so no extra configuration is needed. Repeated
-runs give identical numbers, unlike a chat model:
+runs against a loaded model give the same numbers, unlike a chat model:
 
-    Beach on Saturday?  yes (probability 0.687)
+    Beach on Saturday?  yes (probability 0.684)
     Pick for Sunday?    gallery  "Browsing the Caloundra Regional Gallery"
                         beach=0.001, gallery=0.993, hike=0.006
-                        confidence 0.958
-    Effort for a hike?  1.72 on a 0..2 scale
+                        confidence 0.957
+    Effort for a hike?  1.71 on a 0..2 scale
     Tokens used:        496 in, 0 out
+
+`tev1` is a 4.4GB download, so this example is left out of `run.langchain4j.All` and is run
+on its own, either with `./gradlew run.langchain4j.HolidayDecision` or by its own workflow.
 
 ## Spring AI
 
@@ -208,8 +211,12 @@ Both pick their endpoint from whichever API key is set: `LLMAO_API_KEY`, then `O
 
 `HolidayParallel` instead asks *every* configured provider the same question, fanning the
 calls out with Groovy's `collectParallel` so the endpoints answer concurrently, and prints
-the replies side by side. With two providers configured it also times a one-at-a-time run
-for comparison.
+the replies side by side. Local Ollama is always included, so there is a local answer to
+compare a hosted one against, and with more than one provider it also times a one-at-a-time
+run for comparison. A provider that fails is reported in place rather than losing the others.
+
+Both `Holiday` and `HolidayParallel` print the model that actually answered, since a gateway
+can route a request to a different model than the one asked for.
 
 Like the other examples, these run with no extra setup: if neither key is set,
 they use Ollama's OpenAI-compatible endpoint (`http://localhost:11434/v1`) with `mistral:7b`.

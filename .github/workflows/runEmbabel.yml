@@ -52,51 +52,16 @@ jobs:
 
       - uses: ai-action/setup-ollama@v1
 
-      - name: Cache Ollama blobs0123
+      # One entry for blobs and manifests: sharding by sha prefix left two of the four
+      # buckets empty. The key names the models, so adding one invalidates deliberately,
+      # while restore-keys still reuses the previous cache so only the new model is pulled.
+      - name: Cache Ollama models
         uses: actions/cache@v5
         with:
-          path: |
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-0*
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-1*
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-2*
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-3*
-          key: ollama-blobs0123-${{ runner.os }}-v1
-
-      - name: Cache Ollama blobs4567
-        uses: actions/cache@v5
-        with:
-          path: |
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-4*
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-5*
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-6*
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-7*
-          key: ollama-blobs4567-${{ runner.os }}-v1
-
-      - name: Cache Ollama blobs89AB
-        uses: actions/cache@v5
-        with:
-          path: |
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-8*
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-9*
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-a*
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-b*
-          key: ollama-blobs89AB-${{ runner.os }}-v1
-
-      - name: Cache Ollama blobsCDEF
-        uses: actions/cache@v5
-        with:
-          path: |
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-c*
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-d*
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-e*
-            ${{ env.OLLAMA_HOME }}/models/blobs/sha256-f*
-          key: ollama-blobsCDEF-${{ runner.os }}-v1
-
-      - name: Cache Ollama manifests
-        uses: actions/cache@v5
-        with:
-          path: ${{ env.OLLAMA_HOME }}/models/manifests
-          key: ollama-manifests-${{ runner.os }}-v1
+          path: ${{ env.OLLAMA_HOME }}/models
+          key: ollama-models-${{ runner.os }}-mistral7b-qwen3_8b
+          restore-keys: |
+            ollama-models-${{ runner.os }}-
 
       - name: Download models if needed
         run: |

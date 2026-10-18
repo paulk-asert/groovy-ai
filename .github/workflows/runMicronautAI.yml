@@ -44,8 +44,10 @@ jobs:
       - name: Cache Ollama models
         uses: actions/cache@v5
         with:
-          path: ~/.ollama
-          key: ollama-models-${{ runner.os }}-${{ hashFiles('.github/workflows/runMicronautAI.yml') }}
+          path: ~/.ollama/models
+          # keyed on the models, not the workflow file: editing this file should not
+          # discard a multi-GB model cache
+          key: ollama-models-${{ runner.os }}-mistral7b-qwen3_8b
           restore-keys: |
             ollama-models-${{ runner.os }}-
 
