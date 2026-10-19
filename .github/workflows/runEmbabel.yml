@@ -69,7 +69,7 @@ jobs:
             ollama list | grep "$model" || ollama pull "$model"
           done
 
-      - uses: gradle/actions/setup-gradle@v5
+      - uses: gradle/actions/setup-gradle@v6
       - name: Run Embabel examples
         run: ./gradlew run.embabel.All
         timeout-minutes: 60

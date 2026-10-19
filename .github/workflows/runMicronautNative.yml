@@ -63,7 +63,7 @@ jobs:
           ollama list | grep "mistral:7b" || ollama pull mistral:7b
           ollama list | grep "qwen3:8b" || ollama pull qwen3:8b
 
-      - uses: gradle/actions/setup-gradle@v5
+      - uses: gradle/actions/setup-gradle@v6
       - name: Build native executables
         run: ./gradlew :micronaut:nativeHolidayCompile :micronaut:nativeStructuredCompile :micronaut:nativeToolsCompile
         timeout-minutes: 30
