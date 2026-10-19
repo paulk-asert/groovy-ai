@@ -56,7 +56,7 @@ jobs:
       # buckets empty. The key names the models, so adding one invalidates deliberately,
       # while restore-keys still reuses the previous cache so only the new model is pulled.
       - name: Cache Ollama models
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: ${{ env.OLLAMA_HOME }}/models
           key: ollama-models-${{ runner.os }}-mistral7b-qwen3_8b
