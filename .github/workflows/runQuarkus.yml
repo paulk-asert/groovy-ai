@@ -42,7 +42,7 @@ jobs:
       - uses: ai-action/setup-ollama@v1
       - name: Load model
         run: ollama pull mistral:7b
-      - uses: gradle/actions/setup-gradle@v5
+      - uses: gradle/actions/setup-gradle@v6
       - name: Run Quarkus Holiday example
         run: ./gradlew quarkusRun
         timeout-minutes: 60

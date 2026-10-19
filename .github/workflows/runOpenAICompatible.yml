@@ -52,7 +52,7 @@ jobs:
       - name: Load model
         run: ollama pull mistral:7b
 
-      - uses: gradle/actions/setup-gradle@v5
+      - uses: gradle/actions/setup-gradle@v6
       # if both secrets are set, llmao is the provider the single-provider examples use
       - name: Run OpenAI-compatible examples
         run: ./gradlew run.openai-compatible.All

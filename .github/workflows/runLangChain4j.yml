@@ -71,7 +71,7 @@ jobs:
             ollama list | grep "$model" || ollama pull "$model"
           done
 
-      - uses: gradle/actions/setup-gradle@v5
+      - uses: gradle/actions/setup-gradle@v6
       - name: Run LangChain4j examples
         run: ./gradlew run.langchain4j.All
         timeout-minutes: 60
