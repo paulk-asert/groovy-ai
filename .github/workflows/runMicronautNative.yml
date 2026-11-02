@@ -55,7 +55,7 @@ jobs:
           restore-keys: |
             ollama-models-${{ runner.os }}-
 
-      - uses: ai-action/setup-ollama@v1
+      - uses: ai-action/setup-ollama@v2
       # only qwen3:8b is used here, but all the Ollama workflows share one cache entry,
       # so pull both to keep that shared entry complete whichever workflow populates it
       - name: Load models (if not cached)
