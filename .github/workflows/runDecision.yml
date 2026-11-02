@@ -41,7 +41,7 @@ jobs:
           distribution: 'zulu'
           java-version: 25
           check-latest: true
-      - uses: ai-action/setup-ollama@v1
+      - uses: ai-action/setup-ollama@v2
       - name: Load decision model
         run: ollama pull tev1
       - uses: gradle/actions/setup-gradle@v5

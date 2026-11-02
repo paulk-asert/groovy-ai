@@ -50,7 +50,7 @@ jobs:
           mkdir -p "$OLLAMA_HOME/models/manifests"
           echo "OLLAMA_HOME=$OLLAMA_HOME" >> "$GITHUB_ENV"
 
-      - uses: ai-action/setup-ollama@v1
+      - uses: ai-action/setup-ollama@v2
 
       # One entry for blobs and manifests: sharding by sha prefix left two of the four
       # buckets empty. The key names the models, so adding one invalidates deliberately,

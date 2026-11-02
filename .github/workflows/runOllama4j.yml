@@ -39,7 +39,7 @@ jobs:
           distribution: 'zulu'
           java-version: 25
           check-latest: true
-      - uses: ai-action/setup-ollama@v1
+      - uses: ai-action/setup-ollama@v2
       - name: Load model
         run: ollama pull mistral:7b
       - uses: gradle/actions/setup-gradle@v5

@@ -48,7 +48,7 @@ jobs:
 
       # Ollama is the fallback when neither secret is set (e.g. on forks), and HolidayParallel
       # always queries it alongside any hosted provider, so it is needed either way
-      - uses: ai-action/setup-ollama@v1
+      - uses: ai-action/setup-ollama@v2
       - name: Load model
         run: ollama pull mistral:7b
 

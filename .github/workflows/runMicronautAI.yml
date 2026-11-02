@@ -51,7 +51,7 @@ jobs:
           restore-keys: |
             ollama-models-${{ runner.os }}-
 
-      - uses: ai-action/setup-ollama@v1
+      - uses: ai-action/setup-ollama@v2
       - name: Load models (if not cached)
         run: |
           ollama list | grep "mistral:7b" || ollama pull mistral:7b
